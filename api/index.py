@@ -27,6 +27,7 @@ if ROOT not in sys.path:
 from flask import Flask, jsonify, request, send_from_directory  # noqa: E402
 
 from radar import blobstore, competitors as comp_audit, demand  # noqa: E402
+from radar import publishing as pub_job  # noqa: E402
 from radar import scan as scan_job, store  # noqa: E402
 
 PUBLIC = os.path.join(ROOT, "public")
@@ -174,6 +175,15 @@ def manual_scan():
     except Exception as error:  # noqa: BLE001
         return jsonify({"ok": False, "error": str(error)}), 500
     return jsonify({"ok": True, "date": snapshot["date"], "state": _state_payload()})
+
+
+@_routes("/api/publishing")
+def publishing():
+    if request.method == "POST":
+        return jsonify({"error": "publishing refresh runs from the local server only",
+                        "hint": "python3 -m radar.publishing"}), 503
+    return jsonify({"data": pub_job.load(),
+                    "state": {"mode": "read-only" if STORAGE_MODE == "files" else STORAGE_MODE}})
 
 
 @_routes("/api/competitors/audit")

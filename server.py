@@ -19,6 +19,7 @@ from urllib.parse import parse_qs, urlparse
 
 from radar import competitors as comp_audit
 from radar import demand
+from radar import publishing as pub_job
 from radar import scan as scan_job
 from radar import store
 
@@ -51,6 +52,29 @@ STATE_LOCK = threading.Lock()
 
 COMP_STATE = {"running": False, "error": None, "finished_at": None, "seconds": None}
 COMP_LOCK = threading.Lock()
+
+PUB_STATE = {"running": False, "error": None, "finished_at": None, "seconds": None}
+PUB_LOCK = threading.Lock()
+
+
+def run_publishing():
+    with PUB_LOCK:
+        if PUB_STATE["running"]:
+            return False
+        PUB_STATE.update(running=True, error=None)
+    started = time.time()
+    try:
+        pub_job.save(pub_job.run())
+        PUB_STATE.update(seconds=round(time.time() - started, 1))
+    except Exception as error:  # noqa: BLE001
+        PUB_STATE.update(error="%s: %s" % (type(error).__name__, error))
+    finally:
+        PUB_STATE.update(running=False, finished_at=time.time())
+    return True
+
+
+def start_publishing():
+    threading.Thread(target=run_publishing, daemon=True).start()
 
 
 def run_competitor_audit():
@@ -187,6 +211,9 @@ class Handler(BaseHTTPRequestHandler):
         if path == "/api/competitors":
             self._json({"data": comp_audit.load(), "state": COMP_STATE})
             return
+        if path == "/api/publishing":
+            self._json({"data": pub_job.load(), "state": PUB_STATE})
+            return
         if path == "/api/health":
             self._json({"ok": True, "time": datetime.now().isoformat(timespec="seconds")})
             return
@@ -203,6 +230,13 @@ class Handler(BaseHTTPRequestHandler):
                 return
             start_scan_async()
             self._json({"started": True, "state": self._state_payload()}, 202)
+            return
+        if parsed.path == "/api/publishing":
+            if PUB_STATE["running"]:
+                self._json({"started": False, "state": PUB_STATE}, 202)
+                return
+            start_publishing()
+            self._json({"started": True, "state": PUB_STATE}, 202)
             return
         if parsed.path == "/api/competitors/audit":
             if COMP_STATE["running"]:

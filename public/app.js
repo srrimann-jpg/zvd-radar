@@ -11,6 +11,9 @@ const state = {
   competitors: null,
   compState: {},
   compPoll: null,
+  publishing: null,
+  pubState: {},
+  pubPoll: null,
 };
 
 const $ = (id) => document.getElementById(id);
@@ -457,6 +460,97 @@ function renderCompetitors() {
     <p class="panel-note" style="margin-top:14px">Presence score is a labelled heuristic (content volume, content-to-catalogue depth, schema, social proof, retention and experience tools, freshness) used to rank — not a traffic estimate. ${blocked} sites refuse non-browser clients, so they are marked blocked rather than scored.</p>`;
 }
 
+/* ---------- competitor publishing ---------- */
+async function loadPublishing() {
+  try {
+    const response = await fetch("/api/publishing", { cache: "no-store" });
+    const payload = await response.json();
+    state.publishing = payload.data;
+    state.pubState = payload.state || {};
+    renderPublishing();
+  } catch (error) {
+    const node = $("publishing-body");
+    if (node) node.innerHTML = `<div class="empty">Could not load competitor publishing: ${escapeHtml(error.message)}</div>`;
+  }
+}
+
+async function runPublishing() {
+  state.pubState = { running: true };
+  renderPublishing();
+  try {
+    await fetch("/api/publishing", { method: "POST" });
+  } catch (error) {
+    $("publishing-body").innerHTML = `<div class="empty">Could not start the collection: ${escapeHtml(error.message)}</div>`;
+    return;
+  }
+  pollPublishing();
+}
+
+function pollPublishing() {
+  clearTimeout(state.pubPoll);
+  state.pubPoll = setTimeout(async () => {
+    await loadPublishing();
+    if (state.pubState && state.pubState.running) pollPublishing();
+  }, 3000);
+}
+
+function publishingRow(entry) {
+  const items = entry.new.map((item) => `
+    <li><a href="${escapeHtml(item.url)}" target="_blank" rel="noopener">${escapeHtml(item.title || item.url)}</a>
+      <span class="muted">· ${escapeHtml(item.kind)}${item.lastmod ? " · " + escapeHtml(item.lastmod) : ""}</span></li>`).join("");
+  const feeds = entry.rss.map((item) => `
+    <li><a href="${escapeHtml(item.url)}" target="_blank" rel="noopener">${escapeHtml(item.title)}</a>
+      <span class="muted">· feed${item.published ? " · " + escapeHtml(item.published.slice(0, 16)) : ""}</span></li>`).join("");
+  const body = [
+    items ? `<div><strong>${entry.first_run ? "Most recently updated pages" : "New since last run"}</strong><ul>${items}</ul></div>` : "",
+    feeds ? `<div><strong>From their blog feed</strong><ul>${feeds}</ul></div>` : "",
+    entry.error ? `<div><strong>Could not read their sitemap:</strong> ${escapeHtml(entry.error)}</div>` : "",
+  ].filter(Boolean).join("");
+  return `
+    <tr>
+      <td><strong>${escapeHtml(entry.name)}</strong><div class="muted">${escapeHtml(entry.type)} · ${escapeHtml(entry.market)}</div></td>
+      <td class="num">${entry.total_urls}</td>
+      <td class="num">${entry.content_urls}</td>
+      <td class="num"><strong>${entry.new_count}</strong></td>
+      <td class="muted">${entry.rss.length ? entry.rss.length + " feed items" : "—"}</td>
+      <td>${statusPill(entry.status)}</td>
+    </tr>
+    <tr class="detail-row"><td></td><td colspan="5">${
+      body ? `<details><summary>What they published</summary><div class="evidence">${body}</div></details>`
+           : `<span class="muted">Nothing new collected.</span>`}</td></tr>`;
+}
+
+function renderPublishing() {
+  const node = $("publishing-body");
+  if (!node) return;
+  if (state.pubState && state.pubState.running) {
+    node.innerHTML = `<div class="empty"><span class="dot"></span> Reading competitor sitemaps and feeds — about a minute.</div>`;
+    return;
+  }
+  const data = state.publishing;
+  if (!data) {
+    node.innerHTML = `<div class="empty">No publishing snapshot yet.<br><br><button class="ghost" onclick="runPublishing()">Collect competitor output</button></div>`;
+    return;
+  }
+  const feeds = data.domains.filter((entry) => entry.rss.length).length;
+  node.innerHTML = `
+    <div class="kpis" style="margin:0 0 18px">
+      <div class="kpi"><span>Reachable</span><strong>${data.reachable}</strong><small>of ${data.count} tracked</small></div>
+      <div class="kpi"><span>New pages</span><strong>${data.total_new}</strong><small>${data.baseline ? "first baseline run" : "since last run"}</small></div>
+      <div class="kpi"><span>Live feeds</span><strong>${feeds}</strong><small>blog RSS working</small></div>
+      <div class="kpi"><span>Collected</span><strong>${escapeHtml((data.generated_at || "").slice(0, 10))}</strong><small>${data.seconds ? data.seconds + "s" : ""}</small></div>
+    </div>
+    <div class="table-wrap">
+      <table class="table">
+        <thead><tr><th>Competitor</th><th class="num">URLs</th><th class="num">Content</th><th class="num">New</th><th>Feeds</th><th>Access</th></tr></thead>
+        <tbody>${data.domains.map(publishingRow).join("")}</tbody>
+      </table>
+    </div>
+    <p class="panel-note" style="margin-top:14px">${data.baseline
+      ? "First run, so there is nothing to diff against yet — each competitor shows its most recently updated pages instead of claiming everything is new. The next run reports genuine additions."
+      : "New pages are URLs present now that were absent at the last run, read from each site's own sitemap. Titles are fetched for a few of them; a page we cannot read keeps its URL rather than a guess."}</p>`;
+}
+
 /* ---------- brief text ---------- */
 function briefText(topic) {
   const brief = topic.brief;
@@ -496,7 +590,10 @@ document.addEventListener("click", (event) => {
     state.tab = tab.dataset.tab;
     document.querySelectorAll(".tab").forEach((node) => node.classList.toggle("is-active", node === tab));
     document.querySelectorAll(".panel").forEach((panel) => panel.classList.toggle("hidden", panel.id !== "panel-" + state.tab));
-    if (state.tab === "competitors") renderCompetitors();
+    if (state.tab === "competitors") {
+      renderCompetitors();
+      renderPublishing();
+    }
     return;
   }
 
@@ -535,6 +632,10 @@ document.addEventListener("click", (event) => {
   if (event.target.id === "run-competitors") {
     runCompetitorAudit();
   }
+
+  if (event.target.id === "run-publishing") {
+    runPublishing();
+  }
 });
 
 $("theme-filter").addEventListener("change", (event) => {
@@ -554,6 +655,7 @@ $("intent-sort").addEventListener("change", (event) => {
 
 load();
 loadCompetitors();
+loadPublishing();
 setInterval(() => {
   const scan = state.data && state.data.state;
   if (!scan || !scan.running) load();
