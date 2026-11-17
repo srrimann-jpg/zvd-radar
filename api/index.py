@@ -26,7 +26,8 @@ if ROOT not in sys.path:
 
 from flask import Flask, jsonify, request, send_from_directory  # noqa: E402
 
-from radar import blobstore, competitors as comp_audit, scan as scan_job, store  # noqa: E402
+from radar import blobstore, competitors as comp_audit, demand  # noqa: E402
+from radar import scan as scan_job, store  # noqa: E402
 
 PUBLIC = os.path.join(ROOT, "public")
 
@@ -120,6 +121,7 @@ def radar():
         except Exception:  # noqa: BLE001 - fall through to the empty payload
             snapshot = None
 
+    snapshot = demand.enrich_snapshot(snapshot)
     payload = {
         "snapshot": snapshot,
         "state": _state_payload(),

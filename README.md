@@ -40,6 +40,7 @@ python3 -m radar.topkeywords                # ranked shortlist CSV with evidence
 | `radar/store.py` | snapshot storage (file backend locally, Blob backend when hosted) |
 | `radar/blobstore.py` | Vercel Blob backend, stdlib HTTP only |
 | `radar/keywords.py` | Keyword Planner importer with bucket/range provenance |
+| `radar/demand.py` | joins that demand data onto scan intents (volume, competition, bids) |
 | `radar/topkeywords.py` | ranked shortlist export with evidence columns |
 | `radar/competitors.py` | website/content audit across verified COMPETITORS |
 | `server.py` | local HTTP server + API + dashboard |

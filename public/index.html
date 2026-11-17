@@ -61,11 +61,21 @@
   </section>
 
   <section class="panel hidden" id="panel-intent">
-    <p class="panel-note">What people are typing into Google around your category, ranked by how much it is worth owning. Each row is a page you could publish.</p>
+    <div class="filters">
+      <p class="panel-note" id="intent-note" style="margin:0;max-width:62ch">What people are typing into Google around your category. Each row is a page you could publish.</p>
+      <label class="select-wrap">
+        <span>Sort</span>
+        <select id="intent-sort">
+          <option value="value">Commercial value</option>
+          <option value="volume">Search volume</option>
+          <option value="score">Opportunity score</option>
+        </select>
+      </label>
+    </div>
     <div class="table-wrap">
       <table class="table">
         <thead>
-          <tr><th>Query</th><th>Theme</th><th>Stage</th><th>Audience</th><th class="num">Opportunity</th><th>Page to publish</th></tr>
+          <tr><th>Query</th><th>Theme</th><th>Stage</th><th>Volume (IN)</th><th>Competition</th><th class="num">Bid (INR)</th><th class="num">Opportunity</th><th>Page to publish</th></tr>
         </thead>
         <tbody id="intent-body"></tbody>
       </table>

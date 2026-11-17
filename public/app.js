@@ -6,6 +6,7 @@ const state = {
   audience: "All",
   theme: "all",
   sort: "score",
+  intentSort: "value",
   poll: null,
   competitors: null,
   compState: {},
@@ -152,8 +153,20 @@ function renderKpis(snapshot) {
     { label: "Signals read", value: snapshot.stats.signals, note: snapshot.stats.outlets + " outlets" },
     { label: "Themes live", value: snapshot.stats.themes, note: snapshot.topics.length + " publishable topics" },
     { label: "Rising", value: rising, note: rising ? "vs last scan" : "baseline scan" },
-    { label: "Search intents", value: snapshot.stats.queries, note: "autocomplete queries" },
-    { label: "Brand mentions", value: snapshot.brand.total_mentions, note: b2b + (b2b === 1 ? " B2B topic" : " B2B topics") },
+    {
+      label: "Search intents",
+      value: snapshot.stats.queries,
+      note: (snapshot.demand_summary && snapshot.demand_summary.with_data)
+        ? snapshot.demand_summary.with_data + " with volume data"
+        : "autocomplete queries",
+    },
+    {
+      label: "Brand mentions",
+      value: snapshot.brand.total_mentions,
+      note: snapshot.brand.total_mentions
+        ? snapshot.brand.share_of_voice + "% share of voice"
+        : "no earned coverage yet",
+    },
   ];
   $("kpis").innerHTML = cards.map((card) => `
     <div class="kpi">
@@ -243,17 +256,46 @@ function renderTopics(snapshot) {
   }).join("");
 }
 
+function demandCells(keyword) {
+  const demand = keyword.demand;
+  if (!demand || !demand.volume) {
+    return `<td class="muted">—</td><td class="muted">—</td><td class="num muted">—</td>`;
+  }
+  const bid = demand.bid_high != null
+    ? `₹${Math.round(demand.bid_low)}–${Math.round(demand.bid_high)}`
+    : "—";
+  return `<td>${escapeHtml(demand.volume)}</td>
+      <td class="muted">${escapeHtml(demand.competition || "—")}</td>
+      <td class="num muted">${bid}</td>`;
+}
+
 function renderIntent(snapshot) {
-  const rows = snapshot.keywords.slice(0, 60).map((keyword) => `
+  const summary = snapshot.demand_summary || {};
+  const note = $("intent-note");
+  if (note) {
+    note.textContent = summary.with_data
+      ? `Volume, competition and top-of-page bids from Google Keyword Planner (${summary.country || "IN"}, trailing 12 months). ${summary.with_data} of ${summary.total} queries have data — the rest show an em dash rather than a guess.`
+      : "No keyword data imported yet. Run: python3 -m radar.keywords import <export.csv> --country IN";
+  }
+
+  const rows = snapshot.keywords.slice();
+  if (state.intentSort === "volume") {
+    rows.sort((a, b) => ((b.demand && b.demand.bucket_low) || 0) - ((a.demand && a.demand.bucket_low) || 0) || b.score - a.score);
+  } else if (state.intentSort === "score") {
+    rows.sort((a, b) => b.score - a.score);
+  } else {
+    rows.sort((a, b) => (b.demand_score || 0) - (a.demand_score || 0) || b.score - a.score);
+  }
+
+  $("intent-body").innerHTML = rows.slice(0, 80).map((keyword) => `
     <tr>
       <td>${escapeHtml(keyword.title)}${keyword.note ? `<div class="muted" style="margin-top:3px">${escapeHtml(keyword.note)}</div>` : ""}</td>
       <td class="muted">${escapeHtml(keyword.theme_label)}</td>
       <td>${escapeHtml(keyword.stage)}</td>
-      <td class="muted">${escapeHtml(keyword.audience)}</td>
+      ${demandCells(keyword)}
       <td class="num"><span class="bar"><i style="width:${keyword.score}%"></i></span> <span class="muted">${keyword.score}</span></td>
       <td class="muted">${escapeHtml(keyword.page_type)}</td>
-    </tr>`).join("");
-  $("intent-body").innerHTML = rows || `<tr><td colspan="6" class="muted" style="padding:24px">No search intents collected yet.</td></tr>`;
+    </tr>`).join("") || `<tr><td colspan="8" class="muted" style="padding:24px">No search intents collected yet.</td></tr>`;
 }
 
 function renderSignals(snapshot) {
@@ -503,6 +545,11 @@ $("theme-filter").addEventListener("change", (event) => {
 $("sort-filter").addEventListener("change", (event) => {
   state.sort = event.target.value;
   if (state.data && state.data.snapshot) renderTopics(state.data.snapshot);
+});
+
+$("intent-sort").addEventListener("change", (event) => {
+  state.intentSort = event.target.value;
+  if (state.data && state.data.snapshot) renderIntent(state.data.snapshot);
 });
 
 load();

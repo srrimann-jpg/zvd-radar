@@ -18,6 +18,7 @@ from pathlib import Path
 from urllib.parse import parse_qs, urlparse
 
 from radar import competitors as comp_audit
+from radar import demand
 from radar import scan as scan_job
 from radar import store
 
@@ -172,6 +173,7 @@ class Handler(BaseHTTPRequestHandler):
             params = parse_qs(parsed.query)
             day = (params.get("date") or [""])[0]
             snapshot = store.load_date(day) if day else store.load_latest()
+            snapshot = demand.enrich_snapshot(snapshot)
             self._json({
                 "snapshot": snapshot,
                 "state": self._state_payload(),
