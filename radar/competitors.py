@@ -56,7 +56,15 @@ COMPETITORS = [
     {"name": "Allurez", "domain": "allurez.com", "market": "US / Global", "type": "Retailer"},
     {"name": "Lippa's", "domain": "lippas.com", "market": "US", "type": "Retailer"},
     {"name": "Lauren B Jewelry", "domain": "laurenbjewelry.com", "market": "US", "type": "Brand"},
+    {"name": "Silveroni", "domain": "silveroni.com", "market": "Global", "type": "Wholesaler"},
+    {"name": "Grown Diamond Corp", "domain": "growndiamondcorp.com", "market": "USA / India", "type": "Manufacturer"},
+    {"name": "One World Diamonds", "domain": "om-diamonds.com", "market": "India / Global", "type": "Wholesaler"},
     {"name": "77 Diamonds", "domain": "77diamonds.com", "market": "UK / Global", "type": "Retailer"},
+    {"name": "Innovation Diamonds", "domain": "innovationdia.com", "market": "Global", "type": "Manufacturer"},
+    {"name": "Signova", "domain": "signova.com", "market": "Global", "type": "Wholesaler"},
+    {"name": "Sheladiya", "domain": "sheladiyadiamond.com", "market": "India / Global", "type": "Manufacturer"},
+    {"name": "Adornet Jewels", "domain": "adornetjewels.com", "market": "Thailand / Global", "type": "Manufacturer"},
+    {"name": "Indigo Jewellery", "domain": "indigojewellery.com", "market": "India / Global", "type": "Manufacturer"},
 ]
 
 DATA_DIR = Path(__file__).resolve().parent.parent / "data"
