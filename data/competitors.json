@@ -1,7 +1,7 @@
 {
- "generated_at": "2026-11-17T08:20:20+00:00",
+ "generated_at": "2026-11-17T08:50:38+00:00",
  "method": "Public site evidence only: sitemaps, schema, HTML tech hints. No traffic estimates.",
- "count": 23,
+ "count": 24,
  "results": [
   {
    "name": "Rare Carat",
@@ -108,7 +108,7 @@
    "status": "ok",
    "blocked": false,
    "final_url": "https://www.diamondxe.com/",
-   "title": "Online Diamond Jewellery Store | Buy Certified Diamonds &amp; Jewellery \u2013 DiamondXE",
+   "title": "Online Diamond Jewellery Store | Buy Certified Diamonds &amp; Jewellery – DiamondXE",
    "meta_chars": 154,
    "home_kb": 258,
    "schema": [
@@ -190,6 +190,51 @@
     "retention": 0,
     "experience": 3.0,
     "freshness": 5.0,
+    "access": 2.0
+   }
+  },
+  {
+   "name": "Diamorivo",
+   "domain": "diamorivo.com",
+   "market": "India / Global",
+   "type": "Retailer",
+   "status": "ok",
+   "blocked": false,
+   "final_url": "https://diamorivo.com/",
+   "title": "Buy Lab Grown Diamond Jewellery in india : DIAM O RIVO",
+   "meta_chars": 151,
+   "home_kb": 741,
+   "schema": [
+    "EntryPoint",
+    "JewelryStore",
+    "PostalAddress",
+    "SearchAction",
+    "WebSite"
+   ],
+   "tech": [
+    "360 product view",
+    "Cloudflare",
+    "GA4 / GTM",
+    "Meta pixel"
+   ],
+   "sitemap_children": 1,
+   "total_urls": 1746,
+   "content_urls": 40,
+   "product_urls": 1680,
+   "other_urls": 26,
+   "newest_lastmod": "2026-11-17",
+   "updated_90d": 1728,
+   "notes": [],
+   "score": 32,
+   "score_parts": {
+    "content_volume": 11.3,
+    "content_depth": 0.6,
+    "catalogue_scale": 8.4,
+    "schema": 0.0,
+    "social_proof": 0,
+    "retention": 0,
+    "experience": 3.0,
+    "freshness": 7.0,
     "access": 2.0
    }
   },
@@ -395,48 +440,6 @@
    }
   },
   {
-   "name": "DND Diamond",
-   "domain": "dnddiamond.com",
-   "market": "India / Global",
-   "type": "Marketplace",
-   "status": "ok",
-   "blocked": false,
-   "final_url": "https://dnddiamond.com/",
-   "title": "DND Diamonds",
-   "meta_chars": 88,
-   "home_kb": 316,
-   "schema": [],
-   "tech": [
-    "360 product view",
-    "Cloudflare",
-    "Virtual try-on"
-   ],
-   "sitemap_children": 0,
-   "total_urls": 33,
-   "content_urls": 4,
-   "product_urls": 33,
-   "other_urls": 0,
-   "newest_lastmod": "",
-   "updated_90d": 0,
-   "notes": [
-    "Sitemap: HTTP Error 404: Not Found",
-    "No sitemap: structure sampled from homepage links",
-    "Content hubs live at /blog"
-   ],
-   "score": 20,
-   "score_parts": {
-    "content_volume": 4.9,
-    "content_depth": 3.2,
-    "catalogue_scale": 4.0,
-    "schema": 0.0,
-    "social_proof": 0,
-    "retention": 0,
-    "experience": 6.0,
-    "freshness": 0.0,
-    "access": 2.0
-   }
-  },
-  {
    "name": "Allurez",
    "domain": "allurez.com",
    "market": "US / Global",
@@ -482,6 +485,48 @@
     "retention": 6.0,
     "experience": 3.0,
     "freshness": 3.0,
+    "access": 2.0
+   }
+  },
+  {
+   "name": "DND Diamond",
+   "domain": "dnddiamond.com",
+   "market": "India / Global",
+   "type": "Marketplace",
+   "status": "ok",
+   "blocked": false,
+   "final_url": "https://dnddiamond.com/",
+   "title": "DND Diamonds",
+   "meta_chars": 88,
+   "home_kb": 316,
+   "schema": [],
+   "tech": [
+    "360 product view",
+    "Cloudflare",
+    "Virtual try-on"
+   ],
+   "sitemap_children": 0,
+   "total_urls": 33,
+   "content_urls": 4,
+   "product_urls": 33,
+   "other_urls": 0,
+   "newest_lastmod": "",
+   "updated_90d": 0,
+   "notes": [
+    "Sitemap: HTTP Error 404: Not Found",
+    "No sitemap: structure sampled from homepage links",
+    "Content hubs live at /blog"
+   ],
+   "score": 20,
+   "score_parts": {
+    "content_volume": 4.9,
+    "content_depth": 3.2,
+    "catalogue_scale": 4.0,
+    "schema": 0.0,
+    "social_proof": 0,
+    "retention": 0,
+    "experience": 6.0,
+    "freshness": 0.0,
     "access": 2.0
    }
   },
@@ -687,7 +732,8 @@
     "experience": 0,
     "freshness": 0.0,
     "access": 0.0
-   }
+   },
+   "index_snapshot": {}
   },
   {
    "name": "VDB",
@@ -724,6 +770,16 @@
     "experience": 0,
     "freshness": 0.0,
     "access": 0.0
+   },
+   "index_snapshot": {
+    "scale_claims": "30K+ trade professionals, 3M+ items from 1,200+ suppliers",
+    "pricing_marketplace": "$360/yr per user ($306/yr 2-year)",
+    "pricing_integrations": "$500 + $75/mo (Shopify/Woo)",
+    "pricing_inventory": "$50–$100/product/mo by tier",
+    "web_traffic_note": "403 at edge, content indexed via search",
+    "google_play": "4.5★, 238 reviews, 10K+ downloads",
+    "founder_note": "No retailer commission; monetises supplier listing fees, custom builds, marketplace ads",
+    "contact": "NY + Mumbai offices"
    }
   },
   {
@@ -761,7 +817,8 @@
     "experience": 0,
     "freshness": 0.0,
     "access": 0.0
-   }
+   },
+   "index_snapshot": {}
   },
   {
    "name": "Tanishq",
@@ -798,7 +855,8 @@
     "experience": 0,
     "freshness": 0.0,
     "access": 0.0
-   }
+   },
+   "index_snapshot": {}
   },
   {
    "name": "PriceScope",
@@ -835,7 +893,8 @@
     "experience": 0,
     "freshness": 0.0,
     "access": 0.0
-   }
+   },
+   "index_snapshot": {}
   },
   {
    "name": "Ritani",
@@ -872,7 +931,8 @@
     "experience": 0,
     "freshness": 0.0,
     "access": 0.0
-   }
+   },
+   "index_snapshot": {}
   },
   {
    "name": "Whitehouse Brothers",
@@ -909,7 +969,8 @@
     "experience": 0,
     "freshness": 0.0,
     "access": 0.0
-   }
+   },
+   "index_snapshot": {}
   },
   {
    "name": "Lauren B Jewelry",
@@ -946,7 +1007,8 @@
     "experience": 0,
     "freshness": 0.0,
     "access": 0.0
-   }
+   },
+   "index_snapshot": {}
   }
  ]
 }

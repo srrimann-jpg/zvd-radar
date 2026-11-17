@@ -42,6 +42,7 @@ COMPETITORS = [
     {"name": "The Diamond Port", "domain": "thediamondport.com", "market": "Global", "type": "Wholesaler"},
     {"name": "DND Diamond", "domain": "dnddiamond.com", "market": "India / Global", "type": "Marketplace"},
     {"name": "Toshakhana", "domain": "toshakhana.uk", "market": "UK / Global", "type": "Wholesaler"},
+    {"name": "Diamorivo", "domain": "diamorivo.com", "market": "India / Global", "type": "Retailer"},
     {"name": "Brilliance", "domain": "brilliance.com", "market": "US / Global", "type": "Retailer"},
     {"name": "Tanishq", "domain": "tanishq.co.in", "market": "India / Global", "type": "Brand"},
     {"name": "PriceScope", "domain": "pricescope.com", "market": "US / Global", "type": "Community"},
