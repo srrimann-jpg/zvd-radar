@@ -336,6 +336,7 @@ COMPETITORS = [
     "James Allen",
     "Rare Carat",
     "Signet Jewelers",
+    "Toshakhana",
 ]
 
 # Buying-stage vocabulary for autocomplete queries.

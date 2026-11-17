@@ -41,6 +41,7 @@ COMPETITORS = [
     {"name": "DiamondXE", "domain": "diamondxe.com", "market": "India / Global", "type": "Marketplace"},
     {"name": "The Diamond Port", "domain": "thediamondport.com", "market": "Global", "type": "Wholesaler"},
     {"name": "DND Diamond", "domain": "dnddiamond.com", "market": "India / Global", "type": "Marketplace"},
+    {"name": "Toshakhana", "domain": "toshakhana.uk", "market": "UK / Global", "type": "Wholesaler"},
     {"name": "Brilliance", "domain": "brilliance.com", "market": "US / Global", "type": "Retailer"},
     {"name": "Tanishq", "domain": "tanishq.co.in", "market": "India / Global", "type": "Brand"},
     {"name": "PriceScope", "domain": "pricescope.com", "market": "US / Global", "type": "Community"},
@@ -227,10 +228,18 @@ def _homepage_footprint(html, host):
     if not html:
         return None
     bare = host.replace("www.", "")
-    absolute = set(re.findall(r'href=["\'](https?://[^"\']+)["\']', html))
-    relative = set(re.findall(r'href=["\'](/[^"\'#][^"\']*)["\']', html))
-    links = {url for url in absolute if bare in url} | relative
-    links = {url.split("?")[0].rstrip("/") for url in links if len(url) > 1}
+    base = "https://%s/" % host
+    links = set()
+    # Hand-built static sites link bare relative paths ("contact.html"), so every href is
+    # resolved against the root rather than only matching "/..." or absolute URLs.
+    for raw in re.findall(r'href=["\']([^"\']+)["\']', html):
+        raw = raw.strip()
+        if not raw or raw.startswith(("#", "mailto:", "tel:", "javascript:", "data:")):
+            continue
+        resolved = urljoin(base, raw)
+        if not resolved.startswith(("http://", "https://")) or bare not in resolved:
+            continue
+        links.add(resolved.split("?")[0].rstrip("/"))
     content = sum(1 for url in links if CONTENT_RE.search(url))
     product = sum(1 for url in links if PRODUCT_RE.search(url))
     return {"total": len(links), "content": content, "product": product}
@@ -342,6 +351,8 @@ def audit(competitor):
             result["content_urls"] = max(result["content_urls"], len(hubs) * 4)
 
     result.update(_score(result))
+    # Each advertised sitemap can fail with the same error; four identical notes is noise.
+    result["notes"] = list(dict.fromkeys(result["notes"]))
     return result
 
 

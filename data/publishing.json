@@ -1,9 +1,9 @@
 {
- "generated_at": "2026-11-17T07:32:51+00:00",
- "seconds": 155.1,
- "baseline": true,
- "count": 22,
- "reachable": 10,
+ "generated_at": "2026-11-17T08:17:34+00:00",
+ "seconds": 201.7,
+ "baseline": false,
+ "count": 23,
+ "reachable": 14,
  "total_new": 0,
  "domains": [
   {
@@ -12,6 +12,7 @@
    "type": "Retailer",
    "market": "UK / Global",
    "status": "ok",
+   "source": "sitemap",
    "error": null,
    "total_urls": 2230,
    "content_urls": 92,
@@ -35,7 +36,7 @@
      "url": "https://www.77diamonds.com/book-an-appointment",
      "lastmod": "",
      "kind": "other",
-     "title": ""
+     "title": "Book An Appointment"
     },
     {
      "url": "https://www.77diamonds.com/about-77diamonds.html",
@@ -88,6 +89,7 @@
    "type": "Retailer",
    "market": "US / Global",
    "status": "ok",
+   "source": "sitemap",
    "error": null,
    "total_urls": 53,
    "content_urls": 0,
@@ -220,87 +222,12 @@
    ]
   },
   {
-   "name": "DiamondXE",
-   "domain": "diamondxe.com",
-   "type": "Marketplace",
-   "market": "India / Global",
-   "status": "ok",
-   "error": null,
-   "total_urls": 82,
-   "content_urls": 68,
-   "catalogue_urls": 4,
-   "first_run": true,
-   "new_count": 10,
-   "new": [
-    {
-     "url": "https://www.diamondxe.com/offer/promotion-offer",
-     "lastmod": "2026-11-02",
-     "kind": "other",
-     "title": "DiamondXE Diwali Edit"
-    },
-    {
-     "url": "https://www.diamondxe.com/",
-     "lastmod": "2026-06-16",
-     "kind": "other",
-     "title": "Online Diamond Jewellery Store"
-    },
-    {
-     "url": "https://www.diamondxe.com/about",
-     "lastmod": "2026-06-16",
-     "kind": "other",
-     "title": "About DiamondXE | Trusted B2B & B2C Diamond Marketplace"
-    },
-    {
-     "url": "https://www.diamondxe.com/why-us",
-     "lastmod": "2026-06-16",
-     "kind": "other",
-     "title": "Why Choose DiamondXE"
-    },
-    {
-     "url": "https://www.diamondxe.com/contact",
-     "lastmod": "2026-06-16",
-     "kind": "other",
-     "title": "Contact DiamondXE | Online Diamond Jewellery Support"
-    },
-    {
-     "url": "https://www.diamondxe.com/diamond-luxe",
-     "lastmod": "2026-06-16",
-     "kind": "catalogue",
-     "title": "DiamondXE - Your Trusted Source for Quality Diamonds Online"
-    },
-    {
-     "url": "https://www.diamondxe.com/ring",
-     "lastmod": "2026-06-16",
-     "kind": "catalogue",
-     "title": ""
-    },
-    {
-     "url": "https://www.diamondxe.com/earrings",
-     "lastmod": "2026-06-16",
-     "kind": "catalogue",
-     "title": ""
-    },
-    {
-     "url": "https://www.diamondxe.com/pendants",
-     "lastmod": "2026-06-16",
-     "kind": "other",
-     "title": ""
-    },
-    {
-     "url": "https://www.diamondxe.com/bracelets",
-     "lastmod": "2026-06-16",
-     "kind": "other",
-     "title": ""
-    }
-   ],
-   "rss": []
-  },
-  {
    "name": "Lippa's",
    "domain": "lippas.com",
    "type": "Retailer",
    "market": "US",
    "status": "ok",
+   "source": "sitemap",
    "error": null,
    "total_urls": 1508,
    "content_urls": 105,
@@ -423,79 +350,115 @@
    ]
   },
   {
+   "name": "Brilliance",
+   "domain": "brilliance.com",
+   "type": "Retailer",
+   "market": "US / Global",
+   "status": "blocked",
+   "source": "sitemap",
+   "error": "HTTP Error 403: Forbidden",
+   "total_urls": 0,
+   "content_urls": 0,
+   "catalogue_urls": 0,
+   "first_run": true,
+   "new_count": 0,
+   "new": [],
+   "rss": []
+  },
+  {
+   "name": "DND Diamond",
+   "domain": "dnddiamond.com",
+   "type": "Marketplace",
+   "market": "India / Global",
+   "status": "ok",
+   "source": "crawl",
+   "error": null,
+   "total_urls": 85,
+   "content_urls": 2,
+   "catalogue_urls": 53,
+   "first_run": false,
+   "new_count": 0,
+   "new": [],
+   "rss": []
+  },
+  {
+   "name": "DiaTech",
+   "domain": "app.diatech.ai",
+   "type": "Technology",
+   "market": "Global",
+   "status": "ok",
+   "source": "crawl",
+   "error": null,
+   "total_urls": 6,
+   "content_urls": 0,
+   "catalogue_urls": 0,
+   "first_run": false,
+   "new_count": 0,
+   "new": [],
+   "rss": []
+  },
+  {
+   "name": "DiamondXE",
+   "domain": "diamondxe.com",
+   "type": "Marketplace",
+   "market": "India / Global",
+   "status": "ok",
+   "source": "sitemap",
+   "error": null,
+   "total_urls": 82,
+   "content_urls": 68,
+   "catalogue_urls": 4,
+   "first_run": false,
+   "new_count": 0,
+   "new": [],
+   "rss": []
+  },
+  {
+   "name": "IDEX Online",
+   "domain": "idexonline.com",
+   "type": "Marketplace",
+   "market": "Global",
+   "status": "ok",
+   "source": "crawl",
+   "error": null,
+   "total_urls": 116,
+   "content_urls": 31,
+   "catalogue_urls": 11,
+   "first_run": false,
+   "new_count": 0,
+   "new": [],
+   "rss": []
+  },
+  {
+   "name": "Lauren B Jewelry",
+   "domain": "laurenbjewelry.com",
+   "type": "Brand",
+   "market": "US",
+   "status": "blocked",
+   "source": "sitemap",
+   "error": "HTTP Error 403: Forbidden",
+   "total_urls": 0,
+   "content_urls": 0,
+   "catalogue_urls": 0,
+   "first_run": true,
+   "new_count": 0,
+   "new": [],
+   "rss": []
+  },
+  {
    "name": "Nivoda",
    "domain": "nivoda.com",
    "type": "Marketplace",
    "market": "Global",
    "status": "ok",
+   "source": "sitemap",
    "error": null,
    "total_urls": 77,
    "content_urls": 28,
    "catalogue_urls": 6,
-   "first_run": true,
-   "new_count": 10,
-   "new": [
-    {
-     "url": "https://nivoda.com/",
-     "lastmod": "2026-09-24",
-     "kind": "other",
-     "title": "Home - Nivoda"
-    },
-    {
-     "url": "https://nivoda.com/demo",
-     "lastmod": "2026-09-15",
-     "kind": "other",
-     "title": "Schedule a Demo - Nivoda"
-    },
-    {
-     "url": "https://nivoda.com/supply-of-goods-terms-conditions",
-     "lastmod": "2026-09-15",
-     "kind": "other",
-     "title": "Supply of Goods Terms & Conditions"
-    },
-    {
-     "url": "https://nivoda.com/purchase-of-goods-terms-conditions",
-     "lastmod": "2026-09-15",
-     "kind": "other",
-     "title": "Purchase of Goods Terms & Conditions"
-    },
-    {
-     "url": "https://nivoda.com/privacy-policy",
-     "lastmod": "2026-08-28",
-     "kind": "other",
-     "title": ""
-    },
-    {
-     "url": "https://nivoda.com/contact",
-     "lastmod": "2026-06-26",
-     "kind": "other",
-     "title": ""
-    },
-    {
-     "url": "https://nivoda.com/candidate-privacy-policy",
-     "lastmod": "2026-05-21",
-     "kind": "other",
-     "title": ""
-    },
-    {
-     "url": "https://nivoda.com/faq",
-     "lastmod": "2026-05-19",
-     "kind": "content",
-     "title": "FAQs - Nivoda"
-    },
-    {
-     "url": "https://nivoda.com/terms-conditions",
-     "lastmod": "2026-05-13",
-     "kind": "other",
-     "title": ""
-    },
-    {
-     "url": "https://nivoda.com/faq/gia-digital-only-certificates",
-     "lastmod": "2026-03-11",
-     "kind": "content",
-     "title": "GIA Digital Only Certificates"
-    }
-   ],
+   "first_run": false,
+   "new_count": 0,
+   "new": [],
    "rss": [
     {
      "title": "Growing Your Shopify Store Without Complicating SEO",
@@ -550,79 +513,83 @@
    ]
   },
   {
+   "name": "PriceScope",
+   "domain": "pricescope.com",
+   "type": "Community",
+   "market": "US / Global",
+   "status": "blocked",
+   "source": "sitemap",
+   "error": "HTTP Error 403: Forbidden",
+   "total_urls": 0,
+   "content_urls": 0,
+   "catalogue_urls": 0,
+   "first_run": true,
+   "new_count": 0,
+   "new": [],
+   "rss": []
+  },
+  {
+   "name": "Rapaport / RapNet",
+   "domain": "rapaport.com",
+   "type": "Marketplace",
+   "market": "Global",
+   "status": "blocked",
+   "source": "sitemap",
+   "error": "<urlopen error [SSL: TLSV1_ALERT_PROTOCOL_VERSION] tlsv1 alert protocol version ",
+   "total_urls": 0,
+   "content_urls": 0,
+   "catalogue_urls": 0,
+   "first_run": true,
+   "new_count": 0,
+   "new": [],
+   "rss": []
+  },
+  {
    "name": "Rare Carat",
    "domain": "rarecarat.com",
    "type": "Retailer",
    "market": "US",
    "status": "ok",
+   "source": "sitemap",
    "error": null,
    "total_urls": 205,
    "content_urls": 111,
    "catalogue_urls": 82,
+   "first_run": false,
+   "new_count": 0,
+   "new": [],
+   "rss": []
+  },
+  {
+   "name": "Ritani",
+   "domain": "ritani.com",
+   "type": "Retailer",
+   "market": "US",
+   "status": "blocked",
+   "source": "sitemap",
+   "error": "HTTP Error 403: Forbidden",
+   "total_urls": 0,
+   "content_urls": 0,
+   "catalogue_urls": 0,
    "first_run": true,
-   "new_count": 10,
-   "new": [
-    {
-     "url": "https://www.rarecarat.com/learn/katapult-lease-to-own",
-     "lastmod": "2026-08-14",
-     "kind": "content",
-     "title": "Katapult Lease to Own Engagement Rings & Jewelry"
-    },
-    {
-     "url": "https://www.rarecarat.com/education/all-about-rare-carat/does-rare-carat-have-a-warranty",
-     "lastmod": "2022-02-07",
-     "kind": "content",
-     "title": "Does Rare Carat Have a Warranty?"
-    },
-    {
-     "url": "https://www.rarecarat.com/education/diamonds-guide/diamond-fluorescence",
-     "lastmod": "2022-02-07",
-     "kind": "content",
-     "title": "Diamond Fluorescence Buying Guide"
-    },
-    {
-     "url": "https://www.rarecarat.com/jewelry/rings/halo-engagement-ring-guide",
-     "lastmod": "2022-02-07",
-     "kind": "content",
-     "title": "Halo Engagement Ring Guide"
-    },
-    {
-     "url": "https://www.rarecarat.com/jewelry/pendants/what-to-look-for-in-diamond-pendants-rarecarat-com",
-     "lastmod": "2022-02-07",
-     "kind": "catalogue",
-     "title": ""
-    },
-    {
-     "url": "https://www.rarecarat.com/jewelry/rings/princess-cut-engagement-rings-on-rare-carat-rarecarat-com",
-     "lastmod": "2022-02-07",
-     "kind": "catalogue",
-     "title": ""
-    },
-    {
-     "url": "https://www.rarecarat.com/education/inclusions/buy-or-not-diamonds-with-bearded-girdle",
-     "lastmod": "2022-02-07",
-     "kind": "content",
-     "title": "Diamond Inclusions: Bearded Girdle"
-    },
-    {
-     "url": "https://www.rarecarat.com/diamonds/slp/pear-shaped-diamonds",
-     "lastmod": "2022-02-07",
-     "kind": "catalogue",
-     "title": ""
-    },
-    {
-     "url": "https://www.rarecarat.com/mission",
-     "lastmod": "2022-02-07",
-     "kind": "other",
-     "title": ""
-    },
-    {
-     "url": "https://www.rarecarat.com/education/inclusions/diamond-feather-inclusions",
-     "lastmod": "2022-02-07",
-     "kind": "content",
-     "title": "Diamond Inclusions: Feather"
-    }
-   ],
+   "new_count": 0,
+   "new": [],
+   "rss": []
+  },
+  {
+   "name": "Shane Co.",
+   "domain": "shaneco.com",
+   "type": "Retailer",
+   "market": "US",
+   "status": "blocked",
+   "source": "sitemap",
+   "error": "The read operation timed out",
+   "total_urls": 0,
+   "content_urls": 0,
+   "catalogue_urls": 0,
+   "first_run": true,
+   "new_count": 0,
+   "new": [],
    "rss": []
   },
   {
@@ -631,74 +598,14 @@
    "type": "Marketplace",
    "market": "US / Global",
    "status": "ok",
+   "source": "sitemap",
    "error": null,
    "total_urls": 63,
    "content_urls": 0,
    "catalogue_urls": 55,
-   "first_run": true,
-   "new_count": 10,
-   "new": [
-    {
-     "url": "https://www.stonealgo.com/diamond-comparison/",
-     "lastmod": "2024-12-09",
-     "kind": "catalogue",
-     "title": "Diamond Comparison | StoneAlgo"
-    },
-    {
-     "url": "https://www.stonealgo.com/diamond-details/subscribe/",
-     "lastmod": "2024-12-09",
-     "kind": "catalogue",
-     "title": "Subscribe to StoneAlgo Pro"
-    },
-    {
-     "url": "https://www.stonealgo.com/custom/engagement-rings/",
-     "lastmod": "2024-09-02",
-     "kind": "catalogue",
-     "title": "Custom Engagement Rings"
-    },
-    {
-     "url": "https://www.stonealgo.com/custom/engagement-rings/custom-ring-builder/",
-     "lastmod": "2024-09-02",
-     "kind": "catalogue",
-     "title": "3D Custom Ring Designer"
-    },
-    {
-     "url": "https://www.stonealgo.com/diamonds/",
-     "lastmod": "2024-06-06",
-     "kind": "catalogue",
-     "title": "Search Diamonds by Shape"
-    },
-    {
-     "url": "https://www.stonealgo.com/diamonds/round-cut-diamonds/",
-     "lastmod": "2024-06-06",
-     "kind": "catalogue",
-     "title": "StoneAlgo Round Diamond Collection"
-    },
-    {
-     "url": "https://www.stonealgo.com/diamonds/cushion-cut-diamonds/",
-     "lastmod": "2024-06-06",
-     "kind": "catalogue",
-     "title": ""
-    },
-    {
-     "url": "https://www.stonealgo.com/diamonds/oval-cut-diamonds/",
-     "lastmod": "2024-06-06",
-     "kind": "catalogue",
-     "title": ""
-    },
-    {
-     "url": "https://www.stonealgo.com/diamonds/emerald-cut-diamonds/",
-     "lastmod": "2024-06-06",
-     "kind": "catalogue",
-     "title": ""
-    },
-    {
-     "url": "https://www.stonealgo.com/diamonds/princess-cut-diamonds/",
-     "lastmod": "2024-06-06",
-     "kind": "catalogue",
-     "title": ""
-    }
-   ],
+   "first_run": false,
+   "new_count": 0,
+   "new": [],
    "rss": [
     {
      "title": "SI2 Clarity Diamonds: How to Find an Eye Clean SI2",
@@ -763,79 +670,35 @@
    ]
   },
   {
+   "name": "Tanishq",
+   "domain": "tanishq.co.in",
+   "type": "Brand",
+   "market": "India / Global",
+   "status": "blocked",
+   "source": "sitemap",
+   "error": "HTTP Error 403: Forbidden",
+   "total_urls": 0,
+   "content_urls": 0,
+   "catalogue_urls": 0,
+   "first_run": true,
+   "new_count": 0,
+   "new": [],
+   "rss": []
+  },
+  {
    "name": "The Diamond Port",
    "domain": "thediamondport.com",
    "type": "Wholesaler",
    "market": "Global",
    "status": "ok",
+   "source": "sitemap",
    "error": null,
    "total_urls": 11,
    "content_urls": 0,
    "catalogue_urls": 4,
-   "first_run": true,
-   "new_count": 10,
-   "new": [
-    {
-     "url": "https://www.thediamondport.com/",
-     "lastmod": "",
-     "kind": "other",
-     "title": "The Diamond Port - Online Diamond Marketplace"
-    },
-    {
-     "url": "https://www.thediamondport.com/about",
-     "lastmod": "",
-     "kind": "other",
-     "title": "Thediamondport | Best place to get a diamonds"
-    },
-    {
-     "url": "https://www.thediamondport.com/buyer",
-     "lastmod": "",
-     "kind": "other",
-     "title": "buy diamonds online"
-    },
-    {
-     "url": "https://www.thediamondport.com/suppliers",
-     "lastmod": "",
-     "kind": "other",
-     "title": "Sell Diamonds Online"
-    },
-    {
-     "url": "https://www.thediamondport.com/contact",
-     "lastmod": "",
-     "kind": "other",
-     "title": "Contact Us -Thediamondport online diamonds trading platform"
-    },
-    {
-     "url": "https://www.thediamondport.com/login",
-     "lastmod": "",
-     "kind": "other",
-     "title": "Free Marketplace Account Login"
-    },
-    {
-     "url": "https://www.thediamondport.com/register",
-     "lastmod": "",
-     "kind": "other",
-     "title": ""
-    },
-    {
-     "url": "https://www.thediamondport.com/australian-jewellery-fair",
-     "lastmod": "",
-     "kind": "catalogue",
-     "title": ""
-    },
-    {
-     "url": "https://www.thediamondport.com/singapore-jewellery-fair",
-     "lastmod": "",
-     "kind": "catalogue",
-     "title": ""
-    },
-    {
-     "url": "https://thediamondport.com/jewelers-international-showcase-jis-miami",
-     "lastmod": "",
-     "kind": "catalogue",
-     "title": ""
-    }
-   ],
+   "first_run": false,
+   "new_count": 0,
+   "new": [],
    "rss": [
     {
      "title": "Why Online Marketplaces are the Future of B2B Diamond Trading",
@@ -890,303 +753,33 @@
    ]
   },
   {
+   "name": "Toshakhana",
+   "domain": "toshakhana.uk",
+   "type": "Wholesaler",
+   "market": "UK / Global",
+   "status": "ok",
+   "source": "crawl",
+   "error": null,
+   "total_urls": 19,
+   "content_urls": 1,
+   "catalogue_urls": 2,
+   "first_run": false,
+   "new_count": 0,
+   "new": [],
+   "rss": []
+  },
+  {
    "name": "UNI Diamonds",
    "domain": "uni.diamonds",
    "type": "Wholesaler",
    "market": "Global",
    "status": "ok",
+   "source": "sitemap",
    "error": null,
    "total_urls": 65,
    "content_urls": 3,
    "catalogue_urls": 20,
-   "first_run": true,
-   "new_count": 10,
-   "new": [
-    {
-     "url": "https://www.uni.diamonds/blog",
-     "lastmod": "2026-11-16",
-     "kind": "content",
-     "title": "UNI | Diamond Industry News, Insights & Market Trends"
-    },
-    {
-     "url": "https://www.uni.diamonds/company-policies",
-     "lastmod": "2026-11-16",
-     "kind": "other",
-     "title": "UNI Diamonds - Company Policies"
-    },
-    {
-     "url": "https://www.uni.diamonds/privacy",
-     "lastmod": "2026-11-16",
-     "kind": "other",
-     "title": "UNI Diamonds - Privacy Policy"
-    },
-    {
-     "url": "https://www.uni.diamonds/terms",
-     "lastmod": "2026-11-16",
-     "kind": "other",
-     "title": "UNI Diamonds - Terms of Use"
-    },
-    {
-     "url": "https://www.uni.diamonds/israel-show",
-     "lastmod": "2026-11-16",
-     "kind": "other",
-     "title": "UNI Diamonds - Israel Show"
-    },
-    {
-     "url": "https://www.uni.diamonds/diamond-search",
-     "lastmod": "2026-11-16",
-     "kind": "catalogue",
-     "title": "UNI Diamonds - Search for Diamonds"
-    },
-    {
-     "url": "https://www.uni.diamonds/jhj",
-     "lastmod": "2026-11-16",
-     "kind": "other",
-     "title": ""
-    },
-    {
-     "url": "https://www.uni.diamonds/why-choose-uni-diamonds",
-     "lastmod": "2026-11-16",
-     "kind": "catalogue",
-     "title": ""
-    },
-    {
-     "url": "https://www.uni.diamonds/natural-vs-lab-grown-diamonds-2027",
-     "lastmod": "2026-11-15",
-     "kind": "catalogue",
-     "title": ""
-    },
-    {
-     "url": "https://www.uni.diamonds/how-jewelry-stores-compete-with-online-retailers",
-     "lastmod": "2026-11-12",
-     "kind": "catalogue",
-     "title": ""
-    }
-   ],
-   "rss": []
-  },
-  {
-   "name": "Washington Diamond",
-   "domain": "washingtondiamond.com",
-   "type": "Retailer",
-   "market": "US",
-   "status": "ok",
-   "error": null,
-   "total_urls": 3000,
-   "content_urls": 0,
-   "catalogue_urls": 2998,
-   "first_run": true,
-   "new_count": 10,
-   "new": [
-    {
-     "url": "https://washingtondiamond.com/products/morganite-and-diamond-halo-ring-in-18k-rose-gold-050475",
-     "lastmod": "2026-11-17",
-     "kind": "catalogue",
-     "title": "Morganite Halo Ring in 18KR"
-    },
-    {
-     "url": "https://washingtondiamond.com/products/sapphire-and-diamond-ring-18k-white-gold-050480",
-     "lastmod": "2026-11-17",
-     "kind": "catalogue",
-     "title": "Clover Sapphire & Diamond 18KW Ring"
-    },
-    {
-     "url": "https://washingtondiamond.com/products/petite-vintage-inspired-sapphire-and-diamond-ring-in-18k-white-gold-050482",
-     "lastmod": "2026-11-17",
-     "kind": "catalogue",
-     "title": "18KW Sapphire & Ring"
-    },
-    {
-     "url": "https://washingtondiamond.com/products/gorgeous-pink-sapphire-and-diamond-halo-ring-050502",
-     "lastmod": "2026-11-17",
-     "kind": "catalogue",
-     "title": "Pink Sapphire & Halo Ring"
-    },
-    {
-     "url": "https://washingtondiamond.com/products/stunning-sapphire-and-diamond-halo-ring-050506",
-     "lastmod": "2026-11-17",
-     "kind": "catalogue",
-     "title": "Stunning Sapphire Halo Ring"
-    },
-    {
-     "url": "https://washingtondiamond.com/products/sapphire-and-tsavorite-ring-050524",
-     "lastmod": "2026-11-17",
-     "kind": "catalogue",
-     "title": "Sapphire and Tsavorite Ring"
-    },
-    {
-     "url": "https://washingtondiamond.com/products/14k-rose-gold-round-aqua-diamonds-ring-050536",
-     "lastmod": "2026-11-17",
-     "kind": "catalogue",
-     "title": ""
-    },
-    {
-     "url": "https://washingtondiamond.com/products/18k-white-gold-oval-sapphire-diamonds-wedding-band-050539",
-     "lastmod": "2026-11-17",
-     "kind": "catalogue",
-     "title": ""
-    },
-    {
-     "url": "https://washingtondiamond.com/products/18kwg-sapphires-31-16-dias-54-48-band-050557",
-     "lastmod": "2026-11-17",
-     "kind": "catalogue",
-     "title": ""
-    },
-    {
-     "url": "https://washingtondiamond.com/products/alternating-0-30-carat-sapphire-0-29-carat-diamond-18k-white-gold-channel-set-band-050574",
-     "lastmod": "2026-11-17",
-     "kind": "catalogue",
-     "title": ""
-    }
-   ],
-   "rss": []
-  },
-  {
-   "name": "Brilliance",
-   "domain": "brilliance.com",
-   "type": "Retailer",
-   "market": "US / Global",
-   "status": "blocked",
-   "error": "HTTP Error 403: Forbidden",
-   "total_urls": 0,
-   "content_urls": 0,
-   "catalogue_urls": 0,
-   "first_run": true,
-   "new_count": 0,
-   "new": [],
-   "rss": []
-  },
-  {
-   "name": "DND Diamond",
-   "domain": "dnddiamond.com",
-   "type": "Marketplace",
-   "market": "India / Global",
-   "status": "blocked",
-   "error": "HTTP Error 404: Not Found",
-   "total_urls": 0,
-   "content_urls": 0,
-   "catalogue_urls": 0,
-   "first_run": true,
-   "new_count": 0,
-   "new": [],
-   "rss": []
-  },
-  {
-   "name": "DiaTech",
-   "domain": "app.diatech.ai",
-   "type": "Technology",
-   "market": "Global",
-   "status": "blocked",
-   "error": "HTTP Error 404: Not Found",
-   "total_urls": 0,
-   "content_urls": 0,
-   "catalogue_urls": 0,
-   "first_run": true,
-   "new_count": 0,
-   "new": [],
-   "rss": []
-  },
-  {
-   "name": "IDEX Online",
-   "domain": "idexonline.com",
-   "type": "Marketplace",
-   "market": "Global",
-   "status": "blocked",
-   "error": "HTTP Error 404: Not Found",
-   "total_urls": 0,
-   "content_urls": 0,
-   "catalogue_urls": 0,
-   "first_run": true,
-   "new_count": 0,
-   "new": [],
-   "rss": []
-  },
-  {
-   "name": "Lauren B Jewelry",
-   "domain": "laurenbjewelry.com",
-   "type": "Brand",
-   "market": "US",
-   "status": "blocked",
-   "error": "HTTP Error 403: Forbidden",
-   "total_urls": 0,
-   "content_urls": 0,
-   "catalogue_urls": 0,
-   "first_run": true,
-   "new_count": 0,
-   "new": [],
-   "rss": []
-  },
-  {
-   "name": "PriceScope",
-   "domain": "pricescope.com",
-   "type": "Community",
-   "market": "US / Global",
-   "status": "blocked",
-   "error": "HTTP Error 403: Forbidden",
-   "total_urls": 0,
-   "content_urls": 0,
-   "catalogue_urls": 0,
-   "first_run": true,
-   "new_count": 0,
-   "new": [],
-   "rss": []
-  },
-  {
-   "name": "Rapaport / RapNet",
-   "domain": "rapaport.com",
-   "type": "Marketplace",
-   "market": "Global",
-   "status": "blocked",
-   "error": "<urlopen error [SSL: TLSV1_ALERT_PROTOCOL_VERSION] tlsv1 alert protocol version ",
-   "total_urls": 0,
-   "content_urls": 0,
-   "catalogue_urls": 0,
-   "first_run": true,
-   "new_count": 0,
-   "new": [],
-   "rss": []
-  },
-  {
-   "name": "Ritani",
-   "domain": "ritani.com",
-   "type": "Retailer",
-   "market": "US",
-   "status": "blocked",
-   "error": "HTTP Error 403: Forbidden",
-   "total_urls": 0,
-   "content_urls": 0,
-   "catalogue_urls": 0,
-   "first_run": true,
-   "new_count": 0,
-   "new": [],
-   "rss": []
-  },
-  {
-   "name": "Shane Co.",
-   "domain": "shaneco.com",
-   "type": "Retailer",
-   "market": "US",
-   "status": "blocked",
-   "error": "The read operation timed out",
-   "total_urls": 0,
-   "content_urls": 0,
-   "catalogue_urls": 0,
-   "first_run": true,
-   "new_count": 0,
-   "new": [],
-   "rss": []
-  },
-  {
-   "name": "Tanishq",
-   "domain": "tanishq.co.in",
-   "type": "Brand",
-   "market": "India / Global",
-   "status": "blocked",
-   "error": "HTTP Error 403: Forbidden",
-   "total_urls": 0,
-   "content_urls": 0,
-   "catalogue_urls": 0,
-   "first_run": true,
+   "first_run": false,
    "new_count": 0,
    "new": [],
    "rss": []
@@ -1197,6 +790,7 @@
    "type": "Marketplace",
    "market": "US / Global",
    "status": "blocked",
+   "source": "sitemap",
    "error": "HTTP Error 403: Forbidden",
    "total_urls": 0,
    "content_urls": 0,
@@ -1207,11 +801,28 @@
    "rss": []
   },
   {
+   "name": "Washington Diamond",
+   "domain": "washingtondiamond.com",
+   "type": "Retailer",
+   "market": "US",
+   "status": "ok",
+   "source": "sitemap",
+   "error": null,
+   "total_urls": 3000,
+   "content_urls": 0,
+   "catalogue_urls": 2998,
+   "first_run": false,
+   "new_count": 0,
+   "new": [],
+   "rss": []
+  },
+  {
    "name": "Whitehouse Brothers",
    "domain": "whitehousebrothers.com",
    "type": "Brand",
    "market": "US",
    "status": "blocked",
+   "source": "sitemap",
    "error": "HTTP Error 403: Forbidden",
    "total_urls": 0,
    "content_urls": 0,
@@ -1369,6 +980,132 @@
    "https://www.uni.diamonds/vicenzaoro-sep26",
    "https://www.uni.diamonds/london-jewellery-show"
   ],
+  "idexonline.com": [
+   "https://idexonline.com",
+   "https://idexonline.com/ns24/auth/login.aspx?rdr=%2f",
+   "https://idexonline.com/NS24/Auth/NewRegistration.aspx",
+   "https://idexonline.com/ns24/diamonds/search.aspx",
+   "https://idexonline.com/update_SuppDemand",
+   "https://idexonline.com/ns24/Onsite/Hub.aspx",
+   "https://idexonline.com/diamond_prices_realtime",
+   "https://idexonline.com/diamond_prices_index",
+   "https://idexonline.com/diamond_prices_report",
+   "https://idexonline.com/newsroom",
+   "https://idexonline.com/IOR",
+   "https://idexonline.com/Memo",
+   "https://idexonline.com/Search_News",
+   "https://idexonline.com/rssfeeds",
+   "https://idexonline.com/Bids_Ascs-Bids",
+   "https://idexonline.com/ns24/Transactions/Purchases.aspx",
+   "https://idexonline.com/ns24/Transactions/Sales.aspx",
+   "https://idexonline.com/My_Account-Company_Info",
+   "https://idexonline.com/My_Account-Branches_Info",
+   "https://idexonline.com/My_Account-Personal_Info",
+   "https://idexonline.com/ns24/Auth/Logout.aspx",
+   "https://idexonline.com/GDT",
+   "https://idexonline.com/diamond_prices_lp",
+   "https://idexonline.com/ns24/auth/RedirectLoggedIn.aspx?rdr=/diamond_prices_realtime",
+   "https://idexonline.com/register",
+   "https://idexonline.com/ns24/news/NewsLetterSubscribe.aspx",
+   "https://idexonline.com/IOR?id=51484",
+   "https://idexonline.com/FullArticle?Id=51516",
+   "https://idexonline.com/Memo?id=51509",
+   "https://idexonline.com/FullArticle?Id=51514",
+   "https://idexonline.com/BoxxStars",
+   "https://idexonline.com/OurServices",
+   "https://idexonline.com/AboutUs",
+   "https://idexonline.com/Privacy",
+   "https://idexonline.com/Conditions",
+   "https://idexonline.com/ns24/Advertise/MediaKit.aspx",
+   "https://idexonline.com/IndustryLinks",
+   "https://idexonline.com/ContactUs",
+   "https://idexonline.com/ns24/auth/login.aspx",
+   "https://idexonline.com/ns24/auth/ForgotPassword.aspx",
+   "http://www.idexonline.com/OurServices.aspx",
+   "https://idexonline.com/register.aspx",
+   "https://idexonline.com/Portal_MyAccount.aspx",
+   "https://idexonline.com/ns24/auth/login.aspx?rdr=/ns24/Onsite/Hub.aspx",
+   "https://idexonline.com/ns24/Onsite/Home.aspx",
+   "https://idexonline.com/ns24/News/RssFeeds.aspx",
+   "https://idexonline.com/ns24/CompanyInfo/CompanyInfo.aspx",
+   "https://idexonline.com/ns24/CompanyInfo/BranchesInfo.aspx",
+   "https://idexonline.com/ns24/CompanyInfo/PersonalInfo.aspx",
+   "https://idexonline.com/diamond_prices_Drb",
+   "https://idexonline.com/>",
+   "https://idexonline.com/section-page.html",
+   "https://idexonline.com/FullArticle?Id=51513",
+   "https://idexonline.com/FullArticle?Id=51512",
+   "https://idexonline.com/FullArticle?Id=51511",
+   "https://idexonline.com/FullArticle?Id=51510",
+   "https://idexonline.com/FullArticle?Id=51507",
+   "https://idexonline.com/FullArticle?Id=51506",
+   "https://idexonline.com/FullArticle?Id=51505",
+   "https://idexonline.com/FullArticle?Id=51504",
+   "https://idexonline.com/FullArticle?Id=51503",
+   "https://idexonline.com/FullArticle?Id=51502",
+   "https://idexonline.com/FullArticle?Id=51500",
+   "https://idexonline.com/FullArticle?Id=51501",
+   "https://idexonline.com/FullArticle?Id=51499",
+   "https://idexonline.com/FullArticle?Id=51498",
+   "https://idexonline.com/FullArticle?Id=51497",
+   "https://idexonline.com/FullArticle?Id=51496",
+   "https://idexonline.com/price-report.html",
+   "https://idexonline.com/most-read.html",
+   "https://idexonline.com/editors-pick.html",
+   "https://idexonline.com/NS24/Landing/BuyNowPayLater.aspx",
+   "https://idexonline.com/RequestFinancing-LP",
+   "https://idexonline.com/OurServices-Price_Data",
+   "http://www.idexonline.com/AboutUs",
+   "http://www.idexonline.com",
+   "http://www.idexonline.com/ns24/auth/login.aspx",
+   "http://www.idexonline.com/register.aspx",
+   "http://www.idexonline.com/ns24/diamonds/search.aspx",
+   "http://www.idexonline.com/update_SuppDemand",
+   "http://www.idexonline.com/ns24/Onsite/Hub.aspx",
+   "http://www.idexonline.com/diamond_prices_realtime",
+   "http://www.idexonline.com/diamond_prices_index",
+   "http://www.idexonline.com/diamond_prices_report",
+   "http://www.idexonline.com/newsroom",
+   "http://www.idexonline.com/IOR",
+   "http://www.idexonline.com/Memo",
+   "http://www.idexonline.com/Search_News",
+   "http://www.idexonline.com/rssfeeds",
+   "http://www.idexonline.com/Bids_Ascs-Bids",
+   "http://www.idexonline.com/ns24/Transactions/Purchases.aspx",
+   "http://www.idexonline.com/ns24/Transactions/Sales.aspx",
+   "http://www.idexonline.com/Portal_MyAccount.aspx",
+   "http://www.idexonline.com/My_Account-Company_Info",
+   "http://www.idexonline.com/My_Account-Branches_Info",
+   "http://www.idexonline.com/My_Account-Personal_Info",
+   "http://www.idexonline.com/ns24/Auth/Logout.aspx",
+   "http://www.idexonline.com/NS24/Landing/BuyNowPayLater.aspx",
+   "http://www.idexonline.com/RequestFinancing-LP",
+   "http://www.idexonline.com/OurServices-Price_Data",
+   "http://www.idexonline.com/OurServices",
+   "http://www.idexonline.com/Privacy",
+   "http://www.idexonline.com/Conditions",
+   "http://www.idexonline.com/ns24/Advertise/MediaKit.aspx",
+   "http://www.idexonline.com/IndustryLinks",
+   "http://www.idexonline.com/ContactUs",
+   "https://idexonline.com/Sign_In.aspx",
+   "https://idexonline.com/diamond_prices_drb_meth",
+   "https://idexonline.com/FullArticle?Id=51292",
+   "https://idexonline.com/FullArticle?Id=51458",
+   "https://idexonline.com/FullArticle?Id=50054",
+   "https://idexonline.com/FullArticle?Id=50270",
+   "https://idexonline.com/FullArticle?Id=51151",
+   "https://idexonline.com/FullArticle?Id=50546",
+   "https://idexonline.com/FullArticle?Id=51470",
+   "https://idexonline.com/ns24/auth/login.aspx?rdr=%2fNS24%2fLanding%2fBuyNowPayLater.aspx"
+  ],
+  "app.diatech.ai": [
+   "https://app.diatech.ai",
+   "https://app.diatech.ai/api/logo",
+   "https://app.diatech.ai/auth/register?next=",
+   "https://app.diatech.ai/auth/forgot?next=",
+   "https://app.diatech.ai/auth/linkedin?next=",
+   "https://app.diatech.ai/auth/login?next="
+  ],
   "diamondxe.com": [
    "https://www.diamondxe.com/",
    "https://www.diamondxe.com/about",
@@ -1465,6 +1202,114 @@
    "https://www.thediamondport.com/singapore-jewellery-fair",
    "https://thediamondport.com/jewelers-international-showcase-jis-miami",
    "https://thediamondport.com/atlanta-jewelry-show"
+  ],
+  "dnddiamond.com": [
+   "https://dnddiamond.com",
+   "https://dnddiamond.com/page/contact_us",
+   "https://dnddiamond.com/diamond?type=lab",
+   "https://dnddiamond.com/loose-diamond-detail?type=lab",
+   "https://dnddiamond.com/diamond?type=natural",
+   "https://dnddiamond.com/demand",
+   "https://dnddiamond.com/diamond",
+   "https://dnddiamond.com/price-calculator",
+   "https://dnddiamond.com/product-category",
+   "https://dnddiamond.com/add-demand",
+   "https://dnddiamond.com/add-demand?type=custom",
+   "https://dnddiamond.com/product-category/jewelry-rings",
+   "https://dnddiamond.com/product-category/jewelry-pendant",
+   "https://dnddiamond.com/product-category/jewelry-bracelets",
+   "https://dnddiamond.com/product-category/jewelry-earrings",
+   "https://dnddiamond.com/register?role=supplier",
+   "https://dnddiamond.com/register",
+   "https://dnddiamond.com/jewellery-coming-soon",
+   "https://dnddiamond.com/page/about",
+   "https://dnddiamond.com/page/why_us",
+   "https://dnddiamond.com/blog",
+   "https://dnddiamond.com/page/faqs",
+   "https://dnddiamond.com/page/term_condition",
+   "https://dnddiamond.com/page/privacy_policy",
+   "https://dnddiamond.com/page/store",
+   "https://dnddiamond.com/page/term-condition",
+   "https://dnddiamond.com/add-demand?type=parcel",
+   "https://dnddiamond.com/search/diamond_search?type=lab",
+   "https://dnddiamond.com/looseDiamond?type=lab",
+   "https://dnddiamond.com/search/diamond_search?type=natural",
+   "https://dnddiamond.com/shop?category=rings",
+   "https://dnddiamond.com/shop?category=earrings",
+   "https://dnddiamond.com/shop?category=necklaces",
+   "https://dnddiamond.com/shop?category=pendants",
+   "https://dnddiamond.com/shop?category=bracelets",
+   "https://dnddiamond.com/shop?category=brooch",
+   "https://dnddiamond.com/shop?category=gemstone-rings",
+   "https://dnddiamond.com/shop?category=mens",
+   "https://dnddiamond.com/my-account?mode=register&role=supplier",
+   "https://dnddiamond.com/my-account?mode=register",
+   "https://dnddiamond.com/my-account?panel=wishlist",
+   "https://dnddiamond.com/my-account?panel=cart",
+   "https://dnddiamond.com/my-account",
+   "https://dnddiamond.com/shop",
+   "https://dnddiamond.com/loginWithGoogle",
+   "https://dnddiamond.com/product-category/jewelry-rings?cur=CN",
+   "https://dnddiamond.com/product-category/jewelry-rings?cur=EU",
+   "https://dnddiamond.com/product-category/jewelry-rings?cur=IN",
+   "https://dnddiamond.com/product-category/jewelry-rings?cur=JP",
+   "https://dnddiamond.com/product-category/jewelry-rings?cur=SG",
+   "https://dnddiamond.com/product-category/jewelry-rings?cur=TW",
+   "https://dnddiamond.com/product-category/jewelry-rings?cur=GB",
+   "https://dnddiamond.com/product-category/jewelry-rings?cur=US",
+   "https://dnddiamond.com/product-category/jewelry-rings?cur=AU",
+   "https://dnddiamond.com/product-category/jewelry-rings?cur=CA",
+   "https://dnddiamond.com/product-category/jewelry-pendant?cur=CN",
+   "https://dnddiamond.com/product-category/jewelry-pendant?cur=EU",
+   "https://dnddiamond.com/product-category/jewelry-pendant?cur=IN",
+   "https://dnddiamond.com/product-category/jewelry-pendant?cur=JP",
+   "https://dnddiamond.com/product-category/jewelry-pendant?cur=SG",
+   "https://dnddiamond.com/product-category/jewelry-pendant?cur=TW",
+   "https://dnddiamond.com/product-category/jewelry-pendant?cur=GB",
+   "https://dnddiamond.com/product-category/jewelry-pendant?cur=US",
+   "https://dnddiamond.com/product-category/jewelry-pendant?cur=AU",
+   "https://dnddiamond.com/product-category/jewelry-pendant?cur=CA",
+   "https://dnddiamond.com/product-category/jewelry-bracelets?cur=CN",
+   "https://dnddiamond.com/product-category/jewelry-bracelets?cur=EU",
+   "https://dnddiamond.com/product-category/jewelry-bracelets?cur=IN",
+   "https://dnddiamond.com/product-category/jewelry-bracelets?cur=JP",
+   "https://dnddiamond.com/product-category/jewelry-bracelets?cur=SG",
+   "https://dnddiamond.com/product-category/jewelry-bracelets?cur=TW",
+   "https://dnddiamond.com/product-category/jewelry-bracelets?cur=GB",
+   "https://dnddiamond.com/product-category/jewelry-bracelets?cur=US",
+   "https://dnddiamond.com/product-category/jewelry-bracelets?cur=AU",
+   "https://dnddiamond.com/product-category/jewelry-bracelets?cur=CA",
+   "https://dnddiamond.com/product-category/jewelry-earrings?cur=CN",
+   "https://dnddiamond.com/product-category/jewelry-earrings?cur=EU",
+   "https://dnddiamond.com/product-category/jewelry-earrings?cur=IN",
+   "https://dnddiamond.com/product-category/jewelry-earrings?cur=JP",
+   "https://dnddiamond.com/product-category/jewelry-earrings?cur=SG",
+   "https://dnddiamond.com/product-category/jewelry-earrings?cur=TW",
+   "https://dnddiamond.com/product-category/jewelry-earrings?cur=GB",
+   "https://dnddiamond.com/product-category/jewelry-earrings?cur=US",
+   "https://dnddiamond.com/product-category/jewelry-earrings?cur=AU",
+   "https://dnddiamond.com/product-category/jewelry-earrings?cur=CA"
+  ],
+  "toshakhana.uk": [
+   "https://toshakhana.uk",
+   "https://toshakhana.uk/index.html",
+   "https://toshakhana.uk/contact.html",
+   "https://toshakhana.uk/loose-stones.html",
+   "https://toshakhana.uk/manufacturing.html",
+   "https://toshakhana.uk/private-label.html",
+   "https://toshakhana.uk/materials.html",
+   "https://toshakhana.uk/metal-trade.html",
+   "https://toshakhana.uk/how-we-work.html",
+   "https://toshakhana.uk/about.html",
+   "https://toshakhana.uk/FAQ.html",
+   "https://toshakhana.uk/terms.html",
+   "https://toshakhana.uk/privacy.html",
+   "https://toshakhana.uk/compliance.html",
+   "https://toshakhana.uk/cookies.html",
+   "https://toshakhana.uk/thank-you.html",
+   "https://toshakhana.uk/aml.html",
+   "https://toshakhana.uk/conflict-free.html",
+   "https://toshakhana.uk/modern-slavery.html"
   ],
   "rarecarat.com": [
    "https://www.rarecarat.com/learn/katapult-lease-to-own",

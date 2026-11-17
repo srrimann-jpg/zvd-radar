@@ -5,6 +5,8 @@ Two keyless signals, both verified to work before this module was written:
   sitemap diff   we already download each competitor's sitemap with <lastmod> dates.
                  Keep the URL set per domain, diff it each run, and the new entries are
                  literally the pages they published since last time.
+  link crawl     sites with no sitemap at all are walked from their navigation instead,
+                 so a hand-built static site is tracked rather than called unreachable.
   RSS            only 5 of the 22 domains expose a working feed (nivoda, thediamondport,
                  stonealgo, allurez, lippas), so feeds are a bonus, not the backbone.
 
@@ -40,7 +42,9 @@ STORE_NAME = "publishing.json"
 URL_BUDGET = 3000
 TITLE_LIMIT = 6
 WORKERS = 8
-DEADLINE_SECONDS = 220
+DEADLINE_SECONDS = 420
+CRAWL_BUDGET = 400
+CRAWL_FETCH_LIMIT = 60
 
 # Verified working, path discovered by probing /feed, /rss, /feed.xml, /blog/feed.
 FEEDS = {
@@ -52,6 +56,9 @@ FEEDS = {
 }
 
 TITLE_RE = re.compile(r"<title[^>]*>(.*?)</title>", re.S | re.I)
+LINK_RE = re.compile(r'href=["\']([^"\'#]+)["\']', re.I)
+NON_PAGE_RE = re.compile(
+    r"\.(png|jpe?g|gif|svg|webp|ico|css|js|pdf|zip|gz|mp4|webm|woff2?|ttf|xml|txt)(\?|$)", re.I)
 
 
 def _clean(text, limit=160):
@@ -101,6 +108,80 @@ def sitemap_pairs(domain, deadline=None):
             return pairs[:URL_BUDGET], None
         last = "no urls in sitemap"
     return [], last
+
+
+def _host(url):
+    return re.sub(r"^www\.", "", (urllib.parse.urlparse(url).netloc or "").lower())
+
+
+def _links(html, base):
+    out = []
+    for raw in LINK_RE.findall(html or ""):
+        raw = raw.strip()
+        if not raw or raw.startswith(("#", "mailto:", "tel:", "javascript:", "data:")):
+            continue
+        absolute = urllib.parse.urljoin(base, raw)
+        if not absolute.startswith(("http://", "https://")):
+            continue
+        out.append(absolute.split("#")[0])
+    return out
+
+
+def _child_links(url):
+    try:
+        _, final, html = _fetch(url, limit=400_000, timeout=8)
+    except Exception:  # noqa: BLE001
+        return []
+    return _links(html, final or url)
+
+
+def crawl_pages(domain, deadline=None, budget=CRAWL_BUDGET):
+    """Fallback for sites that publish no sitemap: walk internal links from the homepage.
+
+    Some trade suppliers ship a hand-built static site with no sitemap and no feed
+    (toshakhana.uk is one). Their pages are still public, so they are discovered from the
+    navigation rather than the domain being reported as unreachable.
+    """
+    root = "https://%s/" % domain
+    try:
+        _, final, html = _fetch(root, limit=600_000, timeout=14)
+    except Exception as error:  # noqa: BLE001
+        return [], str(error)[:80]
+
+    host = _host(final or root)
+    seen = []
+    seen_keys = set()
+
+    def remember(url):
+        clean = url.split("#")[0].rstrip("/") or url.split("#")[0]
+        if _host(clean) != host or NON_PAGE_RE.search(clean):
+            return False
+        key = clean.lower()
+        if key in seen_keys:
+            return False
+        seen_keys.add(key)
+        seen.append(clean)
+        return True
+
+    remember(root)
+    frontier = [url for url in _links(html, final or root) if remember(url)]
+    depth = 0
+    while frontier and depth < 2 and len(seen) < budget:
+        if deadline and time.time() > deadline:
+            break
+        batch = frontier[:CRAWL_FETCH_LIMIT]
+        with concurrent.futures.ThreadPoolExecutor(max_workers=WORKERS) as pool:
+            results = list(pool.map(_child_links, batch))
+        following = []
+        for links in results:
+            if len(seen) >= budget:
+                break
+            for link in links:
+                if remember(link):
+                    following.append(link)
+        frontier = following
+        depth += 1
+    return [(url, "") for url in seen[:budget]], None
 
 
 def _is_sitemap(url):
@@ -174,7 +255,7 @@ def rss_items(domain, limit=12):
     return items, None
 
 
-def _entry(competitor, pairs, previous, new_feeds, error):
+def _entry(competitor, pairs, previous, new_feeds, error, source="sitemap"):
     domain = competitor["domain"]
     urls = [pair[0] for pair in pairs]
     first_run = not previous
@@ -212,6 +293,7 @@ def _entry(competitor, pairs, previous, new_feeds, error):
         "type": competitor["type"],
         "market": competitor["market"],
         "status": "ok" if urls else ("blocked" if error else "empty"),
+        "source": source,
         "error": error,
         "total_urls": len(urls),
         "content_urls": kinds.get("content", 0),
@@ -243,13 +325,51 @@ def run(progress=None):
         domain = competitor["domain"]
         report("Reading %s" % competitor["name"])
         pairs, error = sitemap_pairs(domain, deadline)
+        source = "sitemap"
+        if not pairs:
+            crawled, crawl_error = crawl_pages(domain, deadline)
+            if crawled:
+                pairs, error, source = crawled, None, "crawl"
+            elif crawl_error and not error:
+                error = crawl_error
         feeds, feed_error = rss_items(domain)
-        entry, urls = _entry(competitor, pairs, previous_index.get(domain) or [], feeds, error)
+        entry, urls = _entry(
+            competitor, pairs, previous_index.get(domain) or [], feeds, error, source)
         if feed_error:
             entry["rss_error"] = feed_error
         entries.append(entry)
         if urls:
             index[domain] = urls
+
+    # A run can hit its time limit before every domain is read. The dropped domains must
+    # still appear and must keep their URL set, or next run would call their whole
+    # back catalogue "new".
+    collected = {entry["domain"] for entry in entries}
+    for competitor in COMPETITORS:
+        domain = competitor["domain"]
+        if domain in collected:
+            continue
+        prior = next((item for item in (previous_payload.get("domains") or [])
+                      if item.get("domain") == domain), {})
+        entries.append({
+            "name": competitor["name"],
+            "domain": domain,
+            "type": competitor["type"],
+            "market": competitor["market"],
+            "status": "deferred",
+            "source": prior.get("source", "sitemap"),
+            "error": None,
+            "total_urls": prior.get("total_urls", 0),
+            "content_urls": prior.get("content_urls", 0),
+            "catalogue_urls": prior.get("catalogue_urls", 0),
+            "first_run": False,
+            "new_count": 0,
+            "new": [],
+            "rss": [],
+            "note": "Not read this run - the run reached its time limit. Previous page set kept.",
+        })
+        if previous_index.get(domain):
+            index[domain] = previous_index[domain]
 
     entries.sort(key=lambda item: (-item["new_count"], item["name"]))
     payload = {

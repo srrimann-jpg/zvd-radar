@@ -399,6 +399,7 @@ function pollCompetitors() {
 function statusPill(status) {
   if (status === "blocked") return `<span class="pill cooling">blocked</span>`;
   if (status === "error") return `<span class="pill">unreachable</span>`;
+  if (status === "deferred") return `<span class="pill cooling">not read</span>`;
   return `<span class="pill rising">reachable</span>`;
 }
 
@@ -504,6 +505,8 @@ function publishingRow(entry) {
   const body = [
     items ? `<div><strong>${entry.first_run ? "Most recently updated pages" : "New since last run"}</strong><ul>${items}</ul></div>` : "",
     feeds ? `<div><strong>From their blog feed</strong><ul>${feeds}</ul></div>` : "",
+    entry.source === "crawl" ? `<div><strong>How this was found:</strong> they publish no sitemap, so pages come from their own navigation links.</div>` : "",
+    entry.note ? `<div class="muted">${escapeHtml(entry.note)}</div>` : "",
     entry.error ? `<div><strong>Could not read their sitemap:</strong> ${escapeHtml(entry.error)}</div>` : "",
   ].filter(Boolean).join("");
   return `
