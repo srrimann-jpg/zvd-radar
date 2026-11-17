@@ -52,6 +52,7 @@ COMPETITORS = [
     {"name": "Ritani", "domain": "ritani.com", "market": "US", "type": "Retailer"},
     {"name": "Shane Co.", "domain": "shaneco.com", "market": "US", "type": "Retailer"},
     {"name": "Whitehouse Brothers", "domain": "whitehousebrothers.com", "market": "US", "type": "Brand"},
+    {"name": "Lepdo Diamonds", "domain": "lepdodiamonds.com", "market": "India / Global", "type": "Marketplace"},
     {"name": "Allurez", "domain": "allurez.com", "market": "US / Global", "type": "Retailer"},
     {"name": "Lippa's", "domain": "lippas.com", "market": "US", "type": "Retailer"},
     {"name": "Lauren B Jewelry", "domain": "laurenbjewelry.com", "market": "US", "type": "Brand"},

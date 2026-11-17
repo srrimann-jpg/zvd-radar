@@ -1,7 +1,7 @@
 {
- "generated_at": "2026-11-17T08:50:38+00:00",
+ "generated_at": "2026-11-17T08:56:35+00:00",
  "method": "Public site evidence only: sitemaps, schema, HTML tech hints. No traffic estimates.",
- "count": 24,
+ "count": 25,
  "results": [
   {
    "name": "Rare Carat",
@@ -190,6 +190,50 @@
     "retention": 0,
     "experience": 3.0,
     "freshness": 5.0,
+    "access": 2.0
+   }
+  },
+  {
+   "name": "Lepdo Diamonds",
+   "domain": "lepdodiamonds.com",
+   "market": "India / Global",
+   "type": "Marketplace",
+   "status": "ok",
+   "blocked": false,
+   "final_url": "https://lepdodiamonds.com/",
+   "title": "Lab Grown Diamonds Supplier | Lepdo Diamonds",
+   "meta_chars": 154,
+   "home_kb": 334,
+   "schema": [
+    "ImageObject",
+    "Organization",
+    "SearchAction",
+    "WebPage",
+    "WebSite"
+   ],
+   "tech": [
+    "360 product view",
+    "GA4 / GTM",
+    "WooCommerce"
+   ],
+   "sitemap_children": 9,
+   "total_urls": 1491,
+   "content_urls": 55,
+   "product_urls": 1491,
+   "other_urls": 0,
+   "newest_lastmod": "2026-10-30",
+   "updated_90d": 204,
+   "notes": [],
+   "score": 36,
+   "score_parts": {
+    "content_volume": 12.2,
+    "content_depth": 1.0,
+    "catalogue_scale": 8.3,
+    "schema": 2.0,
+    "social_proof": 0,
+    "retention": 0,
+    "experience": 3.0,
+    "freshness": 7.0,
     "access": 2.0
    }
   },
@@ -440,6 +484,48 @@
    }
   },
   {
+   "name": "DND Diamond",
+   "domain": "dnddiamond.com",
+   "market": "India / Global",
+   "type": "Marketplace",
+   "status": "ok",
+   "blocked": false,
+   "final_url": "https://dnddiamond.com/",
+   "title": "DND Diamonds",
+   "meta_chars": 88,
+   "home_kb": 316,
+   "schema": [],
+   "tech": [
+    "360 product view",
+    "Cloudflare",
+    "Virtual try-on"
+   ],
+   "sitemap_children": 0,
+   "total_urls": 33,
+   "content_urls": 4,
+   "product_urls": 33,
+   "other_urls": 0,
+   "newest_lastmod": "",
+   "updated_90d": 0,
+   "notes": [
+    "Sitemap: HTTP Error 404: Not Found",
+    "No sitemap: structure sampled from homepage links",
+    "Content hubs live at /blog"
+   ],
+   "score": 20,
+   "score_parts": {
+    "content_volume": 4.9,
+    "content_depth": 3.2,
+    "catalogue_scale": 4.0,
+    "schema": 0.0,
+    "social_proof": 0,
+    "retention": 0,
+    "experience": 6.0,
+    "freshness": 0.0,
+    "access": 2.0
+   }
+  },
+  {
    "name": "Allurez",
    "domain": "allurez.com",
    "market": "US / Global",
@@ -485,48 +571,6 @@
     "retention": 6.0,
     "experience": 3.0,
     "freshness": 3.0,
-    "access": 2.0
-   }
-  },
-  {
-   "name": "DND Diamond",
-   "domain": "dnddiamond.com",
-   "market": "India / Global",
-   "type": "Marketplace",
-   "status": "ok",
-   "blocked": false,
-   "final_url": "https://dnddiamond.com/",
-   "title": "DND Diamonds",
-   "meta_chars": 88,
-   "home_kb": 316,
-   "schema": [],
-   "tech": [
-    "360 product view",
-    "Cloudflare",
-    "Virtual try-on"
-   ],
-   "sitemap_children": 0,
-   "total_urls": 33,
-   "content_urls": 4,
-   "product_urls": 33,
-   "other_urls": 0,
-   "newest_lastmod": "",
-   "updated_90d": 0,
-   "notes": [
-    "Sitemap: HTTP Error 404: Not Found",
-    "No sitemap: structure sampled from homepage links",
-    "Content hubs live at /blog"
-   ],
-   "score": 20,
-   "score_parts": {
-    "content_volume": 4.9,
-    "content_depth": 3.2,
-    "catalogue_scale": 4.0,
-    "schema": 0.0,
-    "social_proof": 0,
-    "retention": 0,
-    "experience": 6.0,
-    "freshness": 0.0,
     "access": 2.0
    }
   },
