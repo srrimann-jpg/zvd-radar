@@ -15,4 +15,3 @@ data/.DS_Store
 # Local scratch
 *.log
 *.tmp
-.git-commit-msg.txt
