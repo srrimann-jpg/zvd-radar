@@ -1,0 +1,17 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Vercel
+.vercel/
+
+# Attachments and OS noise
+.cloud-attachments/
+.DS_Store
+data/.DS_Store
+
+# Local scratch
+*.log
+*.tmp

@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ZVD Radar — daily intent &amp; topic listener for zvdapp.com</title>
+<link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">
+    <span class="mark" aria-hidden="true">◈</span>
+    <div>
+      <h1>ZVD Radar</h1>
+      <p class="tagline">Daily intent &amp; topic listener · zvdapp.com</p>
+    </div>
+  </div>
+  <div class="controls">
+    <div class="datebox">
+      <strong id="snapshot-date">—</strong>
+      <small id="snapshot-meta">no scan yet</small>
+    </div>
+    <button id="run-scan" class="btn">Run today's scan</button>
+  </div>
+</header>
+
+<div id="status" class="status hidden" role="status"></div>
+
+<section class="kpis" id="kpis" aria-label="Today at a glance"></section>
+
+<nav class="tabs" role="tablist">
+  <button class="tab is-active" data-tab="topics">Today's topics</button>
+  <button class="tab" data-tab="intent">Search intent</button>
+  <button class="tab" data-tab="signals">Live signals</button>
+  <button class="tab" data-tab="brand">Brand watch</button>
+  <button class="tab" data-tab="competitors">Competitors</button>
+</nav>
+
+<main>
+  <section class="panel" id="panel-topics">
+    <div class="filters">
+      <div class="segmented" id="audience-filter">
+        <button class="seg is-active" data-audience="All">All</button>
+        <button class="seg" data-audience="B2C">B2C</button>
+        <button class="seg" data-audience="B2B">B2B</button>
+      </div>
+      <label class="select-wrap">
+        <span>Theme</span>
+        <select id="theme-filter"><option value="all">All themes</option></select>
+      </label>
+      <label class="select-wrap">
+        <span>Sort</span>
+        <select id="sort-filter">
+          <option value="score">Opportunity</option>
+          <option value="momentum">Momentum</option>
+          <option value="signals">Signal volume</option>
+        </select>
+      </label>
+    </div>
+    <div class="grid" id="topic-grid"></div>
+  </section>
+
+  <section class="panel hidden" id="panel-intent">
+    <p class="panel-note">What people are typing into Google around your category, ranked by how much it is worth owning. Each row is a page you could publish.</p>
+    <div class="table-wrap">
+      <table class="table">
+        <thead>
+          <tr><th>Query</th><th>Theme</th><th>Stage</th><th>Audience</th><th class="num">Opportunity</th><th>Page to publish</th></tr>
+        </thead>
+        <tbody id="intent-body"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="panel hidden" id="panel-signals">
+    <p class="panel-note">Everything the listener read today, newest first. News from Google and Bing, questions from Reddit.</p>
+    <div class="feed" id="signal-feed"></div>
+  </section>
+
+  <section class="panel hidden" id="panel-brand">
+    <div id="brand-body"></div>
+  </section>
+
+  <section class="panel hidden" id="panel-competitors">
+    <div class="filters">
+      <p class="panel-note" style="margin:0;max-width:62ch">Public-evidence audit of your verified competitor register: sitemap footprint, content vs catalogue depth, schema, trust and marketing stack. No traffic or backlink estimates are invented.</p>
+      <button id="run-competitors" class="ghost">Refresh audit</button>
+    </div>
+    <div id="competitor-body"></div>
+  </section>
+</main>
+
+<footer>
+  <span>Sources: Google News · Bing News · Reddit · Google autocomplete. Scored locally, no paid APIs.</span>
+  <span id="footer-stamp"></span>
+</footer>
+
+<script src="/app.js"></script>
+</body>
+</html>

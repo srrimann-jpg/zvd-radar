@@ -1,0 +1,2712 @@
+{
+ "app": "ZVD Radar",
+ "site": "zvdapp.com",
+ "date": "2026-11-17",
+ "generated_at": "2026-11-17T05:43:50+00:00",
+ "scan_seconds": 9.7,
+ "window_days": 7,
+ "stats": {
+  "signals": 393,
+  "news_signals": 378,
+  "community_signals": 15,
+  "queries": 179,
+  "themes": 11,
+  "outlets": 155,
+  "raw_items": 599,
+  "errors": [],
+  "error_count": 0
+ },
+ "themes": [
+  {
+   "id": "natural-diamond",
+   "label": "Natural & mined diamonds",
+   "count": 114
+  },
+  {
+   "id": "lab-grown",
+   "label": "Lab-grown diamonds",
+   "count": 74
+  },
+  {
+   "id": "engagement-rings",
+   "label": "Engagement & bridal",
+   "count": 66
+  },
+  {
+   "id": "jewelry-tech",
+   "label": "E-commerce & tech",
+   "count": 32
+  },
+  {
+   "id": "jewelry-retail",
+   "label": "Retail & brands",
+   "count": 26
+  },
+  {
+   "id": "jewelry-trends",
+   "label": "Trends & style",
+   "count": 25
+  },
+  {
+   "id": "diamond-prices",
+   "label": "Prices & pricing",
+   "count": 17
+  },
+  {
+   "id": "diamond-investment",
+   "label": "Investment & resale",
+   "count": 16
+  },
+  {
+   "id": "wholesale-b2b",
+   "label": "Wholesale & trade",
+   "count": 10
+  },
+  {
+   "id": "grading-certs",
+   "label": "Grading & certificates",
+   "count": 7
+  },
+  {
+   "id": "sustainability",
+   "label": "Traceability & ethics",
+   "count": 6
+  }
+ ],
+ "topics": [
+  {
+   "id": "natural-diamond-2026-11-17",
+   "theme": "natural-diamond",
+   "theme_label": "Natural & mined diamonds",
+   "title": "Natural Diamonds for Sale",
+   "audience": "Both",
+   "score": 99,
+   "momentum": "Steady",
+   "change_pct": 3,
+   "signal_count": 114,
+   "outlet_count": 58,
+   "query_count": 6,
+   "why_now": "114 news stories from 58 outlets in the last 7 days, of which 49 broke in the last 48 hours.",
+   "keywords": [
+    {
+     "query": "natural diamonds for sale",
+     "stage": "Compare",
+     "score": 80
+    },
+    {
+     "query": "natural diamond tennis bracelet",
+     "stage": "Research",
+     "score": 72
+    },
+    {
+     "query": "natural diamond stud earrings",
+     "stage": "Research",
+     "score": 72
+    },
+    {
+     "query": "natural diamonds",
+     "stage": "Research",
+     "score": 66
+    },
+    {
+     "query": "natural diamond ring",
+     "stage": "Research",
+     "score": 66
+    },
+    {
+     "query": "natural diamond earrings",
+     "stage": "Research",
+     "score": 66
+    }
+   ],
+   "brief": {
+    "format": "Market explainer + newsletter section",
+    "hook": "The supply story is moving faster than buyers realise, and the gap is where trust is won or lost.",
+    "angle": "Translate supply-side news into buyer confidence: what scarcity, ownership and production cuts mean for the person buying a stone this quarter.",
+    "outline": [
+     "What changed this week, in one paragraph a buyer can repeat",
+     "Why 'natural diamonds for sale' matters to the price on your screen",
+     "Natural vs lab-grown supply, side by side for the year",
+     "What this means for resale and heirloom value",
+     "How ZVDapp prices around it (and how to read a quote)"
+    ],
+    "cta": "See natural diamond inventory with origin and certificate on ZVDapp",
+    "words": "1,200-1,800 words"
+   },
+   "signals": [
+    {
+     "title": "Angola seeks to acquire a 10% stake in De Beers from Anglo American to strengthen its influence in the global diamond industry",
+     "url": "https://news.google.com/rss/articles/CBMigwJBVV95cUxOMDRPTUtnZ0VCQ3RVUXdNcHFLUzZJSVQwc0FEaTc1Y0NEQ0pTZWpjcDB0aDJnMXd3R3Z4bVdST2x6Nm0zWTRZVkppVXFWaWljbWpzZ01VcmxsQjdyV3RNUlNtUWNkNXhlTUxPUkNBR21VSHlZTm1RQ2dKdmJIc0ltOEU4NGJ0N2ItZXRydGtUUDFLa0FxRVRhTnljNVpGaDlvdXBFeUJicnFGRUJoUzBUOFJiQ2xQRTh2TV82dVVfMTJpcFJKZUJuYWNRT1RPazBRSlB2WVN0VXlLQXFkcU95aWNlTEFoNkF4Q0RsTEphLXdtMU1xNmF4elhZUUtfWnVzbTlr?oc=5",
+     "outlet": "FashionNetwork USA",
+     "type": "news",
+     "published": "2026-11-16T18:01:35+00:00"
+    },
+    {
+     "title": "De Beers London releases new festive campaign",
+     "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBIeTlucmlnemU5RnNlbVZVZV9VeF9wV2lfajMzS0pNbzdTV0NKSUxaQlI4UTZZVXBvMHBmQ0YybWFaV0p3N0xwSGpJTm92OEdsYmtJUUVzLWltOWRNQmhOZmY4ZzZNS1BXbE1CVlhXZ0sydVdjUUt0ckJMUnllV0E?oc=5",
+     "outlet": "Professional Jeweller",
+     "type": "news",
+     "published": "2026-11-16T09:50:49+00:00"
+    },
+    {
+     "title": "Anglo American’s stake in De Beers attracts interest from Angola and Richemont",
+     "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxPTVEzUmI3dGNvdTh5Mk14X2U3UDJxZ3hVeFdRd1ZSZUVoR1VYOHN1NFFyRGlUbTFQQ2lKYXlBU1drNEtaTjZESjN4S244YUVhX2ZteHNLbmozbUxkZ3pxSG1aMExfaUFOc21qTEtTcVk0YXpXWWwzcUZIWWxxVV9tTGZ2UDlaSU10YVktR2tJYV9DLUxLS3B0eWpXcnpWSl9TLUlkV2RnZTFTT1JmLVV3djgyN1p6Vy00dU1zVkI3RQ?oc=5",
+     "outlet": "Bizcommunity",
+     "type": "news",
+     "published": "2026-11-16T07:47:36+00:00"
+    },
+    {
+     "title": "Angola to buy 10% stake in De Beers as Anglo American plans divestment",
+     "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE5aYzhNaTBsX3B1aXJpM21Kc2k2R1Jtczh2Qjl4Y1RydnlUUUNUWGFqN2ZVaTd1UjlBRGpPSnIyMG5uUWR4bW0xNHdnOVJsRmdNYXkzRjc4X0hBSTZkSnk2dG5mbTJZUVN2WjVJdGtMNUtOY1pIUXR0cDhXYw?oc=5",
+     "outlet": "Mining Technology",
+     "type": "news",
+     "published": "2026-11-16T07:43:37+00:00"
+    },
+    {
+     "title": "Angola Seeks 10% Stake in De Beers",
+     "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5JbF9PS3VFMTk3eklYQkNrOWtpRkVSVVNmVlNUc1ZnQlBJbklrWnNPRmh2OGdRQk90VXd4ZWJXMktpendYbFpSbmNkVU1kdDhxMTNOamp5NGVuQzA?oc=5",
+     "outlet": "IDEX Online Diamond Index",
+     "type": "news",
+     "published": "2026-11-16T06:01:34+00:00"
+    }
+   ]
+  },
+  {
+   "id": "engagement-rings-2026-11-17",
+   "theme": "engagement-rings",
+   "theme_label": "Engagement & bridal",
+   "title": "Natural Diamond Engagement Rings Price",
+   "audience": "B2C",
+   "score": 96,
+   "momentum": "Steady",
+   "change_pct": 0,
+   "signal_count": 66,
+   "outlet_count": 31,
+   "query_count": 40,
+   "why_now": "61 news stories from 31 outlets in the last 7 days, 5 community threads asking related questions, of which 6 broke in the last 48 hours.",
+   "keywords": [
+    {
+     "query": "natural diamond engagement rings price",
+     "stage": "Price / commercial",
+     "score": 88
+    },
+    {
+     "query": "custom engagement ring cost",
+     "stage": "Price / commercial",
+     "score": 88
+    },
+    {
+     "query": "natural diamond engagement rings for sale",
+     "stage": "Compare",
+     "score": 84
+    },
+    {
+     "query": "engagement rings for women",
+     "stage": "Compare",
+     "score": 84
+    },
+    {
+     "query": "engagement ring vs wedding ring",
+     "stage": "Compare",
+     "score": 84
+    },
+    {
+     "query": "engagement rings for men",
+     "stage": "Compare",
+     "score": 84
+    }
+   ],
+   "brief": {
+    "format": "Buying guide + style gallery + ring-size tool",
+    "hook": "Ring buyers research for weeks and decide in minutes - the winners are the pages that survive the research phase.",
+    "angle": "Build style-led buying pages that answer the exact ring questions asked in forums this week, each ending in a shoppable shortlist.",
+    "outline": [
+     "The styles trending this week, with photos and price bands",
+     "'natural diamond engagement rings price', answered directly with examples",
+     "Setting types: what each one does to the apparent size of the stone",
+     "Budget splits that look expensive and cost less",
+     "Timeline: how long a custom ring actually takes",
+     "Try-before-you-buy and resize policies"
+    ],
+    "cta": "Build a ring around a certified centre stone on ZVDapp",
+    "words": "1,200-1,800 words"
+   },
+   "signals": [
+    {
+     "title": "Why You Need an East-West Diamond Engagement Ring",
+     "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTFBtcW80eFFUbi1QV0ZFa05QR3FNSE5seWtfN1dhR2Uyd01pNGx2WFhpclBvaFhwMC1YYkxldGxycVdmaFlHWUg1UHVIUVNoRTlrc1Jhb1FJQnhKSGdZcTdTMFNidHBERXZ0TWh3?oc=5",
+     "outlet": "Natural Diamond Council",
+     "type": "news",
+     "published": "2026-11-16T20:38:47+00:00"
+    },
+    {
+     "title": "These Engagement Ring Trends Are Proof That 2027 Is the Year of Individualism",
+     "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxQeUhXZzdGRUFZMUt3QVNPbzhXMEJCVS1pQ0ZYV0QxNzVnaFQ1QzR5ZEFySWxWS2s1N21SYWxLVklGWWk1Y2hKRjdLdm5sV0JreGZuZmdXcVdwX3JSNGo4bm90bklXWkx5VGZua1Vyelk4MFQ2X3ZNTE1Cb1MzandOUU9idTBrLUpmQ0pwalFlNA?oc=5",
+     "outlet": "StyleCaster",
+     "type": "news",
+     "published": "2026-11-16T11:55:00+00:00"
+    },
+    {
+     "title": "Carl Blackburn Discusses Custom Engagement Ring Prices",
+     "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOcE1iU3pZeVhyaVFJWFhQREJ6YmJ6eHRTejBJcTZBUUJxcy0tZ2dfNUZrMEhwZmg5cUgxR0FQSk1CaElFQThHemZvZzhsd1dJbi1LSjEzVWo2b3JLdWlXbGdTamF0ZGszNzltTWFQY1k1LXE4V2hjaVB2dk9hcXRvRldXMllfUzZOTlFZMWUtbVVDcFJhY2dQUlJRanZEYVNPMjd2RzlvTldEc0d2?oc=5",
+     "outlet": "24-7PressRelease.com",
+     "type": "news",
+     "published": "2026-11-16T07:03:02+00:00"
+    },
+    {
+     "title": "Irish engagement ring ✨",
+     "url": "https://www.reddit.com/r/EngagementRings/comments/1xx9fzv/irish_engagement_ring/",
+     "outlet": "r/EngagementRings",
+     "type": "community",
+     "published": "2026-11-15T23:01:33+00:00"
+    },
+    {
+     "title": "Love my ring",
+     "url": "https://www.reddit.com/r/EngagementRings/comments/1xw4kch/love_my_ring/",
+     "outlet": "r/EngagementRings",
+     "type": "community",
+     "published": "2026-11-14T15:05:12+00:00"
+    }
+   ]
+  },
+  {
+   "id": "lab-grown-2026-11-17",
+   "theme": "lab-grown",
+   "theme_label": "Lab-grown diamonds",
+   "title": "Lab Grown Diamond Rings Price",
+   "audience": "Both",
+   "score": 94,
+   "momentum": "Steady",
+   "change_pct": -4,
+   "signal_count": 74,
+   "outlet_count": 46,
+   "query_count": 36,
+   "why_now": "73 news stories from 46 outlets in the last 7 days, 1 community threads asking related questions, of which 2 broke in the last 48 hours.",
+   "keywords": [
+    {
+     "query": "lab grown diamond rings best place to buy",
+     "stage": "Price / commercial",
+     "score": 88
+    },
+    {
+     "query": "lab grown diamond rings price",
+     "stage": "Price / commercial",
+     "score": 88
+    },
+    {
+     "query": "lab grown diamonds vs real diamonds",
+     "stage": "Compare",
+     "score": 84
+    },
+    {
+     "query": "lab grown diamonds vs natural",
+     "stage": "Compare",
+     "score": 84
+    },
+    {
+     "query": "lab grown diamonds vs cubic zirconia",
+     "stage": "Compare",
+     "score": 84
+    },
+    {
+     "query": "lab grown diamond rings for women",
+     "stage": "Compare",
+     "score": 84
+    }
+   ],
+   "brief": {
+    "format": "Comparison guide + FAQ block + 3 short videos",
+    "hook": "Buyers are not confused about what lab-grown is any more - they are confused about what it is worth next to natural.",
+    "angle": "Publish a like-for-like comparison with real price examples, then own the 'vs' searches with one definitive page.",
+    "outline": [
+     "The 30-second answer to 'lab grown diamond rings price', above the fold",
+     "Price per carat today: lab-grown vs natural, with live marketplace examples",
+     "What the certificate says (IGI/CVD language explained in plain English)",
+     "Resale reality: what each stone is worth after purchase",
+     "Who each stone is right for - with three real buyer scenarios",
+     "Checklist: five questions to ask before paying a deposit"
+    ],
+    "cta": "Browse certified lab-grown stones on ZVDapp with price-per-carat visible",
+    "words": "1,200-1,800 words"
+   },
+   "signals": [
+    {
+     "title": "TikTok auction craze fuels surge in sale of lab-grown diamonds",
+     "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPeGpGUW13OVNfcWw4aU5keG5VcTJBOXRQbWxLTmR0UjZxTGMyU1J4TVM3b0toYll1bWhybEl5aG9jMy1yTzFuc2Q1amlIQTVqTTlhbzJBdnpVdlctR2R2RFZLYVBQTGlGeGcySkNPZnJGOEQ2MWkwTW5rMWI1RzZjeVpNUFFzcTUxbTJyRnZLaWIxRVpUUUtmWTZxbHpRQUhWbndCdWY3cw?oc=5",
+     "outlet": "Daily Mail",
+     "type": "news",
+     "published": "2026-11-15T01:00:00+00:00"
+    },
+    {
+     "title": "Consortium leading De Beers bid plans marketing push to counter lab-grown gems",
+     "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQenZGanJJZkxZbHVvbk9SNVR2S2VMXzV3elowU29XM2hyOHktNjlKRHZGRnJjUldpOVRNM0lOVUg4Ul9YaDVUZWZvZjFNdkhRUFNCZkhFb2V0QW5CMEVaZFpXaW5GeDVUOGd0V0dYLWVEUVRWendXNTB3QkZWanBGUlhXSi15SnM?oc=5",
+     "outlet": "MiningMX",
+     "type": "news",
+     "published": "2026-11-13T08:26:22+00:00"
+    },
+    {
+     "title": "Finally my time to post!",
+     "url": "https://www.reddit.com/r/EngagementRings/comments/1xsu178/finally_my_time_to_post/",
+     "outlet": "r/EngagementRings",
+     "type": "community",
+     "published": "2026-11-10T18:07:45+00:00"
+    },
+    {
+     "title": "The Best Lab-Grown Diamond Tennis Bracelets To Gift Or Get For Yourself",
+     "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQZ0xhek9qNVU0c0MwQlpsanRwX0xsX2ItdVhTVG1hRzQ3R1pVZlREQ09iMmx6bV95SGdSQ2R6djd3WURnQWRfRWtrdkw2b3NRTWpfN3BmbzdUeVE4VzRCaHZkN0pORzdWYkFNLXU5NlZwdHBwcmZGOEFSS3h6aFZoWm5IS2Y2VWlIWDEtaGgwN1I3TnZSSzZiMGJPZTN2LUdPT0E?oc=5",
+     "outlet": "Forbes",
+     "type": "news",
+     "published": "2026-11-06T08:00:00+00:00"
+    },
+    {
+     "title": "The 14 Best Places to Buy Lab-Grown Diamonds in 2026",
+     "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxQQnVnc19nX080SEVwVDVnVlE3VnNiSWZJSWpEUUhIcDVqc2tobTJRUkRNMDJ5VDhLZ19FYmxqYjdYeWFFeGp1TkRnUnFuWnZGY0VNYjVqNTAzNDJpLThsdU1Bd2pkeVhpd3cxRndvbjR0Z1BvN2M4bm16Z29BUnpoVg?oc=5",
+     "outlet": "Brides",
+     "type": "news",
+     "published": "2026-11-05T08:00:00+00:00"
+    }
+   ]
+  },
+  {
+   "id": "jewelry-trends-2026-11-17",
+   "theme": "jewelry-trends",
+   "theme_label": "Trends & style",
+   "title": "Jewelry Trends 2026 Fall",
+   "audience": "B2C",
+   "score": 82,
+   "momentum": "Steady",
+   "change_pct": 4,
+   "signal_count": 25,
+   "outlet_count": 17,
+   "query_count": 27,
+   "why_now": "20 news stories from 17 outlets in the last 7 days, 5 community threads asking related questions.",
+   "keywords": [
+    {
+     "query": "diamond tennis bracelet costco",
+     "stage": "Price / commercial",
+     "score": 88
+    },
+    {
+     "query": "diamond tennis bracelet tiffany",
+     "stage": "Research",
+     "score": 76
+    },
+    {
+     "query": "jewelry trends 2026 fall",
+     "stage": "Research",
+     "score": 76
+    },
+    {
+     "query": "jewelry trends 2026 vogue",
+     "stage": "Research",
+     "score": 76
+    },
+    {
+     "query": "jewelry trends 2026 fall vogue",
+     "stage": "Research",
+     "score": 76
+    },
+    {
+     "query": "jewelry trends 2026 summer",
+     "stage": "Research",
+     "score": 76
+    }
+   ],
+   "brief": {
+    "format": "Shoppable edit + Reels/TikTok script + Pinterest set",
+    "hook": "Trend content is only commercially useful if a reader can buy the look at three price points in the same scroll.",
+    "angle": "Ride the trend cycle with fast, shoppable posts: pick the week's strongest style signal, show three price points, link the category.",
+    "outline": [
+     "The look that is trending this week and why now",
+     "'jewelry trends 2026 fall', styled three ways",
+     "Entry, mid and statement price points from the marketplace",
+     "Metal and stone pairings that photograph well",
+     "What to buy now vs wait for"
+    ],
+    "cta": "Shop the edit on ZVDapp",
+    "words": "1,200-1,800 words"
+   },
+   "signals": [
+    {
+     "title": "My wedding set",
+     "url": "https://www.reddit.com/r/jewelry/comments/1xwx24x/my_wedding_set/",
+     "outlet": "r/jewelry",
+     "type": "community",
+     "published": "2026-11-15T14:37:30+00:00"
+    },
+    {
+     "title": "My 0.3 carat ring!",
+     "url": "https://www.reddit.com/r/EngagementRings/comments/1xwcrm6/my_03_carat_ring/",
+     "outlet": "r/EngagementRings",
+     "type": "community",
+     "published": "2026-11-14T20:42:35+00:00"
+    },
+    {
+     "title": "Handcrafted Art Deco-style platinum ring with an emerald-cut diamond in five views",
+     "url": "https://www.reddit.com/r/jewelry/comments/1xw2yyv/handcrafted_art_decostyle_platinum_ring_with_an/",
+     "outlet": "r/jewelry",
+     "type": "community",
+     "published": "2026-11-14T13:54:57+00:00"
+    },
+    {
+     "title": "My original engagement diamond got a second life!",
+     "url": "https://www.reddit.com/r/EngagementRings/comments/1xvp7p9/my_original_engagement_diamond_got_a_second_life/",
+     "outlet": "r/EngagementRings",
+     "type": "community",
+     "published": "2026-11-14T01:02:56+00:00"
+    },
+    {
+     "title": "Trading updates: Coles, JB Hi-Fi, Michael Hill and Nick Scali chase complicated Christmas consumers; jewellery, fashion shine; furniture, electronics struggle as Black Friday looms",
+     "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPN0IxZjRlUGFCN1Y2N3VWc2VtSXl2dGZNbGtSWEhHUG04eDgxeVFlOHRMSUhZd1lkd3RVc3VaN09WOEdiR2M4ME5sTGVQTmx6aF9jenhNZUVhS3plZHVIZEhEaFQzYWpZMjRITzhVY1pYQmFDOW9aaG11em9ET1ZZYmhFbTVhdk1XOWg2UFVJNlZoTTJVeGRjLXBPaHB6OVVVV2FTa0xDdjRWcUdlTllaZ0p3b2t4ZnZXa0Zr?oc=5",
+     "outlet": "Mi-3.com.au.",
+     "type": "news",
+     "published": "2026-11-09T22:23:15+00:00"
+    }
+   ]
+  },
+  {
+   "id": "diamond-investment-2026-11-17",
+   "theme": "diamond-investment",
+   "theme_label": "Investment & resale",
+   "title": "Diamond Resale Value Calculator",
+   "audience": "Both",
+   "score": 69,
+   "momentum": "Steady",
+   "change_pct": 7,
+   "signal_count": 16,
+   "outlet_count": 9,
+   "query_count": 14,
+   "why_now": "15 news stories from 9 outlets in the last 7 days, 1 community threads asking related questions, of which 1 broke in the last 48 hours.",
+   "keywords": [
+    {
+     "query": "diamond resale value calculator",
+     "stage": "Compare",
+     "score": 76
+    },
+    {
+     "query": "diamond resale value vs gold",
+     "stage": "Compare",
+     "score": 76
+    },
+    {
+     "query": "diamond resale value chart",
+     "stage": "Research",
+     "score": 68
+    },
+    {
+     "query": "diamond resale value in india",
+     "stage": "Research",
+     "score": 68
+    },
+    {
+     "query": "diamond resale value tanishq",
+     "stage": "Research",
+     "score": 68
+    },
+    {
+     "query": "diamond resale value in pakistan",
+     "stage": "Research",
+     "score": 68
+    }
+   ],
+   "brief": {
+    "format": "Honest explainer + FAQ + video",
+    "hook": "Nobody trusts a seller who says every stone is an investment - clarity converts.",
+    "angle": "Answer the resale question honestly and in detail. The brand that tells buyers when diamonds are a bad investment earns the right to be believed on everything else.",
+    "outline": [
+     "When a diamond holds value and when it does not",
+     "'diamond resale value calculator', with real numbers",
+     "Lab-grown vs natural resale after three years",
+     "Auction results as a sanity check",
+     "How to buy with exit in mind"
+    ],
+    "cta": "Compare stones with resale and certificate data on ZVDapp",
+    "words": "900-1,200 words"
+   },
+   "signals": [
+    {
+     "title": "Something you don't see every day: French high jewelry design gouaches from Art Deco onward!",
+     "url": "https://www.reddit.com/r/jewelry/comments/1xxa53c/something_you_dont_see_every_day_french_high/",
+     "outlet": "r/jewelry",
+     "type": "community",
+     "published": "2026-11-15T23:32:59+00:00"
+    },
+    {
+     "title": "A 24-carat 'Bulgari Pink' diamond ring sells for over $14.6 million at Christie's auction",
+     "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOdEZtZkxuUlB3TXg3ZzVlNHg2SWg3Uk1nVHRLZ0pxQUlFVDlHcU55WnVTRldPSjR1SWdIdXdySDhiT29NWjFmRVVpZmhPVlIxRmVIVnFFcmJiWEU0Q09CN3hHcDZxTFlrcWJ3c0hSdXFIczJuZTJMRWN6ejRSNE1vSEhDYzhGYkN6SThz?oc=5",
+     "outlet": "Newsday",
+     "type": "news",
+     "published": "2026-11-10T20:56:51+00:00"
+    },
+    {
+     "title": "Rare Azure Blue Diamond Sold at Christie's Auction for $8M",
+     "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE9YeWFIX3FaMDA4MU11VEEtTkpZY1U4YnJDX3JZYnFtZkRLVW5nejRsZl9KUkhEOVZpWWtfRGlZN3JkRFh3RjZmbGlVYV9HSi1zZUQ5Y0x1Y1FXSXNrTzhYeFBTcGR1bjJ0a045ZUt3NGtsR0Q0TXFzSzJmQ04?oc=5",
+     "outlet": "Natural Diamond Council",
+     "type": "news",
+     "published": "2026-10-11T10:12:59+00:00"
+    },
+    {
+     "title": "Blue-green diamond called the \"world's rarest\" sells for record $17.3 million at auction",
+     "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOOFM3MjgxZDEyMjZWczZ6bEpOdTIzbmMxZU9JSUdfQUpQZWg3c0RCTzk0RG5jV0JBdTBPZEVzaEtOUUlBUTNueDJyeFZBYmdDdXFpcHh0NFdlUWhHVThfaFdtdnVoUFFmYnJnaE5CZ0tGNmdfSkNqTklVeFBRaVhrNWZIOWJuMVN3?oc=5",
+     "outlet": "CBS News",
+     "type": "news",
+     "published": "2026-05-14T07:00:00+00:00"
+    },
+    {
+     "title": "What a Decade of Auction Data Reveals About Colored Diamonds",
+     "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQc1JjX1Myc3liWGVudEo4SUgzaWRnU3U3YVdCTTRocGFGU1NIZmFDZXhYNUJPbjdjaXJJNFY5WHhfZENkZlJlQ0lzWHZCdmNlMVhuT25TVVRxUW9iZm1XVV9lNHZNWUlfTjFPYW0wdk9RTXdTQ1owSW1YdzR5LUVKZWZWc0dSbG14bnpJYlpqNVNqblpLSHE3aDdJOGRRaDU5?oc=5",
+     "outlet": "Rapaport",
+     "type": "news",
+     "published": "2026-03-12T07:00:00+00:00"
+    }
+   ]
+  },
+  {
+   "id": "diamond-prices-2026-11-17",
+   "theme": "diamond-prices",
+   "theme_label": "Prices & pricing",
+   "title": "Diamond Price Chart 10 Years",
+   "audience": "Both",
+   "score": 68,
+   "momentum": "Steady",
+   "change_pct": -11,
+   "signal_count": 17,
+   "outlet_count": 7,
+   "query_count": 14,
+   "why_now": "17 news stories from 7 outlets in the last 7 days, of which 1 broke in the last 48 hours.",
+   "keywords": [
+    {
+     "query": "diamond price chart 10 years",
+     "stage": "Price / commercial",
+     "score": 88
+    },
+    {
+     "query": "diamond price per carat",
+     "stage": "Price / commercial",
+     "score": 88
+    },
+    {
+     "query": "diamond prices over time",
+     "stage": "Price / commercial",
+     "score": 88
+    },
+    {
+     "query": "diamond price per gram",
+     "stage": "Price / commercial",
+     "score": 88
+    },
+    {
+     "query": "1 carat diamond price",
+     "stage": "Price / commercial",
+     "score": 88
+    },
+    {
+     "query": "1 carat diamond price chart",
+     "stage": "Price / commercial",
+     "score": 88
+    }
+   ],
+   "brief": {
+    "format": "Data page + monthly update + short video",
+    "hook": "Diamond pricing is opaque by design, which means a clear, sourced price table is a permanent traffic asset.",
+    "angle": "Publish a transparent price-per-carat benchmark, refreshed monthly, so ZVDapp becomes the page people cite when they argue about diamond prices.",
+    "outline": [
+     "Price per carat by shape and size band, this month vs last",
+     "Why 'diamond price chart 10 years' - the three factors that actually move it",
+     "Lab-grown vs natural price curves on one chart",
+     "What a fair retail markup looks like",
+     "Where to check a quote before you commit"
+    ],
+    "cta": "Compare live price-per-carat by shape on ZVDapp",
+    "words": "1,200-1,800 words"
+   },
+   "signals": [
+    {
+     "title": "African Producers Make Plans to Reignite Natural-Diamond Interest",
+     "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQYmwtcjFLMUlMc0JuOUI3RVNiam43dlUtNzhyYUxOUWo2MUFER0YwUmhVbWlsLURWQzVKU3dfdDQ0NzJoVHJqRzZvbnhFLW91Y01UNy12Y0tpRUtXR0phS2pHTjhwRk9nZGptd1FaYVhvM251bDlMdEhxUTgwWlJzbTNJRFRPajl0MmxvcmZWcWNkdExCSG1z?oc=5",
+     "outlet": "Rapaport",
+     "type": "news",
+     "published": "2026-11-16T17:15:31+00:00"
+    },
+    {
+     "title": "Gareth Penny Calls for Stronger Natural-Diamond Marketing",
+     "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQemdtd0NsUGd5SVNFZy1UYy1uT2xiM2R2QTZJNWI3OGJxYjBzd0RHcktVQTMtU1FNMzNiYlRfSnRKdlluQmNLWGR2dkNTQlN4dE5TbkNWRERfMnFvVHZvNDRhMEdiUzJ2d1hwWlVuTGdBNFZWak5uQ1N6QTJhbG9JRGtrcklUbDBkU0FaYg?oc=5",
+     "outlet": "Rapaport",
+     "type": "news",
+     "published": "2026-09-14T07:00:00+00:00"
+    },
+    {
+     "title": "Natural Diamond Prices Plunge 50% in Four Years as Lab-Grown Technology Destroys Scarcity Premium",
+     "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTFBRNXZnNkNRc1BSZTUteE9IblRCX1gyNmZxLUFuTE81WGcwSF9UNjBCVkhLMC1wdkJ0djdlSy1sdlNqSGdkRV9USkR5X29DcXdUMVdMZkU4M1ROaHNkNjBrSmNGTmZoU0kySENyb2FjVGRITGtydGc?oc=5",
+     "outlet": "BigGo Finance",
+     "type": "news",
+     "published": "2026-08-12T07:00:00+00:00"
+    },
+    {
+     "title": "Diamond Prices Just Hit a 100-Year Low. So Why Isn't Jewelry Getting Any Cheaper?",
+     "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTFBDTEdYdVBCWmtkTmFYaDd6V25PMnNQdGwzNTRMcVQxalcxcGt5MGo3YzdHQ2E0TG92OWJ0aGdqWFNVTXpXTUNoS0pEcEJjVFBfZm92eEljTUxCaW1XVkpV?oc=5",
+     "outlet": "money.com",
+     "type": "news",
+     "published": "2026-04-17T07:00:00+00:00"
+    },
+    {
+     "title": "7 of the Most Expensive Diamonds Sold at Auction",
+     "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE5Rb1VuUTN6YTdFRDBDSEIyOWtEQWFMTU1QM3pobUthVDhWMnoyTlNFODAydmpnUERXQmJHazNCZ01Tc3ZVU21uNWpsMVNxaExMMFhOZy0tdC1jUFpzQzJZVGdKTUFhTWRleV9FOGxoTlM?oc=5",
+     "outlet": "Galerie Magazine",
+     "type": "news",
+     "published": "2025-04-25T07:00:00+00:00"
+    }
+   ]
+  },
+  {
+   "id": "wholesale-b2b-2026-11-17",
+   "theme": "wholesale-b2b",
+   "theme_label": "Wholesale & trade",
+   "title": "Loose Diamond Wholesale Price",
+   "audience": "B2B",
+   "score": 67,
+   "momentum": "Steady",
+   "change_pct": 11,
+   "signal_count": 10,
+   "outlet_count": 9,
+   "query_count": 23,
+   "why_now": "10 news stories from 9 outlets in the last 7 days.",
+   "keywords": [
+    {
+     "query": "loose diamond wholesale price",
+     "stage": "Price / commercial",
+     "score": 88
+    },
+    {
+     "query": "diamond wholesale prices",
+     "stage": "Price / commercial",
+     "score": 82
+    },
+    {
+     "query": "loose diamond wholesale canada",
+     "stage": "Trade",
+     "score": 82
+    },
+    {
+     "query": "jewelry wholesale sumter sc",
+     "stage": "Trade",
+     "score": 82
+    },
+    {
+     "query": "diamond wholesale",
+     "stage": "Trade",
+     "score": 76
+    },
+    {
+     "query": "diamond wholesale online",
+     "stage": "Trade",
+     "score": 76
+    }
+   ],
+   "brief": {
+    "format": "Trade briefing + gated price sheet + LinkedIn carousel",
+    "hook": "Trade buyers do not need inspiration, they need terms, spread and availability - publish that and they bookmark you.",
+    "angle": "Publish trade-facing intelligence: what is moving, at what memo terms, and where the arbitrage is - the content that makes a marketplace the trade's default reference.",
+    "outline": [
+     "What moved in the trade this week",
+     "'loose diamond wholesale price': the spread between asking and clearing prices",
+     "Memo terms and payment expectations by market",
+     "Certificates and parcel breakdowns buyers now expect",
+     "Where to source verified parcels on ZVDapp"
+    ],
+    "cta": "Open a trade account on ZVDapp and see parcel-level pricing",
+    "words": "1,200-1,800 words"
+   },
+   "signals": [
+    {
+     "title": "Why Surat’s Diamond Bourse isn’t shining three years after inauguration",
+     "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxQQ0dGV19JLXV3b0hNNmRlbU43M2g5dURzZFBzUVY5Q0ZVWEh1bFkxVGNoNUhnemRBS1pjVmpPdHBWY04wWmFCX09WZHh5X3BQeUFsQ0NxelZYemc0U291M0Y3aDFOMVhWNUIwTVJMUmdjZ2dUdzhKZlRzNVptdDBOY3NfTFdQTXQ1QlRWWndtTW9VWHBFbUptVjNUams3WVNsNFhDdW50VURDemFqa1M3bWJ3R2ZfaEFKb2ZObWV6X3gydk95WkJ4TWhGbVrSAdMBQVVfeXFMTUZHY2pYV0JYaVlTMHNHbmxIUFFWVE9UcXF4RE9OVGJFdEh3U0xHMHVkWlE1ZndSNTgyT29jLU9kM1p1Z0RnOVlITzhDVzZHWDhWdEMxdlpqR0ZqZnppdDQ1YjU3RmVsRGZqWFVvYjl1QU1uand6dkpUQmgwSmR3YW1COEo1aUl1aWdjb2ZqTVJ0OW12ZjVfNzVRbGp2NmlzRnNCRXlNbDQ2Q2ZWUmJqcDVHNmtSR0o5RzNBUVpGNUcxS01qMm5pTDRSbmJnMVFEYjFWWQ?oc=5",
+     "outlet": "The Indian Express",
+     "type": "news",
+     "published": "2026-11-01T07:00:00+00:00"
+    },
+    {
+     "title": "Lab-Grown Diamond Wholesale Prices Are in Freefall; Retail Margins May Be Next",
+     "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE5Ca0RGMmRfV1B1WFJsRWtXdzgxcURJZXU5VmlNbk1ocVNfMlI0YklxaFhaZ0pkNEZWMGZkS0NOMWZxWFY1OTBTWUtnNV83ai14TnhSYXJyOUZSeks4WU9oOWswQmRyZmgtaUJvLXJ3QzB0N2dtTmhHQnA4R3lJdw?oc=5",
+     "outlet": "JCK",
+     "type": "news",
+     "published": "2026-08-10T07:00:00+00:00"
+    },
+    {
+     "title": "LGD effect: Natural diamond sightholder base set to shrink",
+     "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxQN2FxM3FQY2dpalM5dGhmVGRWZ01HSS1ZSUlfYXg1aHZId2RyNEZ0TkJ0SUJsR19yV0p6ZTVRSmlyNFlyM2JIWTdicnpHN3NpWTVkajRfYS1sd0JzVUlSbXB4b1NvbkdxdmVVZmtET2wwX0h5dWJaNHJJMFQ3Z1pjcjQzeTB6WVdrOFg0WTZ5ZW1xU3hSMW1DdlFHSmJkRERPc1JCd0pJR2RnakVFcldFUWtMQXdSaGJ5TTFYbUVqeHZzZ1c2a0h2YWNR0gHPAUFVX3lxTFBsVlgwZndYcnF2TEtfUnVBQ2NpbGFBN0twMW14UW4tQXE5M25Oc0xwSkc4RWR5eU5GNGhCbi05RmcwUGxrdXhHRE50RWNORnU2cnNwRFdEVDhIV3ZJSWZfR0Y1Q19DenBrZWxfbi1jRHR2MXVZNzBwalpNUnJZTGlEb3RXb0QwbVh0RHBKNnJDUUptcGNIT2dRYTFDN09MQ3BJRTR1UUJGVGYwUUxyckowNm9sT0JtVDF0MW96blhhUjFIeGo5bDJtb2RwaHNwTQ?oc=5",
+     "outlet": "The Times of India",
+     "type": "news",
+     "published": "2026-04-11T07:00:00+00:00"
+    },
+    {
+     "title": "Wholesale Lab-grown Diamond Prices Down 26%",
+     "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE5zNExxUmVmUVdtM3dxaXpmakFYdnpsWlNGS2RIRHFtempjTnVKSm1uNG9YSmFtQ2NJRm5oMi1zYVE4elYxNGZPcU9aTS1pRWFTSUR2VEdfR2dOSi1lVHJzQjU3YUR4SHNxdnJsdEZyMmI?oc=5",
+     "outlet": "WatchPro",
+     "type": "news",
+     "published": "2026-01-22T08:00:00+00:00"
+    },
+    {
+     "title": "Will Trump’s India tariffs shut down world’s biggest cut diamond supplier?",
+     "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQbkZVc3JSRW9kWTMwbVI4aHJyWk5YSE9MSmxkT01CZ1BKLVp2cDQzUzBHV2JoNVhUclJ0dWJUUDROb0tKWHdoR3ZVaDdsM3RoLWxRNHlBYXlkbjFsajlsM2RvcjU2UzJ3SUItVGRQSk9mR2Jldm1HQU5FSmpSdFpMd3hlR0lKVjlJT0pMREJEVldJTVhGdVVTVjNsNm5DdVBlbnRZanU5SmNKUEtCQ0h4NFlZX243dGfSAbwBQVVfeXFMUDdZZHJKakRfcnRiNFlTdVJlRnI5a1RjVmtQc2Jfb01XSllXandPcFVZeTNSN1A3YW9JTmhjT3pnVm00TmlBekRfYlVwaEdhUlJqdjYyWVRlaVVDajB6bUVVMHdwNTk5TTRHZmxyVmRwRW1zZ092SzJURWFadmh6QlFuWE8xUE5UM1d0Z3l0aGg4WHNKMHdaZU5iX1QtWjEyX05HbDk3ZGdnSWZackZneE1HOUdjRUhDUmNWSFg?oc=5",
+     "outlet": "Al Jazeera",
+     "type": "news",
+     "published": "2025-08-13T07:00:00+00:00"
+    }
+   ]
+  },
+  {
+   "id": "jewelry-retail-2026-11-17",
+   "theme": "jewelry-retail",
+   "theme_label": "Retail & brands",
+   "title": "What the big jewellery brands' results mean for independent buyers",
+   "audience": "Both",
+   "score": 62,
+   "momentum": "Steady",
+   "change_pct": 4,
+   "signal_count": 26,
+   "outlet_count": 15,
+   "query_count": 0,
+   "why_now": "23 news stories from 15 outlets in the last 7 days, 3 community threads asking related questions, of which 2 broke in the last 48 hours.",
+   "keywords": [],
+   "brief": {
+    "format": "Weekly market note + LinkedIn post + newsletter",
+    "hook": "Big-box jewellery results are a free, credible news hook for the case that a marketplace beats a mall chain.",
+    "angle": "Turn brand and retail earnings news into a 'what this means for independent buyers and sellers' column that positions ZVDapp as the marketplace outside the big-box channel.",
+    "outline": [
+     "What the brands reported this week",
+     "What 'retail & brands' signals about where demand is going",
+     "Where independent buyers get better value",
+     "Gift-season timing: what to launch and when",
+     "What ZVDapp sellers should stock next month"
+    ],
+    "cta": "List or source with ZVDapp instead of a mall chain",
+    "words": "1,200-1,800 words"
+   },
+   "signals": [
+    {
+     "title": "Dhanteras-Diwali 2026: Higher jewellery sales volume drives sharp value growth",
+     "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPd25Tb1M3cjcwU0F2eDlnZEVhUkQyNUFuS1FyZ1NxUmphRElLZHI2LVNrZnU4TXVmNHAzYjRTTjJ3YThXLTlnTlR3QmRRZEJlNW90THVtWXNvWFd5WGQ3MmVOSktrVTBHZWdmVVRBSjJ4aHAybmd5LTRoZGxEZmhhVnpmTFZNNEdMWDZ2S3ZqNkkwNno1RTlXVHVFbTBESl92TnNxM2M2d1FGN3hhWUNF?oc=5",
+     "outlet": "The Retail Jeweller India",
+     "type": "news",
+     "published": "2026-11-16T14:36:39+00:00"
+    },
+    {
+     "title": "Any experts can tell me if I should return this to Tiffany and co?",
+     "url": "https://www.reddit.com/r/jewelry/comments/1xw1jv7/any_experts_can_tell_me_if_i_should_return_this/",
+     "outlet": "r/jewelry",
+     "type": "community",
+     "published": "2026-11-14T12:45:12+00:00"
+    },
+    {
+     "title": "From these to these:",
+     "url": "https://www.reddit.com/r/jewelry/comments/1xvglv1/from_these_to_these/",
+     "outlet": "r/jewelry",
+     "type": "community",
+     "published": "2026-11-13T19:04:46+00:00"
+    },
+    {
+     "title": "Masked Armed Men Rob Famous Jewelry Store in Broad Daylight, Stealing 1.5 Billion Won Worth of Goods",
+     "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTFBuRElINHZyeDFNUk9EOEVsdVNld2VCSV8xZXlNMVVIU1lrdDNWZnpKYmJRaThRUl9qZER5b0U2QjRPdmI4NzNzd3djRzVvMlh0b3dNdUNndWlFTDNmRlJ1U2FWZ0M2ekVJNEllYjlB?oc=5",
+     "outlet": "news.sbs.co.kr",
+     "type": "news",
+     "published": "2026-11-13T01:48:43+00:00"
+    },
+    {
+     "title": "My partner did very well :)",
+     "url": "https://www.reddit.com/r/EngagementRings/comments/1xu5lwu/my_partner_did_very_well/",
+     "outlet": "r/EngagementRings",
+     "type": "community",
+     "published": "2026-11-12T06:33:40+00:00"
+    }
+   ]
+  },
+  {
+   "id": "grading-certs-2026-11-17",
+   "theme": "grading-certs",
+   "theme_label": "Grading & certificates",
+   "title": "GIA Certified Diamonds Price",
+   "audience": "Both",
+   "score": 61,
+   "momentum": "Steady",
+   "change_pct": 0,
+   "signal_count": 7,
+   "outlet_count": 6,
+   "query_count": 19,
+   "why_now": "7 news stories from 6 outlets in the last 7 days.",
+   "keywords": [
+    {
+     "query": "gia certified diamonds price",
+     "stage": "Price / commercial",
+     "score": 84
+    },
+    {
+     "query": "gia certified diamonds for sale",
+     "stage": "Compare",
+     "score": 80
+    },
+    {
+     "query": "gia certified diamond rings for sale",
+     "stage": "Compare",
+     "score": 80
+    },
+    {
+     "query": "diamond certificate of authenticity",
+     "stage": "Research",
+     "score": 72
+    },
+    {
+     "query": "diamond certificate number lookup",
+     "stage": "Research",
+     "score": 72
+    },
+    {
+     "query": "gia certified diamond earrings",
+     "stage": "Research",
+     "score": 72
+    }
+   ],
+   "brief": {
+    "format": "Explainer + verification walkthrough video",
+    "hook": "Every buyer eventually asks 'is this real?' - the brand with the clearest answer wins the transaction.",
+    "angle": "Own the trust queries: a plain-English certificate explainer that also shows how to verify any report number in seconds.",
+    "outline": [
+     "What a certificate does and does not tell you",
+     "Reading 'gia certified diamonds price' in under two minutes",
+     "IGI vs GIA vs in-house: the differences that change price",
+     "How to verify a report number before you pay",
+     "Five red flags in a listing"
+    ],
+    "cta": "Every stone on ZVDapp ships with a verifiable report",
+    "words": "1,200-1,800 words"
+   },
+   "signals": [
+    {
+     "title": "IGI vs. GIA — what’s the difference, and which one should you choose?",
+     "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE1tSlVfRVhHUEQ0QmtkVjBJb1lMR0V5ai1ZRnpYUV92amMwQjBKTHBIX3QxY2t0WlE2TWg3YWp4WXFsQ1JYQ1ktSGh6SW5LZVJKWmFoenBKWGF2Y3ZU?oc=5",
+     "outlet": "YouTube",
+     "type": "news",
+     "published": "2026-08-11T07:00:00+00:00"
+    },
+    {
+     "title": "The Diamond Report: Industry Insights",
+     "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQNjRpUHYzb3Y3RmV5VHI0c1JsNWFWTk52a2U2bjZLQm1sbmdLcXlhUDNPMlp5MVN1QUJhSWc5dUF1amZtMlB5N1VnZmYtY1JzZndhS2trdVQ5aGpqZEJaLUEtOFlQd2JpZEVUWF83Z0hIT21odWtGZnI0VWFmZGt1MkRoMlRvUUw3R25kdzNUQ1hydm4tTnc?oc=5",
+     "outlet": "De Beers Group",
+     "type": "news",
+     "published": "2026-05-29T10:06:21+00:00"
+    },
+    {
+     "title": "GIA Changes Its Lab-Grown Grading (Again)",
+     "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5BWVo5QjJjNGNVYVN4R3lxSk5GVFhVVG9JYU43ejVVejhuNXlXQWdiNDFRdV9zU3AzbXFoTV9qeWxDWENUTnVCMVFqQXd6Ulh4OU9MN3VjS2V3NW93b2xtUWZEM0diVThISmh6OGx2TTVESlVmM2lGYmVxakRKZU0?oc=5",
+     "outlet": "JCK",
+     "type": "news",
+     "published": "2025-06-03T07:00:00+00:00"
+    },
+    {
+     "title": "Does In-Factory Grading Help IGI Achieve Huge Margins?",
+     "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNVDVQOXoxa1dST2VtVF9jWGcySHFHZkx0QmRiREtRWUFLTzJ0WV9hN2ZRMHNEa25KcnNWdzJKU0ZTWTAwd3J3czBJaE4tRGNscXI1U1NlZ2RLUXZRU2lxeGUtbUlvenFLVWNsdnhyN0FuUXlONjhNTVNBellQOF9LTVIxbzJuMUw0akZONg?oc=5",
+     "outlet": "Rapaport",
+     "type": "news",
+     "published": "2024-09-26T07:00:00+00:00"
+    },
+    {
+     "title": "GIA, IGI Introduce Same-Day Service Amid Reports of Fraud",
+     "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOV21sZjA3ZXc2bXBlM1pUS0EwMTU3M0lDdUdwWmVUeWRMMWZwQk50YlVremp0ZXozRC1aU1hRQzdGX3dPN0p6d3JDR2FiYTRtdGQ4QjdiRlo5bGZhWjdjU3piRUREQTlLRGIxNm4ycGZjMl9lanZYWkNWRWR2LXRrZ2dxSkdOb0g1eFBzR1RETWM1dzkzdU1VLU5GdjZ0dTVm?oc=5",
+     "outlet": "nationaljeweler.com",
+     "type": "news",
+     "published": "2024-01-11T08:00:00+00:00"
+    }
+   ]
+  },
+  {
+   "id": "jewelry-tech-2026-11-17",
+   "theme": "jewelry-tech",
+   "theme_label": "E-commerce & tech",
+   "title": "What is actually selling diamonds online this month",
+   "audience": "Both",
+   "score": 61,
+   "momentum": "Cooling",
+   "change_pct": -22,
+   "signal_count": 32,
+   "outlet_count": 24,
+   "query_count": 0,
+   "why_now": "32 news stories from 24 outlets in the last 7 days, of which 1 broke in the last 48 hours.",
+   "keywords": [],
+   "brief": {
+    "format": "Operator note + case study + LinkedIn post",
+    "hook": "Jewellery is finally buying online the way fashion does - the brands publishing the playbook get the sellers.",
+    "angle": "Publish operator-grade e-commerce content that doubles as proof ZVDapp is the modern channel: what is working in jewellery online sales this month.",
+    "outline": [
+     "What changed in jewellery e-commerce this week",
+     "'e-commerce & tech': the numbers behind it",
+     "The listing elements that move conversion",
+     "Live selling and short video: what actually sells stones",
+     "How to launch on ZVDapp in a week"
+    ],
+    "cta": "Apply to sell on ZVDapp",
+    "words": "1,200-1,800 words"
+   },
+   "signals": [
+    {
+     "title": "Jewelry Making Kit Market Forecast to 2035: Adult Hobbyist Demand and E-Commerce Discovery Drive Forward Growth",
+     "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxQb21EdEdFemp2M3ZxQUtEbk9RNkdXcXQ5cXJKLVE1cTZkV3VWOFhyWmJnZ1lKUzVMa0FrMWdmR1ZLMk1zR1JVZW1NWTFZUFJwUFVEUS1uOU5jb0thYnpxR0NKOGtGMHVmQXpHTmIxYjc3ZElWdzFxZEVRUjVHUUJhV3JHVGd2LWZicVlYdFZNM21hRWpfVFVocTVmV2RtUVRtOUUweDcxTmdKQUM3YmtUODNUNE5FZHRXc2Y0UHJRcm1fWndHY29lNkNwVUhyYXN3bVltbVFaVQ?oc=5",
+     "outlet": "IndexBox",
+     "type": "news",
+     "published": "2026-11-17T04:16:04+00:00"
+    },
+    {
+     "title": "Can TikTok Shop be about more than just shopping?",
+     "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxObm1wdVRVTTJpRExjOHkzRGNQbHRxN1RNZlU3OEFyam5OakFfY2lHbU4tVEd5aE9NZkRoa2VKbmp3dm9CZDBSYUc2ejN2YnNSR05DbzhpS1lOT2JHRVZRNFJzZ0FOT045R0F4YTBWT2VIVkd4WlZYdFRlZzVwX0xoTDhXTlc1cFpFUE5QMWliXy1Pdw?oc=5",
+     "outlet": "Marketing Brew",
+     "type": "news",
+     "published": "2026-10-20T07:00:00+00:00"
+    },
+    {
+     "title": "TOP 20 JEWELRY MARKETING STATISTICS 2026 REVEAL BILLION-DOLLAR DIGITAL BUYING SURGE",
+     "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE9tNmRleUtIZ3BJTTdzRTV5c0dXczhvQlo4V0t6ZURZUE1pbW1Vcml1UHR1OWQ1cHFzWXQzVkQwdlExa3RGWm9yMmVKeGJkX1BaaXU1Zml2TTJ5V2R4NE5HN0VDNzFhUzV0?oc=5",
+     "outlet": "Amra & Elma",
+     "type": "news",
+     "published": "2026-09-14T07:00:00+00:00"
+    },
+    {
+     "title": "A Luxury Digital Retailer Brings Shopping to You",
+     "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxORjl6X0ZORUVzSVM5eXNITEt0Qy16ZWd6X3BhY2VpQTAtVE12VDd2OWVMRU5yWHJRVlhJaENKT1FnNzA0N1Y4UDdsaFktWXRuaTlldnQ4MFdSZEw0SE1TbThObjdCVWlPWWJuVU1PbHhzOHNQVVlrMTZHZl8zVGJXdw?oc=5",
+     "outlet": "The New York Times",
+     "type": "news",
+     "published": "2026-09-04T07:00:00+00:00"
+    },
+    {
+     "title": "What's behind the diamond downturn?",
+     "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPWXl1LWVIbmxsU1hoUDVsUWZMUTAwYWRqa0phS0RLX01qVWRhN1R6WGtVRy1hNW9obzA4dl9oRHRMY1lUVmFjZU1QQ3FNajhBQTMyTXQzVURKNUlGRTRCQ1hwU2Jic1ZJUV9WcmNNVFNDQ0UwX2V2Q1c4MzRzZDlEazdFdWZBN1U?oc=5",
+     "outlet": "www.marketplace.org",
+     "type": "news",
+     "published": "2026-07-30T07:00:00+00:00"
+    }
+   ]
+  },
+  {
+   "id": "sustainability-2026-11-17",
+   "theme": "sustainability",
+   "theme_label": "Traceability & ethics",
+   "title": "Where your diamond came from: the provenance page buyers check",
+   "audience": "Both",
+   "score": 42,
+   "momentum": "Steady",
+   "change_pct": 0,
+   "signal_count": 6,
+   "outlet_count": 6,
+   "query_count": 0,
+   "why_now": "6 news stories from 6 outlets in the last 7 days.",
+   "keywords": [],
+   "brief": {
+    "format": "Trust page + provenance explainer + short video",
+    "hook": "Ethics questions convert better than ethics lectures - show the evidence trail instead of making claims.",
+    "angle": "Make provenance a product feature: a short, evidence-led page on where ZVDapp stones come from and how a buyer can check.",
+    "outline": [
+     "What traceability means in practice for a single stone",
+     "'traceability & ethics': the claims worth trusting and the ones that are marketing",
+     "Regulation changes buyers should know about",
+     "How ZVDapp documents provenance",
+     "Questions to ask any seller"
+    ],
+    "cta": "See provenance and certification on every ZVDapp listing",
+    "words": "900-1,200 words"
+   },
+   "signals": [
+    {
+     "title": "Natural diamond firms turn to blockchain traceability amid lab-grown competition",
+     "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxPYVRTTlNEVENXNHRSbGRDQlJkRnpyMFhvZTZnU2xlVnB1Nl9CU2p2OUdsYmUzUjBsdkNVWDQyNjFQaTNNRE9YdEN6QUF2Q3B3LUw2OURHOWtUQzZZZUlIb1ZmZ0dpMlhBMGhEelZfai02YWJnTFYtaFlWWFZrUDRyTDRFajBOQkkwNTUxZTlBc1ZEQ0xNWTdfTVNHQ1YzVy1WalVhQjJrYUlnQ21VUGRRUEJfblhXMnZIa0pQSUhEWlNfX25hUGo0MkJjcmZ4bjNP?oc=5",
+     "outlet": "South China Morning Post",
+     "type": "news",
+     "published": "2026-06-14T07:00:00+00:00"
+    },
+    {
+     "title": "GIA acquires 30% shareholding in diamond provenance blockchain platform Tracr",
+     "url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxPOW02YnJyQ3ZuMXNuOUtuMVJBQXVNQkRfNDVsNkhwalVicElXWlFvMkhhNUhOaENlWlFLSFV1a3A2WmZsQTN5WDI0R1FxSk1CUWZNbUVVZ0hFa2xGWkQzY0Flb0Y2c3JBdHZYRHVvUHJsUnNNWGlzS3JRclBpS2hUQzRaQVA1UWI4Z0stQlJxcWs5WVVZM1RUZG9NS2pfalkzSjBFQS01S2VSclpULUVMVW9GNVZCQVdxeGlsdFMwb0FaRkExWUZTdVJNdTFLcmZ3UXV1ZmQzcGtqLVpzaGExYVp0cUo?oc=5",
+     "outlet": "De Beers Group",
+     "type": "news",
+     "published": "2026-05-29T07:00:00+00:00"
+    },
+    {
+     "title": "What Does Sustainability Really Mean in the Diamond Industry?",
+     "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNU1pVYlZlVVJwcGpOWW9jYXN1ckF4d1dyU1E4cmF3ZEFtbmFlZkJ0WHJZN25qVW5EZjdPQXlJU05xb2V6Y3I5ZjlSMUw2SmxjdExnMURsODJnb3VZcGI4blZ6cDJzU3QydDljbjFxMXVFNTdJVnZiY2dPZkdreWcyMklNR2NxQQ?oc=5",
+     "outlet": "observer.com",
+     "type": "news",
+     "published": "2025-06-04T07:00:00+00:00"
+    },
+    {
+     "title": "The environmental impacts and sustainable pathways of the global diamond industry",
+     "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE9ZblV4OWhBU2NLNlRCVUZmSDVUbGQzWG5SUDFWWV9BVkxnc0prVEhOaHowUEpla3EwRmZLR3QtSk9sTDVqX0hmSHhZamEzOU9VZE9Lakc5LWpVcUVoQ3hR?oc=5",
+     "outlet": "Nature",
+     "type": "news",
+     "published": "2024-05-24T07:00:00+00:00"
+    },
+    {
+     "title": "For Tiffany & Co., It’s Not a Diamond If It’s Not Ethical and Sustainable",
+     "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE5xM2xaUUdLM0c4WW52TklydjEwQXRaT0wzUTFqOUt1TUtubW0wWDgtT3RTRmttT2Jsc0t4eXFmZnlPZEdaV1RkUlNUeTRSaHNVRjJXV3RpMXNxcVI3cUVNZTZFMGFVMjdFakdaOVN3?oc=5",
+     "outlet": "the-ethos.co",
+     "type": "news",
+     "published": "2022-11-15T08:00:00+00:00"
+    }
+   ]
+  }
+ ],
+ "keywords": [
+  {
+   "query": "lab grown diamond rings best place to buy",
+   "theme": "lab-grown",
+   "theme_label": "Lab-grown diamonds",
+   "stage": "Price / commercial",
+   "audience": "B2C",
+   "score": 88,
+   "page_type": "Pricing / category page",
+   "title": "Lab Grown Diamond Rings Best Place to Buy",
+   "note": ""
+  },
+  {
+   "query": "lab grown diamond rings price",
+   "theme": "lab-grown",
+   "theme_label": "Lab-grown diamonds",
+   "stage": "Price / commercial",
+   "audience": "Both",
+   "score": 88,
+   "page_type": "Pricing / category page",
+   "title": "Lab Grown Diamond Rings Price",
+   "note": ""
+  },
+  {
+   "query": "diamond price chart 10 years",
+   "theme": "diamond-prices",
+   "theme_label": "Prices & pricing",
+   "stage": "Price / commercial",
+   "audience": "Both",
+   "score": 88,
+   "page_type": "Pricing / category page",
+   "title": "Diamond Price Chart 10 Years",
+   "note": ""
+  },
+  {
+   "query": "diamond price per carat",
+   "theme": "diamond-prices",
+   "theme_label": "Prices & pricing",
+   "stage": "Price / commercial",
+   "audience": "Both",
+   "score": 88,
+   "page_type": "Pricing / category page",
+   "title": "Diamond Price Per Carat",
+   "note": ""
+  },
+  {
+   "query": "diamond prices over time",
+   "theme": "diamond-prices",
+   "theme_label": "Prices & pricing",
+   "stage": "Price / commercial",
+   "audience": "Both",
+   "score": 88,
+   "page_type": "Pricing / category page",
+   "title": "Diamond Prices Over Time",
+   "note": ""
+  },
+  {
+   "query": "diamond price per gram",
+   "theme": "diamond-prices",
+   "theme_label": "Prices & pricing",
+   "stage": "Price / commercial",
+   "audience": "Both",
+   "score": 88,
+   "page_type": "Pricing / category page",
+   "title": "Diamond Price Per Gram",
+   "note": ""
+  },
+  {
+   "query": "natural diamond engagement rings price",
+   "theme": "engagement-rings",
+   "theme_label": "Engagement & bridal",
+   "stage": "Price / commercial",
+   "audience": "B2C",
+   "score": 88,
+   "page_type": "Pricing / category page",
+   "title": "Natural Diamond Engagement Rings Price",
+   "note": ""
+  },
+  {
+   "query": "1 carat diamond price",
+   "theme": "diamond-prices",
+   "theme_label": "Prices & pricing",
+   "stage": "Price / commercial",
+   "audience": "Both",
+   "score": 88,
+   "page_type": "Pricing / category page",
+   "title": "1 Carat Diamond Price",
+   "note": ""
+  },
+  {
+   "query": "1 carat diamond price chart",
+   "theme": "diamond-prices",
+   "theme_label": "Prices & pricing",
+   "stage": "Price / commercial",
+   "audience": "Both",
+   "score": 88,
+   "page_type": "Pricing / category page",
+   "title": "1 Carat Diamond Price Chart",
+   "note": ""
+  },
+  {
+   "query": "diamond tennis bracelet costco",
+   "theme": "jewelry-trends",
+   "theme_label": "Trends & style",
+   "stage": "Price / commercial",
+   "audience": "B2C",
+   "score": 88,
+   "page_type": "Pricing / category page",
+   "title": "Diamond Tennis Bracelet Costco",
+   "note": "Retailer comparison - win this with an honest, priced comparison page."
+  },
+  {
+   "query": "loose diamond wholesale price",
+   "theme": "wholesale-b2b",
+   "theme_label": "Wholesale & trade",
+   "stage": "Price / commercial",
+   "audience": "B2B",
+   "score": 88,
+   "page_type": "Pricing / category page",
+   "title": "Loose Diamond Wholesale Price",
+   "note": ""
+  },
+  {
+   "query": "custom engagement ring cost",
+   "theme": "engagement-rings",
+   "theme_label": "Engagement & bridal",
+   "stage": "Price / commercial",
+   "audience": "B2C",
+   "score": 88,
+   "page_type": "Pricing / category page",
+   "title": "Custom Engagement Ring Cost",
+   "note": ""
+  },
+  {
+   "query": "lab grown diamonds vs real diamonds",
+   "theme": "lab-grown",
+   "theme_label": "Lab-grown diamonds",
+   "stage": "Compare",
+   "audience": "Both",
+   "score": 84,
+   "page_type": "Comparison page",
+   "title": "Lab Grown Diamonds vs Real Diamonds",
+   "note": ""
+  },
+  {
+   "query": "lab grown diamonds vs natural",
+   "theme": "lab-grown",
+   "theme_label": "Lab-grown diamonds",
+   "stage": "Compare",
+   "audience": "Both",
+   "score": 84,
+   "page_type": "Comparison page",
+   "title": "Lab Grown Diamonds vs Natural",
+   "note": ""
+  },
+  {
+   "query": "lab grown diamonds vs cubic zirconia",
+   "theme": "lab-grown",
+   "theme_label": "Lab-grown diamonds",
+   "stage": "Compare",
+   "audience": "Both",
+   "score": 84,
+   "page_type": "Comparison page",
+   "title": "Lab Grown Diamonds vs Cubic Zirconia",
+   "note": ""
+  },
+  {
+   "query": "lab grown diamond rings for women",
+   "theme": "lab-grown",
+   "theme_label": "Lab-grown diamonds",
+   "stage": "Compare",
+   "audience": "Both",
+   "score": 84,
+   "page_type": "Comparison page",
+   "title": "Lab Grown Diamond Rings for Women",
+   "note": ""
+  },
+  {
+   "query": "lab grown diamond rings for men",
+   "theme": "lab-grown",
+   "theme_label": "Lab-grown diamonds",
+   "stage": "Compare",
+   "audience": "Both",
+   "score": 84,
+   "page_type": "Comparison page",
+   "title": "Lab Grown Diamond Rings for Men",
+   "note": ""
+  },
+  {
+   "query": "natural vs lab grown diamonds",
+   "theme": "lab-grown",
+   "theme_label": "Lab-grown diamonds",
+   "stage": "Compare",
+   "audience": "Both",
+   "score": 84,
+   "page_type": "Comparison page",
+   "title": "Natural vs Lab Grown Diamonds",
+   "note": ""
+  },
+  {
+   "query": "natural vs lab grown diamonds price",
+   "theme": "lab-grown",
+   "theme_label": "Lab-grown diamonds",
+   "stage": "Compare",
+   "audience": "Both",
+   "score": 84,
+   "page_type": "Comparison page",
+   "title": "Natural vs Lab Grown Diamonds Price",
+   "note": ""
+  },
+  {
+   "query": "natural vs lab grown diamonds pros and cons",
+   "theme": "lab-grown",
+   "theme_label": "Lab-grown diamonds",
+   "stage": "Compare",
+   "audience": "Both",
+   "score": 84,
+   "page_type": "Comparison page",
+   "title": "Natural vs Lab Grown Diamonds Pros and Cons",
+   "note": ""
+  },
+  {
+   "query": "natural vs lab grown diamonds difference",
+   "theme": "lab-grown",
+   "theme_label": "Lab-grown diamonds",
+   "stage": "Compare",
+   "audience": "Both",
+   "score": 84,
+   "page_type": "Comparison page",
+   "title": "Natural vs Lab Grown Diamonds Difference",
+   "note": ""
+  },
+  {
+   "query": "natural vs lab grown diamond price difference",
+   "theme": "lab-grown",
+   "theme_label": "Lab-grown diamonds",
+   "stage": "Compare",
+   "audience": "Both",
+   "score": 84,
+   "page_type": "Comparison page",
+   "title": "Natural vs Lab Grown Diamond Price Difference",
+   "note": ""
+  },
+  {
+   "query": "natural vs lab grown diamonds reddit",
+   "theme": "lab-grown",
+   "theme_label": "Lab-grown diamonds",
+   "stage": "Compare",
+   "audience": "Both",
+   "score": 84,
+   "page_type": "Comparison page",
+   "title": "Natural vs Lab Grown Diamonds Reddit",
+   "note": ""
+  },
+  {
+   "query": "natural vs lab grown diamonds ethics",
+   "theme": "lab-grown",
+   "theme_label": "Lab-grown diamonds",
+   "stage": "Compare",
+   "audience": "Both",
+   "score": 84,
+   "page_type": "Comparison page",
+   "title": "Natural vs Lab Grown Diamonds Ethics",
+   "note": ""
+  },
+  {
+   "query": "natural vs lab grown diamond cost",
+   "theme": "lab-grown",
+   "theme_label": "Lab-grown diamonds",
+   "stage": "Compare",
+   "audience": "Both",
+   "score": 84,
+   "page_type": "Comparison page",
+   "title": "Natural vs Lab Grown Diamond Cost",
+   "note": ""
+  },
+  {
+   "query": "natural vs lab grown diamonds for engagement rings",
+   "theme": "lab-grown",
+   "theme_label": "Lab-grown diamonds",
+   "stage": "Compare",
+   "audience": "Both",
+   "score": 84,
+   "page_type": "Comparison page",
+   "title": "Natural vs Lab Grown Diamonds for Engagement Rings",
+   "note": ""
+  },
+  {
+   "query": "natural vs lab grown diamond side by side",
+   "theme": "lab-grown",
+   "theme_label": "Lab-grown diamonds",
+   "stage": "Compare",
+   "audience": "Both",
+   "score": 84,
+   "page_type": "Comparison page",
+   "title": "Natural vs Lab Grown Diamond Side by Side",
+   "note": ""
+  },
+  {
+   "query": "natural diamond vs lab diamond",
+   "theme": "lab-grown",
+   "theme_label": "Lab-grown diamonds",
+   "stage": "Compare",
+   "audience": "Both",
+   "score": 84,
+   "page_type": "Comparison page",
+   "title": "Natural Diamond vs Lab Diamond",
+   "note": ""
+  },
+  {
+   "query": "natural diamond engagement rings for sale",
+   "theme": "engagement-rings",
+   "theme_label": "Engagement & bridal",
+   "stage": "Compare",
+   "audience": "B2C",
+   "score": 84,
+   "page_type": "Comparison page",
+   "title": "Natural Diamond Engagement Rings for Sale",
+   "note": ""
+  },
+  {
+   "query": "engagement rings for women",
+   "theme": "engagement-rings",
+   "theme_label": "Engagement & bridal",
+   "stage": "Compare",
+   "audience": "B2C",
+   "score": 84,
+   "page_type": "Comparison page",
+   "title": "Engagement Rings for Women",
+   "note": ""
+  },
+  {
+   "query": "engagement ring vs wedding ring",
+   "theme": "engagement-rings",
+   "theme_label": "Engagement & bridal",
+   "stage": "Compare",
+   "audience": "B2C",
+   "score": 84,
+   "page_type": "Comparison page",
+   "title": "Engagement Ring vs Wedding Ring",
+   "note": ""
+  },
+  {
+   "query": "engagement rings for men",
+   "theme": "engagement-rings",
+   "theme_label": "Engagement & bridal",
+   "stage": "Compare",
+   "audience": "B2C",
+   "score": 84,
+   "page_type": "Comparison page",
+   "title": "Engagement Rings for Men",
+   "note": ""
+  },
+  {
+   "query": "gia certified diamonds price",
+   "theme": "grading-certs",
+   "theme_label": "Grading & certificates",
+   "stage": "Price / commercial",
+   "audience": "Both",
+   "score": 84,
+   "page_type": "Pricing / category page",
+   "title": "GIA Certified Diamonds Price",
+   "note": ""
+  },
+  {
+   "query": "moissanite vs diamond price",
+   "theme": "diamond-prices",
+   "theme_label": "Prices & pricing",
+   "stage": "Compare",
+   "audience": "Both",
+   "score": 84,
+   "page_type": "Comparison page",
+   "title": "Moissanite vs Diamond Price",
+   "note": ""
+  },
+  {
+   "query": "moissanite vs diamond vs lab grown",
+   "theme": "lab-grown",
+   "theme_label": "Lab-grown diamonds",
+   "stage": "Compare",
+   "audience": "Both",
+   "score": 84,
+   "page_type": "Comparison page",
+   "title": "Moissanite vs Diamond vs Lab Grown",
+   "note": ""
+  },
+  {
+   "query": "moissanite vs diamond vs lab diamond",
+   "theme": "lab-grown",
+   "theme_label": "Lab-grown diamonds",
+   "stage": "Compare",
+   "audience": "Both",
+   "score": 84,
+   "page_type": "Comparison page",
+   "title": "Moissanite vs Diamond vs Lab Diamond",
+   "note": ""
+  },
+  {
+   "query": "moissanite vs diamond vs lab grown vs cubic zirconia",
+   "theme": "lab-grown",
+   "theme_label": "Lab-grown diamonds",
+   "stage": "Compare",
+   "audience": "Both",
+   "score": 84,
+   "page_type": "Comparison page",
+   "title": "Moissanite vs Diamond vs Lab Grown vs Cubic Zirconia",
+   "note": ""
+  },
+  {
+   "query": "custom engagement rings for women",
+   "theme": "engagement-rings",
+   "theme_label": "Engagement & bridal",
+   "stage": "Compare",
+   "audience": "B2C",
+   "score": 84,
+   "page_type": "Comparison page",
+   "title": "Custom Engagement Rings for Women",
+   "note": ""
+  },
+  {
+   "query": "diamond prices",
+   "theme": "diamond-prices",
+   "theme_label": "Prices & pricing",
+   "stage": "Price / commercial",
+   "audience": "Both",
+   "score": 82,
+   "page_type": "Pricing / category page",
+   "title": "Diamond Prices",
+   "note": ""
+  },
+  {
+   "query": "diamond price today",
+   "theme": "diamond-prices",
+   "theme_label": "Prices & pricing",
+   "stage": "Price / commercial",
+   "audience": "Both",
+   "score": 82,
+   "page_type": "Pricing / category page",
+   "title": "Diamond Price Today",
+   "note": ""
+  },
+  {
+   "query": "diamond prices chart",
+   "theme": "diamond-prices",
+   "theme_label": "Prices & pricing",
+   "stage": "Price / commercial",
+   "audience": "Both",
+   "score": 82,
+   "page_type": "Pricing / category page",
+   "title": "Diamond Prices Chart",
+   "note": ""
+  },
+  {
+   "query": "diamond prices crash",
+   "theme": "diamond-prices",
+   "theme_label": "Prices & pricing",
+   "stage": "Price / commercial",
+   "audience": "Both",
+   "score": 82,
+   "page_type": "Pricing / category page",
+   "title": "Diamond Prices Crash",
+   "note": ""
+  },
+  {
+   "query": "diamond prices dropping",
+   "theme": "diamond-prices",
+   "theme_label": "Prices & pricing",
+   "stage": "Price / commercial",
+   "audience": "Both",
+   "score": 82,
+   "page_type": "Pricing / category page",
+   "title": "Diamond Prices Dropping",
+   "note": ""
+  },
+  {
+   "query": "natural diamond prices",
+   "theme": "diamond-prices",
+   "theme_label": "Prices & pricing",
+   "stage": "Price / commercial",
+   "audience": "Both",
+   "score": 82,
+   "page_type": "Pricing / category page",
+   "title": "Natural Diamond Prices",
+   "note": ""
+  },
+  {
+   "query": "engagement ring styles 2026",
+   "theme": "engagement-rings",
+   "theme_label": "Engagement & bridal",
+   "stage": "Browse",
+   "audience": "B2C",
+   "score": 82,
+   "page_type": "Collection or gifting page",
+   "title": "Engagement Ring Styles 2026",
+   "note": ""
+  },
+  {
+   "query": "wedding ring styles 2026",
+   "theme": "engagement-rings",
+   "theme_label": "Engagement & bridal",
+   "stage": "Browse",
+   "audience": "B2C",
+   "score": 82,
+   "page_type": "Collection or gifting page",
+   "title": "Wedding Ring Styles 2026",
+   "note": ""
+  },
+  {
+   "query": "popular engagement ring styles 2026",
+   "theme": "engagement-rings",
+   "theme_label": "Engagement & bridal",
+   "stage": "Browse",
+   "audience": "B2C",
+   "score": 82,
+   "page_type": "Collection or gifting page",
+   "title": "Popular Engagement Ring Styles 2026",
+   "note": ""
+  },
+  {
+   "query": "top engagement ring styles 2026",
+   "theme": "engagement-rings",
+   "theme_label": "Engagement & bridal",
+   "stage": "Browse",
+   "audience": "B2C",
+   "score": 82,
+   "page_type": "Collection or gifting page",
+   "title": "Top Engagement Ring Styles 2026",
+   "note": ""
+  },
+  {
+   "query": "trending engagement ring styles 2026",
+   "theme": "engagement-rings",
+   "theme_label": "Engagement & bridal",
+   "stage": "Browse",
+   "audience": "B2C",
+   "score": 82,
+   "page_type": "Collection or gifting page",
+   "title": "Trending Engagement Ring Styles 2026",
+   "note": ""
+  },
+  {
+   "query": "best engagement ring styles 2026",
+   "theme": "engagement-rings",
+   "theme_label": "Engagement & bridal",
+   "stage": "Browse",
+   "audience": "B2C",
+   "score": 82,
+   "page_type": "Collection or gifting page",
+   "title": "Best Engagement Ring Styles 2026",
+   "note": ""
+  },
+  {
+   "query": "popular wedding ring styles 2026",
+   "theme": "engagement-rings",
+   "theme_label": "Engagement & bridal",
+   "stage": "Browse",
+   "audience": "B2C",
+   "score": 82,
+   "page_type": "Collection or gifting page",
+   "title": "Popular Wedding Ring Styles 2026",
+   "note": ""
+  },
+  {
+   "query": "mens wedding ring styles 2026",
+   "theme": "engagement-rings",
+   "theme_label": "Engagement & bridal",
+   "stage": "Browse",
+   "audience": "B2C",
+   "score": 82,
+   "page_type": "Collection or gifting page",
+   "title": "Mens Wedding Ring Styles 2026",
+   "note": ""
+  },
+  {
+   "query": "diamond wholesale prices",
+   "theme": "wholesale-b2b",
+   "theme_label": "Wholesale & trade",
+   "stage": "Price / commercial",
+   "audience": "B2B",
+   "score": 82,
+   "page_type": "Pricing / category page",
+   "title": "Diamond Wholesale Prices",
+   "note": ""
+  },
+  {
+   "query": "loose diamond wholesale canada",
+   "theme": "wholesale-b2b",
+   "theme_label": "Wholesale & trade",
+   "stage": "Trade",
+   "audience": "B2B",
+   "score": 82,
+   "page_type": "B2B landing page + price sheet",
+   "title": "Loose Diamond Wholesale Canada",
+   "note": ""
+  },
+  {
+   "query": "jewelry wholesale sumter sc",
+   "theme": "wholesale-b2b",
+   "theme_label": "Wholesale & trade",
+   "stage": "Trade",
+   "audience": "B2B",
+   "score": 82,
+   "page_type": "B2B landing page + price sheet",
+   "title": "Jewelry Wholesale Sumter Sc",
+   "note": ""
+  },
+  {
+   "query": "lab grown diamond rings under $500",
+   "theme": "lab-grown",
+   "theme_label": "Lab-grown diamonds",
+   "stage": "Research",
+   "audience": "Both",
+   "score": 80,
+   "page_type": "Explainer / FAQ article",
+   "title": "Lab Grown Diamond Rings Under $500",
+   "note": ""
+  },
+  {
+   "query": "natural diamonds for sale",
+   "theme": "natural-diamond",
+   "theme_label": "Natural & mined diamonds",
+   "stage": "Compare",
+   "audience": "Both",
+   "score": 80,
+   "page_type": "Comparison page",
+   "title": "Natural Diamonds for Sale",
+   "note": ""
+  },
+  {
+   "query": "engagement ring settings 2026",
+   "theme": "engagement-rings",
+   "theme_label": "Engagement & bridal",
+   "stage": "Research",
+   "audience": "B2C",
+   "score": 80,
+   "page_type": "Explainer / FAQ article",
+   "title": "Engagement Ring Settings 2026",
+   "note": ""
+  },
+  {
+   "query": "popular engagement ring settings 2026",
+   "theme": "engagement-rings",
+   "theme_label": "Engagement & bridal",
+   "stage": "Research",
+   "audience": "B2C",
+   "score": 80,
+   "page_type": "Explainer / FAQ article",
+   "title": "Popular Engagement Ring Settings 2026",
+   "note": ""
+  },
+  {
+   "query": "gia certified diamonds for sale",
+   "theme": "grading-certs",
+   "theme_label": "Grading & certificates",
+   "stage": "Compare",
+   "audience": "Both",
+   "score": 80,
+   "page_type": "Comparison page",
+   "title": "GIA Certified Diamonds for Sale",
+   "note": ""
+  },
+  {
+   "query": "gia certified diamond rings for sale",
+   "theme": "grading-certs",
+   "theme_label": "Grading & certificates",
+   "stage": "Compare",
+   "audience": "Both",
+   "score": 80,
+   "page_type": "Comparison page",
+   "title": "GIA Certified Diamond Rings for Sale",
+   "note": ""
+  },
+  {
+   "query": "diamond price calculator",
+   "theme": "diamond-prices",
+   "theme_label": "Prices & pricing",
+   "stage": "Compare",
+   "audience": "Both",
+   "score": 78,
+   "page_type": "Comparison page",
+   "title": "Diamond Price Calculator",
+   "note": ""
+  },
+  {
+   "query": "custom engagement ring designer",
+   "theme": "engagement-rings",
+   "theme_label": "Engagement & bridal",
+   "stage": "Browse",
+   "audience": "B2C",
+   "score": 78,
+   "page_type": "Collection or gifting page",
+   "title": "Custom Engagement Ring Designer",
+   "note": ""
+  },
+  {
+   "query": "lab grown diamond rings",
+   "theme": "lab-grown",
+   "theme_label": "Lab-grown diamonds",
+   "stage": "Research",
+   "audience": "Both",
+   "score": 76,
+   "page_type": "Explainer / FAQ article",
+   "title": "Lab Grown Diamond Rings",
+   "note": ""
+  },
+  {
+   "query": "lab grown diamond earrings",
+   "theme": "lab-grown",
+   "theme_label": "Lab-grown diamonds",
+   "stage": "Research",
+   "audience": "B2C",
+   "score": 76,
+   "page_type": "Explainer / FAQ article",
+   "title": "Lab Grown Diamond Earrings",
+   "note": ""
+  },
+  {
+   "query": "lab grown diamond engagement rings",
+   "theme": "lab-grown",
+   "theme_label": "Lab-grown diamonds",
+   "stage": "Research",
+   "audience": "Both",
+   "score": 76,
+   "page_type": "Explainer / FAQ article",
+   "title": "Lab Grown Diamond Engagement Rings",
+   "note": ""
+  },
+  {
+   "query": "lab grown diamond necklace",
+   "theme": "lab-grown",
+   "theme_label": "Lab-grown diamonds",
+   "stage": "Research",
+   "audience": "Both",
+   "score": 76,
+   "page_type": "Explainer / FAQ article",
+   "title": "Lab Grown Diamond Necklace",
+   "note": ""
+  },
+  {
+   "query": "lab grown diamond tennis bracelet",
+   "theme": "lab-grown",
+   "theme_label": "Lab-grown diamonds",
+   "stage": "Research",
+   "audience": "Both",
+   "score": 76,
+   "page_type": "Explainer / FAQ article",
+   "title": "Lab Grown Diamond Tennis Bracelet",
+   "note": ""
+  },
+  {
+   "query": "lab grown diamond stud earrings",
+   "theme": "lab-grown",
+   "theme_label": "Lab-grown diamonds",
+   "stage": "Research",
+   "audience": "B2C",
+   "score": 76,
+   "page_type": "Explainer / FAQ article",
+   "title": "Lab Grown Diamond Stud Earrings",
+   "note": ""
+  },
+  {
+   "query": "lab grown diamond rings engagement",
+   "theme": "lab-grown",
+   "theme_label": "Lab-grown diamonds",
+   "stage": "Research",
+   "audience": "Both",
+   "score": 76,
+   "page_type": "Explainer / FAQ article",
+   "title": "Lab Grown Diamond Rings Engagement",
+   "note": ""
+  },
+  {
+   "query": "lab grown diamond rings 3 carat",
+   "theme": "lab-grown",
+   "theme_label": "Lab-grown diamonds",
+   "stage": "Research",
+   "audience": "Both",
+   "score": 76,
+   "page_type": "Explainer / FAQ article",
+   "title": "Lab Grown Diamond Rings 3 Carat",
+   "note": ""
+  },
+  {
+   "query": "lab grown diamond ring set",
+   "theme": "lab-grown",
+   "theme_label": "Lab-grown diamonds",
+   "stage": "Research",
+   "audience": "Both",
+   "score": 76,
+   "page_type": "Explainer / FAQ article",
+   "title": "Lab Grown Diamond Ring Set",
+   "note": ""
+  },
+  {
+   "query": "natural diamond engagement rings",
+   "theme": "engagement-rings",
+   "theme_label": "Engagement & bridal",
+   "stage": "Research",
+   "audience": "B2C",
+   "score": 76,
+   "page_type": "Explainer / FAQ article",
+   "title": "Natural Diamond Engagement Rings",
+   "note": ""
+  },
+  {
+   "query": "natural diamond engagement rings gold",
+   "theme": "engagement-rings",
+   "theme_label": "Engagement & bridal",
+   "stage": "Research",
+   "audience": "B2C",
+   "score": 76,
+   "page_type": "Explainer / FAQ article",
+   "title": "Natural Diamond Engagement Rings Gold",
+   "note": ""
+  },
+  {
+   "query": "natural diamond engagement rings 3 carat",
+   "theme": "engagement-rings",
+   "theme_label": "Engagement & bridal",
+   "stage": "Research",
+   "audience": "B2C",
+   "score": 76,
+   "page_type": "Explainer / FAQ article",
+   "title": "Natural Diamond Engagement Rings 3 Carat",
+   "note": ""
+  },
+  {
+   "query": "natural diamond engagement rings 2 carat",
+   "theme": "engagement-rings",
+   "theme_label": "Engagement & bridal",
+   "stage": "Research",
+   "audience": "B2C",
+   "score": 76,
+   "page_type": "Explainer / FAQ article",
+   "title": "Natural Diamond Engagement Rings 2 Carat",
+   "note": ""
+  },
+  {
+   "query": "natural diamond engagement rings marquise",
+   "theme": "engagement-rings",
+   "theme_label": "Engagement & bridal",
+   "stage": "Research",
+   "audience": "B2C",
+   "score": 76,
+   "page_type": "Explainer / FAQ article",
+   "title": "Natural Diamond Engagement Rings Marquise",
+   "note": ""
+  },
+  {
+   "query": "natural diamond engagement rings oval",
+   "theme": "engagement-rings",
+   "theme_label": "Engagement & bridal",
+   "stage": "Research",
+   "audience": "B2C",
+   "score": 76,
+   "page_type": "Explainer / FAQ article",
+   "title": "Natural Diamond Engagement Rings Oval",
+   "note": ""
+  },
+  {
+   "query": "natural diamond engagement rings 1 carat",
+   "theme": "engagement-rings",
+   "theme_label": "Engagement & bridal",
+   "stage": "Research",
+   "audience": "B2C",
+   "score": 76,
+   "page_type": "Explainer / FAQ article",
+   "title": "Natural Diamond Engagement Rings 1 Carat",
+   "note": ""
+  },
+  {
+   "query": "engagement ring and wedding band",
+   "theme": "engagement-rings",
+   "theme_label": "Engagement & bridal",
+   "stage": "Research",
+   "audience": "B2C",
+   "score": 76,
+   "page_type": "Explainer / FAQ article",
+   "title": "Engagement Ring and Wedding Band",
+   "note": ""
+  }
+ ],
+ "signals": [
+  {
+   "title": "Jewelry Making Kit Market Forecast to 2035: Adult Hobbyist Demand and E-Commerce Discovery Drive Forward Growth",
+   "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxQb21EdEdFemp2M3ZxQUtEbk9RNkdXcXQ5cXJKLVE1cTZkV3VWOFhyWmJnZ1lKUzVMa0FrMWdmR1ZLMk1zR1JVZW1NWTFZUFJwUFVEUS1uOU5jb0thYnpxR0NKOGtGMHVmQXpHTmIxYjc3ZElWdzFxZEVRUjVHUUJhV3JHVGd2LWZicVlYdFZNM21hRWpfVFVocTVmV2RtUVRtOUUweDcxTmdKQUM3YmtUODNUNE5FZHRXc2Y0UHJRcm1fWndHY29lNkNwVUhyYXN3bVltbVFaVQ?oc=5",
+   "outlet": "IndexBox",
+   "type": "news",
+   "published": "2026-11-17T04:16:04+00:00",
+   "theme": "jewelry-tech",
+   "theme_label": "E-commerce & tech",
+   "audience": "Both"
+  },
+  {
+   "title": "Why You Need an East-West Diamond Engagement Ring",
+   "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTFBtcW80eFFUbi1QV0ZFa05QR3FNSE5seWtfN1dhR2Uyd01pNGx2WFhpclBvaFhwMC1YYkxldGxycVdmaFlHWUg1UHVIUVNoRTlrc1Jhb1FJQnhKSGdZcTdTMFNidHBERXZ0TWh3?oc=5",
+   "outlet": "Natural Diamond Council",
+   "type": "news",
+   "published": "2026-11-16T20:38:47+00:00",
+   "theme": "engagement-rings",
+   "theme_label": "Engagement & bridal",
+   "audience": "B2C"
+  },
+  {
+   "title": "Angola seeks to acquire a 10% stake in De Beers from Anglo American to strengthen its influence in the global diamond industry",
+   "url": "https://news.google.com/rss/articles/CBMigwJBVV95cUxOMDRPTUtnZ0VCQ3RVUXdNcHFLUzZJSVQwc0FEaTc1Y0NEQ0pTZWpjcDB0aDJnMXd3R3Z4bVdST2x6Nm0zWTRZVkppVXFWaWljbWpzZ01VcmxsQjdyV3RNUlNtUWNkNXhlTUxPUkNBR21VSHlZTm1RQ2dKdmJIc0ltOEU4NGJ0N2ItZXRydGtUUDFLa0FxRVRhTnljNVpGaDlvdXBFeUJicnFGRUJoUzBUOFJiQ2xQRTh2TV82dVVfMTJpcFJKZUJuYWNRT1RPazBRSlB2WVN0VXlLQXFkcU95aWNlTEFoNkF4Q0RsTEphLXdtMU1xNmF4elhZUUtfWnVzbTlr?oc=5",
+   "outlet": "FashionNetwork USA",
+   "type": "news",
+   "published": "2026-11-16T18:01:35+00:00",
+   "theme": "natural-diamond",
+   "theme_label": "Natural & mined diamonds",
+   "audience": "Both"
+  },
+  {
+   "title": "African Producers Make Plans to Reignite Natural-Diamond Interest",
+   "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQYmwtcjFLMUlMc0JuOUI3RVNiam43dlUtNzhyYUxOUWo2MUFER0YwUmhVbWlsLURWQzVKU3dfdDQ0NzJoVHJqRzZvbnhFLW91Y01UNy12Y0tpRUtXR0phS2pHTjhwRk9nZGptd1FaYVhvM251bDlMdEhxUTgwWlJzbTNJRFRPajl0MmxvcmZWcWNkdExCSG1z?oc=5",
+   "outlet": "Rapaport",
+   "type": "news",
+   "published": "2026-11-16T17:15:31+00:00",
+   "theme": "diamond-prices",
+   "theme_label": "Prices & pricing",
+   "audience": "Both"
+  },
+  {
+   "title": "Dhanteras-Diwali 2026: Higher jewellery sales volume drives sharp value growth",
+   "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPd25Tb1M3cjcwU0F2eDlnZEVhUkQyNUFuS1FyZ1NxUmphRElLZHI2LVNrZnU4TXVmNHAzYjRTTjJ3YThXLTlnTlR3QmRRZEJlNW90THVtWXNvWFd5WGQ3MmVOSktrVTBHZWdmVVRBSjJ4aHAybmd5LTRoZGxEZmhhVnpmTFZNNEdMWDZ2S3ZqNkkwNno1RTlXVHVFbTBESl92TnNxM2M2d1FGN3hhWUNF?oc=5",
+   "outlet": "The Retail Jeweller India",
+   "type": "news",
+   "published": "2026-11-16T14:36:39+00:00",
+   "theme": "jewelry-retail",
+   "theme_label": "Retail & brands",
+   "audience": "Both"
+  },
+  {
+   "title": "These Engagement Ring Trends Are Proof That 2027 Is the Year of Individualism",
+   "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxQeUhXZzdGRUFZMUt3QVNPbzhXMEJCVS1pQ0ZYV0QxNzVnaFQ1QzR5ZEFySWxWS2s1N21SYWxLVklGWWk1Y2hKRjdLdm5sV0JreGZuZmdXcVdwX3JSNGo4bm90bklXWkx5VGZua1Vyelk4MFQ2X3ZNTE1Cb1MzandOUU9idTBrLUpmQ0pwalFlNA?oc=5",
+   "outlet": "StyleCaster",
+   "type": "news",
+   "published": "2026-11-16T11:55:00+00:00",
+   "theme": "engagement-rings",
+   "theme_label": "Engagement & bridal",
+   "audience": "B2C"
+  },
+  {
+   "title": "De Beers London releases new festive campaign",
+   "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBIeTlucmlnemU5RnNlbVZVZV9VeF9wV2lfajMzS0pNbzdTV0NKSUxaQlI4UTZZVXBvMHBmQ0YybWFaV0p3N0xwSGpJTm92OEdsYmtJUUVzLWltOWRNQmhOZmY4ZzZNS1BXbE1CVlhXZ0sydVdjUUt0ckJMUnllV0E?oc=5",
+   "outlet": "Professional Jeweller",
+   "type": "news",
+   "published": "2026-11-16T09:50:49+00:00",
+   "theme": "natural-diamond",
+   "theme_label": "Natural & mined diamonds",
+   "audience": "Both"
+  },
+  {
+   "title": "Anglo American’s stake in De Beers attracts interest from Angola and Richemont",
+   "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxPTVEzUmI3dGNvdTh5Mk14X2U3UDJxZ3hVeFdRd1ZSZUVoR1VYOHN1NFFyRGlUbTFQQ2lKYXlBU1drNEtaTjZESjN4S244YUVhX2ZteHNLbmozbUxkZ3pxSG1aMExfaUFOc21qTEtTcVk0YXpXWWwzcUZIWWxxVV9tTGZ2UDlaSU10YVktR2tJYV9DLUxLS3B0eWpXcnpWSl9TLUlkV2RnZTFTT1JmLVV3djgyN1p6Vy00dU1zVkI3RQ?oc=5",
+   "outlet": "Bizcommunity",
+   "type": "news",
+   "published": "2026-11-16T07:47:36+00:00",
+   "theme": "natural-diamond",
+   "theme_label": "Natural & mined diamonds",
+   "audience": "Both"
+  },
+  {
+   "title": "Angola to buy 10% stake in De Beers as Anglo American plans divestment",
+   "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE5aYzhNaTBsX3B1aXJpM21Kc2k2R1Jtczh2Qjl4Y1RydnlUUUNUWGFqN2ZVaTd1UjlBRGpPSnIyMG5uUWR4bW0xNHdnOVJsRmdNYXkzRjc4X0hBSTZkSnk2dG5mbTJZUVN2WjVJdGtMNUtOY1pIUXR0cDhXYw?oc=5",
+   "outlet": "Mining Technology",
+   "type": "news",
+   "published": "2026-11-16T07:43:37+00:00",
+   "theme": "natural-diamond",
+   "theme_label": "Natural & mined diamonds",
+   "audience": "Both"
+  },
+  {
+   "title": "Carl Blackburn Discusses Custom Engagement Ring Prices",
+   "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOcE1iU3pZeVhyaVFJWFhQREJ6YmJ6eHRTejBJcTZBUUJxcy0tZ2dfNUZrMEhwZmg5cUgxR0FQSk1CaElFQThHemZvZzhsd1dJbi1LSjEzVWo2b3JLdWlXbGdTamF0ZGszNzltTWFQY1k1LXE4V2hjaVB2dk9hcXRvRldXMllfUzZOTlFZMWUtbVVDcFJhY2dQUlJRanZEYVNPMjd2RzlvTldEc0d2?oc=5",
+   "outlet": "24-7PressRelease.com",
+   "type": "news",
+   "published": "2026-11-16T07:03:02+00:00",
+   "theme": "engagement-rings",
+   "theme_label": "Engagement & bridal",
+   "audience": "B2C"
+  },
+  {
+   "title": "Angola Seeks 10% Stake in De Beers",
+   "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5JbF9PS3VFMTk3eklYQkNrOWtpRkVSVVNmVlNUc1ZnQlBJbklrWnNPRmh2OGdRQk90VXd4ZWJXMktpendYbFpSbmNkVU1kdDhxMTNOamp5NGVuQzA?oc=5",
+   "outlet": "IDEX Online Diamond Index",
+   "type": "news",
+   "published": "2026-11-16T06:01:34+00:00",
+   "theme": "natural-diamond",
+   "theme_label": "Natural & mined diamonds",
+   "audience": "Both"
+  },
+  {
+   "title": "Something you don't see every day: French high jewelry design gouaches from Art Deco onward!",
+   "url": "https://www.reddit.com/r/jewelry/comments/1xxa53c/something_you_dont_see_every_day_french_high/",
+   "outlet": "r/jewelry",
+   "type": "community",
+   "published": "2026-11-15T23:32:59+00:00",
+   "theme": "diamond-investment",
+   "theme_label": "Investment & resale",
+   "audience": "Both"
+  },
+  {
+   "title": "Irish engagement ring ✨",
+   "url": "https://www.reddit.com/r/EngagementRings/comments/1xx9fzv/irish_engagement_ring/",
+   "outlet": "r/EngagementRings",
+   "type": "community",
+   "published": "2026-11-15T23:01:33+00:00",
+   "theme": "engagement-rings",
+   "theme_label": "Engagement & bridal",
+   "audience": "B2C"
+  },
+  {
+   "title": "My wedding set",
+   "url": "https://www.reddit.com/r/jewelry/comments/1xwx24x/my_wedding_set/",
+   "outlet": "r/jewelry",
+   "type": "community",
+   "published": "2026-11-15T14:37:30+00:00",
+   "theme": "jewelry-trends",
+   "theme_label": "Trends & style",
+   "audience": "B2C"
+  },
+  {
+   "title": "De Beers suitor aims to win customers back to real diamonds",
+   "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOVGpOVUhVMU13MUpmQnl1cllzUTZNZ2FFOXFCcFBicWZrYmJacWxlX0wzS2pjQk9udUxRZVNTQmhZbTh2dkRVd1lIc3dGZHhNWHl0a3ZqWklLTGpIdkNESnJnWEVyZTBUU0h6VGlFaUtlb1o0NTBNNW9wN3BjbFVlRk01cG02SzN2YlN5TmxMbDF2bUlqMk51WUFRbVgzMkNOWXhHdy1MV3p1M2I1VnAyYnd3?oc=5",
+   "outlet": "Moneyweb",
+   "type": "news",
+   "published": "2026-11-15T02:00:48+00:00",
+   "theme": "natural-diamond",
+   "theme_label": "Natural & mined diamonds",
+   "audience": "Both"
+  },
+  {
+   "title": "TikTok auction craze fuels surge in sale of lab-grown diamonds",
+   "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPeGpGUW13OVNfcWw4aU5keG5VcTJBOXRQbWxLTmR0UjZxTGMyU1J4TVM3b0toYll1bWhybEl5aG9jMy1yTzFuc2Q1amlIQTVqTTlhbzJBdnpVdlctR2R2RFZLYVBQTGlGeGcySkNPZnJGOEQ2MWkwTW5rMWI1RzZjeVpNUFFzcTUxbTJyRnZLaWIxRVpUUUtmWTZxbHpRQUhWbndCdWY3cw?oc=5",
+   "outlet": "Daily Mail",
+   "type": "news",
+   "published": "2026-11-15T01:00:00+00:00",
+   "theme": "lab-grown",
+   "theme_label": "Lab-grown diamonds",
+   "audience": "Both"
+  },
+  {
+   "title": "My 0.3 carat ring!",
+   "url": "https://www.reddit.com/r/EngagementRings/comments/1xwcrm6/my_03_carat_ring/",
+   "outlet": "r/EngagementRings",
+   "type": "community",
+   "published": "2026-11-14T20:42:35+00:00",
+   "theme": "jewelry-trends",
+   "theme_label": "Trends & style",
+   "audience": "B2C"
+  },
+  {
+   "title": "Love my ring",
+   "url": "https://www.reddit.com/r/EngagementRings/comments/1xw4kch/love_my_ring/",
+   "outlet": "r/EngagementRings",
+   "type": "community",
+   "published": "2026-11-14T15:05:12+00:00",
+   "theme": "engagement-rings",
+   "theme_label": "Engagement & bridal",
+   "audience": "B2C"
+  },
+  {
+   "title": "Angola seeks a 10% stake in De Beers as Anglo American's sale to a Penny-led consortium takes shape",
+   "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxPc1FDTXA1NGM1eG1tWUE5d3FBUktDRjRaa19lb3dSc1QxRDZ0dml1UG0tVTNWeUd4MFdRdnNDNUVPWTlGdlZEZElNQmc4Z1l5U2VHb2pHRFE2R20yTmZVbU9vQzZudl9zdUtidlRTa3JfcDR3bUMtaTljaUN0dXd0LW1LckhvRGdWdjZrWERQZVFScWNRamVOYnJlMVlXaVZuRE9IeTlycDN1Y0UtUUo5NW1xdjQ5XzZtSVE?oc=5",
+   "outlet": "MLQ.ai",
+   "type": "news",
+   "published": "2026-11-14T14:09:35+00:00",
+   "theme": "natural-diamond",
+   "theme_label": "Natural & mined diamonds",
+   "audience": "Both"
+  },
+  {
+   "title": "Handcrafted Art Deco-style platinum ring with an emerald-cut diamond in five views",
+   "url": "https://www.reddit.com/r/jewelry/comments/1xw2yyv/handcrafted_art_decostyle_platinum_ring_with_an/",
+   "outlet": "r/jewelry",
+   "type": "community",
+   "published": "2026-11-14T13:54:57+00:00",
+   "theme": "jewelry-trends",
+   "theme_label": "Trends & style",
+   "audience": "B2C"
+  },
+  {
+   "title": "Any experts can tell me if I should return this to Tiffany and co?",
+   "url": "https://www.reddit.com/r/jewelry/comments/1xw1jv7/any_experts_can_tell_me_if_i_should_return_this/",
+   "outlet": "r/jewelry",
+   "type": "community",
+   "published": "2026-11-14T12:45:12+00:00",
+   "theme": "jewelry-retail",
+   "theme_label": "Retail & brands",
+   "audience": "Both"
+  },
+  {
+   "title": "My original engagement diamond got a second life!",
+   "url": "https://www.reddit.com/r/EngagementRings/comments/1xvp7p9/my_original_engagement_diamond_got_a_second_life/",
+   "outlet": "r/EngagementRings",
+   "type": "community",
+   "published": "2026-11-14T01:02:56+00:00",
+   "theme": "jewelry-trends",
+   "theme_label": "Trends & style",
+   "audience": "B2C"
+  },
+  {
+   "title": "Cannot stop staring at it!",
+   "url": "https://www.reddit.com/r/EngagementRings/comments/1xvnd9o/cannot_stop_staring_at_it/",
+   "outlet": "r/EngagementRings",
+   "type": "community",
+   "published": "2026-11-13T23:38:15+00:00",
+   "theme": "engagement-rings",
+   "theme_label": "Engagement & bridal",
+   "audience": "B2C"
+  },
+  {
+   "title": "Angola to Buy 10% of De Beers via Consortium",
+   "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPZ0N6X3hlYXdfd1U5ekE2RThtZExzTXBmNmZKV1cxdTExWUd6dTVRRjdXZnhULW5pWkJFZnpveWNwNHFNZldSX2dIcDA0Yk5xUnZqRFVNd2gtb1JBbktWcENQRVZscmJjZFBKR1JmMFRJZTEtWlhmR242ZkQyd3VLQ3E1MlRjaXFzbDk2OHNRZXpQdw?oc=5",
+   "outlet": "Briefs Finance",
+   "type": "news",
+   "published": "2026-11-13T23:01:07+00:00",
+   "theme": "natural-diamond",
+   "theme_label": "Natural & mined diamonds",
+   "audience": "Both"
+  },
+  {
+   "title": "Botswana to double De Beers stake to 30% under Anglo American sale",
+   "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE9pZ0w1ZUFfRlVJQU16WGNKcmp3NF92cElndnlNQXo0elRSUk1LaWFOWlRiTTVuTDRwdDhyb05FTmlwTjlHVVd5dFRITU5qZFpoMGlnamh0cnJyQ2ptZ3BSMXZjMi1iQk5mUUE?oc=5",
+   "outlet": "DNE Africa",
+   "type": "news",
+   "published": "2026-11-13T22:43:00+00:00",
+   "theme": "natural-diamond",
+   "theme_label": "Natural & mined diamonds",
+   "audience": "Both"
+  },
+  {
+   "title": "Obsessed with my engagement ring!",
+   "url": "https://www.reddit.com/r/EngagementRings/comments/1xvjc0c/obsessed_with_my_engagement_ring/",
+   "outlet": "r/EngagementRings",
+   "type": "community",
+   "published": "2026-11-13T20:50:28+00:00",
+   "theme": "engagement-rings",
+   "theme_label": "Engagement & bridal",
+   "audience": "B2C"
+  },
+  {
+   "title": "De Beers attracts new shareholders as Anglo exit looms",
+   "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPU2ZHZ1UxdEJjeUVRUmVHd054RnFhMElZaldMWlBVTlY3OFVWM0FKaTNRX3A4b0tnVlBXd0IwSEtVNF9rMWhkQTR0TWlnanVUN21xTG45eUJKbXV4ck1ZMzE5aDhCZFNYTl84Yng3a1lDdWJOYVVJS1plVlBUSUlBQkt1WlRnOElZbkhfcmlTSmJNVElVb2xXd2pB?oc=5",
+   "outlet": "Jewellery Business",
+   "type": "news",
+   "published": "2026-11-13T20:01:52+00:00",
+   "theme": "natural-diamond",
+   "theme_label": "Natural & mined diamonds",
+   "audience": "Both"
+  },
+  {
+   "title": "Phoebe Dynevor Gives a First Look at Her Wedding Ring—and It’s a Timeless Classic",
+   "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE5BMTBJa21xT1hNUFR4Q2xiVm11ZEppWVBGcVlVTGtsZ0p5V01SN1lfRW40bUV2dGpxa21MMFJnV0g4cGtLc2VsNjUyUUlVVXRtaDN4WU5XQnN0TFhaQk53WEw4SzNoT3RlbW9JX20wYVAxYWNDU3c?oc=5",
+   "outlet": "Vogue",
+   "type": "news",
+   "published": "2026-11-13T19:56:31+00:00",
+   "theme": "engagement-rings",
+   "theme_label": "Engagement & bridal",
+   "audience": "B2C"
+  },
+  {
+   "title": "From these to these:",
+   "url": "https://www.reddit.com/r/jewelry/comments/1xvglv1/from_these_to_these/",
+   "outlet": "r/jewelry",
+   "type": "community",
+   "published": "2026-11-13T19:04:46+00:00",
+   "theme": "jewelry-retail",
+   "theme_label": "Retail & brands",
+   "audience": "B2C"
+  },
+  {
+   "title": "Botswana’s Comments on De Beers Sale Leave Much Unanswered",
+   "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTFB2WkgxUnFmRU9veXZQZEcwWFNRdjRKWjlpeHJNUHJKcUdqOHVqamVEZVlSRW9EREo2TkVubGFkOF9LaVBOa0s3M0c4VjBzanFzZm9LRE5TZnpIQVNGYm4xUVpTSEVQRVFUTnJLT3dIOWZ6bThLQVhF?oc=5",
+   "outlet": "JCK",
+   "type": "news",
+   "published": "2026-11-13T18:39:38+00:00",
+   "theme": "natural-diamond",
+   "theme_label": "Natural & mined diamonds",
+   "audience": "Both"
+  },
+  {
+   "title": "Angola aims to acquire 10% stake in De Beers under Anglo American's proposed exit (AAUKF:OTCMKTS)",
+   "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNaDlHTi1NOHI5blR5UGJ6S01IOXpac05GTzRIc25XaE1EclgwUm5uZXZaVjV6cGFOUkpmSFRyTGI1YzVaSEZldXlyR0RWZ1Vwd0VGT0JlYVktRTdwMHhRazNVTkM3YXFQZ1J6aXE2VjFiLVM2LVE1bnE1RUJWWjd1ZnUtTnk1NHk2enYzZW9TMzBkbVd2UlM1MVdlQVdjOVprUDNRLVVmV181S19lWFM5SExXTUJqSGk4?oc=5",
+   "outlet": "Seeking Alpha",
+   "type": "news",
+   "published": "2026-11-13T16:33:54+00:00",
+   "theme": "natural-diamond",
+   "theme_label": "Natural & mined diamonds",
+   "audience": "Both"
+  },
+  {
+   "title": "Angola seeks 10% stake in De Beers under Anglo’s proposed exit",
+   "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNTEdxRU1NUjJ6SFhjcGxZbEt0bmcxeWdpNzhlT0ZFV3Z3em5vbm9PSTdCUWRJd21hWFhrenB3V1RsQnlDV1E0QUZqTmY4Mk45MEhZTmpXcVRyaE1GeG1GbXVqRmlMSnR4Wi1NdElfXy1oOUlNY3VicnFuSjJaZHZEaGdVTlN6WFBSLTlTbmZwVTlkd01UVzVTdkxXM0YxR09zb19aOWlmY2pDZ0dtQVVSRFYzaVQ?oc=5",
+   "outlet": "Channel Africa",
+   "type": "news",
+   "published": "2026-11-13T16:05:28+00:00",
+   "theme": "natural-diamond",
+   "theme_label": "Natural & mined diamonds",
+   "audience": "Both"
+  },
+  {
+   "title": "Angola seeks 10% stake in De Beers under Anglo's proposed exit",
+   "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPZ2c3WmtTMHFMY25zOWE2ZzF5UjBVSEhkT3dnNTJBY0k2b2MxQW92emMwYjhuWWJ1bG9FUmtmYTZxTVdqd0szMk5fZDB4emVYM1RzY1MwTEJXeXI1RUdWdV8xN1dLeXRDVHl6RUxmeURsbUk1M3VKS2l0Wm0tOVZyUUprV3BRdF9VZ25kbnlNR1hBOC1Ha1VrSmc4VFB1cV92LTlkb0k3Q2NLUQ?oc=5",
+   "outlet": "Reuters",
+   "type": "news",
+   "published": "2026-11-13T15:04:00+00:00",
+   "theme": "natural-diamond",
+   "theme_label": "Natural & mined diamonds",
+   "audience": "Both"
+  },
+  {
+   "title": "My ring is here ❤️",
+   "url": "https://www.reddit.com/r/EngagementRings/comments/1xv9gab/my_ring_is_here/",
+   "outlet": "r/EngagementRings",
+   "type": "community",
+   "published": "2026-11-13T14:33:55+00:00",
+   "theme": "engagement-rings",
+   "theme_label": "Engagement & bridal",
+   "audience": "B2C"
+  },
+  {
+   "title": "Angola Plans to Acquire 10% of De Beers as Anglo Exits Diamonds",
+   "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOeVd4ZGpCbjhuTG9ROEVKeFlQVzVHZzA3V2VFbDVPQ0pEOTRMdG8yNGhNVWFnSm11alktQ0tpcUxTdmJxTFBCaDM0bk9vOUh5Wk5JcF9hRDd4YXh3RXNPQmVrNVZKdXdQOWw5bVBUVXF3SHBBS2JJQ21KVjd4UXFGUHBVNVRwTW5qcjVQMFNxWjYxMll1MTEydE5JZ1lhZG13Z0dLdnZuS2oxVTcydUM4U19IRQ?oc=5",
+   "outlet": "Bloomberg.com",
+   "type": "news",
+   "published": "2026-11-13T14:08:25+00:00",
+   "theme": "natural-diamond",
+   "theme_label": "Natural & mined diamonds",
+   "audience": "Both"
+  },
+  {
+   "title": "Angola Seeks 10% Stake in De Beers as Anglo American Pursues Exit",
+   "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNMWhEd0ZlbTJldTY1NFpuQUM2OFItMncxZUdJRll3SHl1RU5fVmsyRTNSUGEtWEJ1Y0VWcWczSUI5OG1EMlJFcjlURjBKdmFJUTlIelA0MEc2bEh4RVhSby1CNDk3S0NNc0twTmI1Q29KRS1RVGMzdVFFUThrSXNsWDN1a05TZUVPb1FEOEY1MFNycElzeUFvcTlB?oc=5",
+   "outlet": "IndexBox",
+   "type": "news",
+   "published": "2026-11-13T14:00:47+00:00",
+   "theme": "natural-diamond",
+   "theme_label": "Natural & mined diamonds",
+   "audience": "Both"
+  },
+  {
+   "title": "Botswana’s Boko Doubles Down on Diamond Industry",
+   "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE9oS19QS2UybWt2cS1XV0lzRjBYcno3eHI4OF9pUDNibWRkN1lKYTR3NVpvOFZoaTVxd2pYeF8xVjJRWGRubmc4SVpjbzBtUUYySDIxT3NKSXBHUi1hZGNWaVhWYWZCQlRESlhR?oc=5",
+   "outlet": "allAfrica.com",
+   "type": "news",
+   "published": "2026-11-13T13:31:53+00:00",
+   "theme": "natural-diamond",
+   "theme_label": "Natural & mined diamonds",
+   "audience": "Both"
+  },
+  {
+   "title": "Botswana: Duma Boko Doubles Down On Diamonds",
+   "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5jVW94Wlp2bWdmTG5JOHdVWU9PVm9jclV0c1lTdksxZ3pNSWhmcGgyNVVVTU8zWDlIcUpqWDk2aVJhVGEwNDI0TlJ0SkJheXU4SmlBU195dFItX3c?oc=5",
+   "outlet": "allAfrica.com",
+   "type": "news",
+   "published": "2026-11-13T12:18:07+00:00",
+   "theme": "natural-diamond",
+   "theme_label": "Natural & mined diamonds",
+   "audience": "Both"
+  },
+  {
+   "title": "Five engagement ring trends set to define 2027",
+   "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE5URE9KYk5QN3NzUVR6bWZ4ZS01cXVLRWdBc0tJVW9BcnZDekJNelNDeXRpbVN1SEJoMXVqckg1ZnczQXJFWWJiZW1HSWpKZXdXN0Y0aGxOVnNZSG5Ddko2QVlEOGZxNllnTVBvVnZCUWdIY2RieGpqZlA2dVk?oc=5",
+   "outlet": "Professional Jeweller",
+   "type": "news",
+   "published": "2026-11-13T11:01:07+00:00",
+   "theme": "engagement-rings",
+   "theme_label": "Engagement & bridal",
+   "audience": "B2C"
+  },
+  {
+   "title": "Richemont Still Deciding Whether to Join Consortium That’s Looking to Buy a Majority Stake in De Beers",
+   "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOYW1Kalk0VmV4aTJnYjdwQ1JfVWZGNmptckZreEczVnZUMUg0S2JVbFNwVFlUSExPR2QzYkdfNmptRHZXdFdkVC1CTy1ZUUhxWFZkM3ZEb0xhNUN3ZTFjaGdYY0hIUEFIWGpVVVd4N0dqWGJBQ0U5WGdaOU5OSUJmY0FzMWZjSkdpZUdELTRWRQ?oc=5",
+   "outlet": "Yahoo Finance Singapore",
+   "type": "news",
+   "published": "2026-11-13T10:45:37+00:00",
+   "theme": "natural-diamond",
+   "theme_label": "Natural & mined diamonds",
+   "audience": "Both"
+  },
+  {
+   "title": "After Botswana agrees to double its De Beers stake, preferred buyer unveils plan to win young customers back from lab-grown diamonds",
+   "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxQRXJneEMxUlhUSVFlbTdUYk15TDdzeV9tcUp0QVVET1ZHd25TWktiRVRaTm5IN1ZsbTduV1A4MTllZVpSMy1RQmc4emFGUWg3eFByYmFaVldJSjF4RUs4TUszVTEzczlOenBLbDFVUHNyNlVXVkotRnI1alI1aHhvLXcyYmNKVk9Gc3JRb2VWWGtEaEVsVFpmOENGNEVIWElxS0IzQjB5NGZkMm1MMmlFVUJaVWVlb193VTZ6X2NORkpJUHRXcXF2NlgzMjBYcVhhOW15ZHZ3?oc=5",
+   "outlet": "Business Insider Africa",
+   "type": "news",
+   "published": "2026-11-13T09:19:28+00:00",
+   "theme": "natural-diamond",
+   "theme_label": "Natural & mined diamonds",
+   "audience": "Both"
+  },
+  {
+   "title": "Consortium leading De Beers bid plans marketing push to counter lab-grown gems",
+   "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQenZGanJJZkxZbHVvbk9SNVR2S2VMXzV3elowU29XM2hyOHktNjlKRHZGRnJjUldpOVRNM0lOVUg4Ul9YaDVUZWZvZjFNdkhRUFNCZkhFb2V0QW5CMEVaZFpXaW5GeDVUOGd0V0dYLWVEUVRWendXNTB3QkZWanBGUlhXSi15SnM?oc=5",
+   "outlet": "MiningMX",
+   "type": "news",
+   "published": "2026-11-13T08:26:22+00:00",
+   "theme": "lab-grown",
+   "theme_label": "Lab-grown diamonds",
+   "audience": "Both"
+  },
+  {
+   "title": "Gunmen rob De Beers jewellery store in Paris, flee on scooters",
+   "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNQUt6a04tTU94MGFSQi1PLTdYOFhMOGhQdWZIaWRGMWM2RlZxU2pQNFdMOUJCME1KNllma3YzRTRVZ2hPcXpZczhRSEtiTmZPSG55LVJXdENjREg2MDl5NVdHN29SMkhUOHNiLVZCcXktYlVPenk4SXB5WGJfMi10ek16YWlld2x6TTFEcFhQeUNPRktfWm43REJEaVBfZ3ByUkIwbw?oc=5",
+   "outlet": "IOL",
+   "type": "news",
+   "published": "2026-11-13T07:43:42+00:00",
+   "theme": "natural-diamond",
+   "theme_label": "Natural & mined diamonds",
+   "audience": "Both"
+  },
+  {
+   "title": "De Beers London's New High Jewellery Collection Explores The Next Dimension Of Diamonds",
+   "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxONFRDdGZuQ0ltYWNxdmRhZWlmalFSZS15SkdBS2pVenlJV3lBdXJ2Xzg2SHo1aEZYaWpNU3pMNEE4ZE1uYVU3bHJzWThteFBsTFowb0ppLU9Eb0M1Y3lWQzdvcjVscmd5cEVVNXN1UktCNVZRLUozY3NEQWk0MWZWc1g0akxmV2g2RHNUUUpPcW5BTHEtRWZ3Sl9abw?oc=5",
+   "outlet": "Harper's Bazaar Arabia",
+   "type": "news",
+   "published": "2026-11-13T07:25:50+00:00",
+   "theme": "natural-diamond",
+   "theme_label": "Natural & mined diamonds",
+   "audience": "Both"
+  },
+  {
+   "title": "Masked Armed Men Rob Famous Jewelry Store in Broad Daylight, Stealing 1.5 Billion Won Worth of Goods",
+   "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTFBuRElINHZyeDFNUk9EOEVsdVNld2VCSV8xZXlNMVVIU1lrdDNWZnpKYmJRaThRUl9qZER5b0U2QjRPdmI4NzNzd3djRzVvMlh0b3dNdUNndWlFTDNmRlJ1U2FWZ0M2ekVJNEllYjlB?oc=5",
+   "outlet": "news.sbs.co.kr",
+   "type": "news",
+   "published": "2026-11-13T01:48:43+00:00",
+   "theme": "jewelry-retail",
+   "theme_label": "Retail & brands",
+   "audience": "Both"
+  },
+  {
+   "title": "Armed robbers steal more than $1.9m from De Beers store in Paris",
+   "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxNaHJsN3JIRHBZNEJNMDN6V2FFel9HOExzOHlseks1cFBjU3c4WEp6VkR1YW9rY1AtLTZKTVJQR2pibThFU1lMR2ZkQWhQbnFwSktyb0hYQi1JQzY0VkRuN0d1NUxiLW9RVWw0OEpBTEtOU0xnWUYtVzIzQXY4Ml8yLWgyV19xTmFuYThBUTNqVnlnLXpXa3hPZUl3NnRZcEJsYzJEb29lcHVGX3pCM2l0VVZaYVczVWVWTmlQRGstQUZzLWVtM2tpeDFvaw?oc=5",
+   "outlet": "NZ Herald",
+   "type": "news",
+   "published": "2026-11-12T20:08:07+00:00",
+   "theme": "natural-diamond",
+   "theme_label": "Natural & mined diamonds",
+   "audience": "Both"
+  },
+  {
+   "title": "De Beers’ Paris Jewellery Store Raided in Broad Daylight",
+   "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNM1J2eUlVN1JvbWxuYW5JTjhReG5jay1sTC1vSXYzUVpfWmVQTDZnbUYxQWZOWTNnd0tlSkU0NDNnQkZqOVZyZHlPNWdrTXNHUk5IQTVhdlRkUUpfZnBpeXMyWFJjeURwOEd2d1ZjamEzUjZOa044WFVXZXF0QXVRa01tME9Hc2VoX2tna0hqVVZJUkRIQjNPdmljcjJOdFdsNVFYZA?oc=5",
+   "outlet": "The Business of Fashion",
+   "type": "news",
+   "published": "2026-11-12T17:27:10+00:00",
+   "theme": "natural-diamond",
+   "theme_label": "Natural & mined diamonds",
+   "audience": "Both"
+  },
+  {
+   "title": "Flash heist at De Beers’s rue de la Paix store in Paris",
+   "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPRnFWSmd5LWI4SWQza0RQaHlHUlJmek0zaWowUmVkVHhmN1pONDF3RGZNcWdhZVl1MFI5bWpTMnM3Yjg1cG1zRmFuUGgyejZ3Z0Y3RWRHVVh6Z0dwTG1SVUkweXRXR215UHNWSW5mbzhxRTE1eXJzWXlMdC1TN093Y1RnZThieWpsUGhLeHA4NGJNMDlYMUFDV1JDbmxQVXc1ZlU4VnR3?oc=5",
+   "outlet": "FashionNetwork USA",
+   "type": "news",
+   "published": "2026-11-12T16:23:27+00:00",
+   "theme": "natural-diamond",
+   "theme_label": "Natural & mined diamonds",
+   "audience": "Both"
+  },
+  {
+   "title": "I’d love to share my handmade platinum jewelry with you",
+   "url": "https://www.reddit.com/r/jewelry/comments/1xuh2f6/id_love_to_share_my_handmade_platinum_jewelry/",
+   "outlet": "r/jewelry",
+   "type": "community",
+   "published": "2026-11-12T16:20:18+00:00",
+   "theme": "jewelry-trends",
+   "theme_label": "Trends & style",
+   "audience": "B2C"
+  },
+  {
+   "title": "Paris De Beers store robbed, luxury goods worth hundreds of thousands of euros stolen",
+   "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxPQ010eWFQY3k0S0RKTk5CNkkzcWYtNUl6NkRtWlM0Q2dfMDVDMDdTVXZBV1VVSm55cXhONWI3OXJnaTItQk45MFpHMzBFYnU3ZFBLZUlZaGJnM1AtUlA0MnkwUW5TR054cXFISmxWSElmdS1wZFNfV3NTbko3MGxVcEhtdzNhVjFqOW5sLXJieXo5SXVpWUd1SmY1LV81YjFlUXppYWozTWdrTllUWUN3WEtmRFVjb2hXY1czb0VzQQ?oc=5",
+   "outlet": "CTV News",
+   "type": "news",
+   "published": "2026-11-12T15:38:33+00:00",
+   "theme": "natural-diamond",
+   "theme_label": "Natural & mined diamonds",
+   "audience": "Both"
+  },
+  {
+   "title": "Namibia hasn’t yet decided if it wants piece of De Beers, report says",
+   "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPRjBrNGhQV0ozY0d3cTJGLWlXWnBERWtRdzh4ZTBNZW96NnZ5bnRWN3Qxby1tOGdxeFI0ZEMxNlBkc2tzZG9ibl82R1JzRDNRTlZ3Y1NPeTZicHIzR04yRl9EQ01ISFBJYi1nTHQtaTZEZjdFSV9XRmNZYVNsWFBWag?oc=5",
+   "outlet": "The Jewelry Wire",
+   "type": "news",
+   "published": "2026-11-12T15:30:10+00:00",
+   "theme": "natural-diamond",
+   "theme_label": "Natural & mined diamonds",
+   "audience": "Both"
+  },
+  {
+   "title": "The Botswana - De Beers Paradox",
+   "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE10TUt0OXF6SzZuZUJmbkZod3NOdFBTdTBUUG5KbjYweGVEWmtMTWNHczE5QU5yYWdZalQ3a2ZvVEFtSFVIbUxBODBGelN3WThQVGc?oc=5",
+   "outlet": "IDEX Online Diamond Index",
+   "type": "news",
+   "published": "2026-11-12T07:25:48+00:00",
+   "theme": "natural-diamond",
+   "theme_label": "Natural & mined diamonds",
+   "audience": "Both"
+  },
+  {
+   "title": "Botswana’s bigger De Beers stake risks deepening diamond dependence, argues Stoddard",
+   "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTFB6bDhUVUJvbjBZVFhnY2lNUkZrVXNjX1AxcENBaTNmLV9YM3ZRUjVSQUtfMjZDWXpURUx0cmQ5Z0NZX3NOWTFlSzdUbFpwNmZDSlctYW5Jck0?oc=5",
+   "outlet": "Ahram Online",
+   "type": "news",
+   "published": "2026-11-12T07:13:19+00:00",
+   "theme": "natural-diamond",
+   "theme_label": "Natural & mined diamonds",
+   "audience": "Both"
+  },
+  {
+   "title": "My partner did very well :)",
+   "url": "https://www.reddit.com/r/EngagementRings/comments/1xu5lwu/my_partner_did_very_well/",
+   "outlet": "r/EngagementRings",
+   "type": "community",
+   "published": "2026-11-12T06:33:40+00:00",
+   "theme": "jewelry-retail",
+   "theme_label": "Retail & brands",
+   "audience": "Both"
+  },
+  {
+   "title": "The flamboyant Proteas spinner who was a diamond sorter at De Beers and became a top real estate agent in KwaZulu-Natal",
+   "url": "https://news.google.com/rss/articles/CBMi-gFBVV95cUxNX3ktOUhKR3FORzVBWUpLTmNNNl95TnZYMHNnekd0UHl1aVBxUzZOdVR2cjFTSDFTNjR2VFJtN0VUUEhDTDBKQ01WTENBa2Jrd2wyTlNqQVhuRGlpaTBKakgzS213d0gzVVZRa3F5WUtuM3VERXBibGp2dWc5NGJXUGhzejNDODhmYjQxd3liUXZubVFFOGVITzhuWV9tazAzWnYyT3k4ZUxTbkRBdks5TnJEMHlsV05XWmo5dGJNd0pKMllwaXJ3Q0lKSHZUcUdpWE9KbXlseVhYMWRiekpzc1E3RnVoVUY0SWJLZEdWWkVEMVJZaENncUl3?oc=5",
+   "outlet": "Daily Investor",
+   "type": "news",
+   "published": "2026-11-12T04:00:00+00:00",
+   "theme": "natural-diamond",
+   "theme_label": "Natural & mined diamonds",
+   "audience": "Both"
+  },
+  {
+   "title": "Govt weighing risky N$2.8 billion De Beers stake",
+   "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFB3YTdjc3RMeGZPNWpMbU1Sai03T0NaV2hjUTFHbTNIdkhVc3JmWGg2QmlpdU1zOFJ6YXBqSmY1dC1fWkQ5VDVYMC1Hd3R2WjRWU2h5YXhqTVRYSEdUMzNZSjZaby03LVNIckdvVXhKQVFKSHd1MlZOVWpjYUkxc28?oc=5",
+   "outlet": "Windhoek Observer",
+   "type": "news",
+   "published": "2026-11-12T03:52:42+00:00",
+   "theme": "natural-diamond",
+   "theme_label": "Natural & mined diamonds",
+   "audience": "Both"
+  },
+  {
+   "title": "Botswana to double stake in diamond miner De Beers",
+   "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxONjdPM0xEYUllWGVJZ0QteEVReDFNVy1Kc2hLVTV1MXJralBrRWQwb0pOUUxkaVNvYVd1bVNDc0JlRjQ5RFNHTV8tMlRGWWxoOExMN2N0U3hxNjdpRVlaT3BreWdTZFp1TXZvdEtsMl84TFIzMGlFNk1TM0luUEg1Ymg0Y1Fia3dJTzN0NW44R1NOWUY4RV93T012WkhoUQ?oc=5",
+   "outlet": "Semafor",
+   "type": "news",
+   "published": "2026-11-11T14:01:00+00:00",
+   "theme": "natural-diamond",
+   "theme_label": "Natural & mined diamonds",
+   "audience": "Both"
+  },
+  {
+   "title": "5 Stylish Engagement Ring Trends for 2026: The Expert Guide",
+   "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE1fUWQ4STdrQWQtWGVmdDVyVExHRm5iLTZSbHpuVDFGNkk3RDJsVllsTWs3c3dSZ21PVnpSUFdkS290ZU5nckMxbC00RGd6NWRGakx2SGNORnIxSG5tRjItem9samwwRE9NZDB1eExYUHlmb0YxdWc?oc=5",
+   "outlet": "Natural Diamond Council",
+   "type": "news",
+   "published": "2026-11-11T14:00:35+00:00",
+   "theme": "engagement-rings",
+   "theme_label": "Engagement & bridal",
+   "audience": "B2C"
+  },
+  {
+   "title": "Global Diamond Consortium welcomes Botswana support for De Beers acquisition",
+   "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE5FNml3aDVUV3ViUlY1NFRmUDFwOV9NYWVNa3Y5MHNWY1pDT2dqOGYtZTVJOGw0UHJQQ2dTb3FHN3lhZDUzYTdUOUlWaDZ6R0k5cGFV?oc=5",
+   "outlet": "Retail Jeweller",
+   "type": "news",
+   "published": "2026-11-11T09:10:42+00:00",
+   "theme": "natural-diamond",
+   "theme_label": "Natural & mined diamonds",
+   "audience": "Both"
+  },
+  {
+   "title": "Botswana is gambling with its future by doubling its stake in De Beers",
+   "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxOa29mVFJCdFNJU3FQeUJiUTlFZHFGRjNCaEhDRENfbDVSaTdUbDI1Mk11TlM0bVQzR1JUOWZER1JLMW5kN3BCUmhWSzRGcnN2emN5MTZiSDlaQ2VuOTV0eEFHdGM4dllNTi1seXpLUWdybFhVb0FHdExSaHRhdmJ0Sk9RanVLZ1BvU2VDZnp0Y2JDWmcxVGFxSUZxVVJ3RG12cWhUYmhQRWkwYXZXWGI4VFdLM1dYOFhGVjhZV2FKQQ?oc=5",
+   "outlet": "Daily Maverick",
+   "type": "news",
+   "published": "2026-11-11T08:26:15+00:00",
+   "theme": "natural-diamond",
+   "theme_label": "Natural & mined diamonds",
+   "audience": "Both"
+  }
+ ],
+ "brand": {
+  "total_mentions": 0,
+  "competitor_mentions": 272,
+  "share_of_voice": 0.0,
+  "entries": [
+   {
+    "term": "ZVDapp",
+    "count": 0,
+    "headlines": []
+   },
+   {
+    "term": "ZVD app",
+    "count": 0,
+    "headlines": []
+   },
+   {
+    "term": "zvdapp.com",
+    "count": 0,
+    "headlines": []
+   }
+  ],
+  "competitors": [
+   {
+    "term": "James Allen",
+    "count": 66,
+    "headlines": [
+     {
+      "title": "James Allen Godley Obituary November 11, 2026",
+      "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFA2akFBX3BnS29qbUJFRXBvb0FsTGp6S3RVNURnR0x4eEVjYWd4SHJaTHBQNGVlZjlhS3NVTkRoUDVSMW81VHd2UUV5VmJ5dnE2VTF5SU14U2trYnNZQjVOby1rc2ZzR1lh?oc=5",
+      "source": "Munden Funeral Home",
+      "published": "2026-11-11T08:00:00+00:00"
+     },
+     {
+      "title": "‘The Chosen’ star Andrew James Allen talks Pontius Pilate and North Texas filming",
+      "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxPVkktYVJlczl2X1IwQUhhSFAzeWVlSi1UWlQ4MHhvZ1hrRmpsc3puSHpuMEpEQm56bWdXZkQyNzQ4cHRZOGdtOFNzN1VaS25VYVFZOC0yU2tETWFZVDN2X0pzZm1maTdiT0VxTGVlMDlQYm9rN0V2UWZCZEppV1NLTFB3?oc=5",
+      "source": "Fort Worth Star-Telegram",
+      "published": "2026-11-13T21:44:02+00:00"
+     },
+     {
+      "title": "James Allen Jr. projected as winner of San Luis, Arizona mayoral race",
+      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNd0RRcHR2T21nOTZ5Sm9rc2tES1dlck8yWDBneUdsalJoWGVDZFVwazRVQklvcmZvUV9kTzdfMDJjOXh5dlcyaXQ1amthOGdoYUdFOEtTQkliSEh3MTJFcTlSQ1dkbUdJVlFsNm5vOENxbjlHWnRDeTFJWTBrZmZnVXNHUU9XUXlYRGU2dkZ0NFRnM1FnakV2clJyNUxYS29ITzdWUE1lSWZxam5NN3hyZHdIdC0?oc=5",
+      "source": "KYMA",
+      "published": "2026-11-13T01:31:16+00:00"
+     }
+    ]
+   },
+   {
+    "term": "Blue Nile",
+    "count": 60,
+    "headlines": [
+     {
+      "title": "Blue Nile and Royal Asscher’s New Partnership Collection",
+      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOZnhKMFZvYk1LN3lfaVY5YzJGRkFjdzMwZjZ4YXdtcVRYUDltcms4UmNubk90SU9nT0VRQmgtTlFUTENLT2MxcXRnRE5XVm5mR0JFb1V1UDZHUTdFTXFXN2Z3dXZmajV5aXZKVW1FM3dOT2ZRdkJ2V0UwYzJ3Q3RtUFlBX054LTNTUWtESnZMQ2ZKYWhnanZBQ2taeDBwNjIwbzU2dTgwTnh6cUl6TURhdw?oc=5",
+      "source": "WWD",
+      "published": "2026-11-16T17:20:33+00:00"
+     },
+     {
+      "title": "Sudanese army deploys reinforcements to Blue Nile front amid leadership changes",
+      "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE44WmQwQWpCeThjNFlJbjNud2lLQ0xYdEE4bGd1eVlodFMzNzZnX1NFSk5rLUZvOHdESkJLanN5RS00NVdOR2xTUUNBOXRqSTFp?oc=5",
+      "source": "Sudan Tribune",
+      "published": "2026-11-16T21:28:57+00:00"
+     },
+     {
+      "title": "Blue Nile River",
+      "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE03QU55TTZuSmUtc1IzOWZUcllhSjZQUG4yaG1zYi00ZWdzWGk3TGtSa3RCNzhBVzRhVVJoSjlBRXZDMmIzNzMzZ29sS1FSTUh2VkRFOXhCRzI3WWVp?oc=5",
+      "source": "Britannica",
+      "published": "2026-11-04T08:00:00+00:00"
+     }
+    ]
+   },
+   {
+    "term": "Brilliant Earth",
+    "count": 53,
+    "headlines": [
+     {
+      "title": "An officer proposes selling about $12K in stock-award shares of Brilliant Earth (BRLT).",
+      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNUkFxUXdpZTY2SU13aGdLUHZVMG4xS1BsRXZ5ZjJ4aERSUHNVaDcxUlhsSjhZWV9sdTJEUUdLNGpOSTl0MWJaMWR5SGFkbzZyU3UzT3N5YzlIeC1VWV9DWEJMZ2t6dW9KLVFGRG1ZcmdDTWVZZnJGMHh1RXBLQk5rbTIwVWg4MURjaVlyWnZqWFoyMmNvOTFBN3F2aHRfSUEzUE4zMQ?oc=5",
+      "source": "Stock Titan",
+      "published": "2026-11-16T21:15:44+00:00"
+     },
+     {
+      "title": "Brilliant Earth Sales Rise 2.3% as Fine Jewelry Gains Ground",
+      "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE5fd3RqQmJnR2VNRFdyZGNkajhzbHAzVGtPbzkyX2x4SloyUTFHN0stVFd3cDRwWkxBLS02MDF1SzFBcGFBbVBySDNkZkdUTDlPSTctX2NqSkRXWFNJeUJOUC1PWFQyRmlKa1N2Z2tjUTVDdGxNblpycw?oc=5",
+      "source": "JCK",
+      "published": "2026-11-05T08:00:00+00:00"
+     },
+     {
+      "title": "How Brilliant Earth Drives Data Democratization",
+      "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPc0hBUThxR0tqUU9sT2FhZDBYZTZhQksxRWt3QTZtR05xMnU4bm1MX3V1R1d0ak9FdDRBOFNkb2tIYXFjVFJhRnZpTXJxOXlZUG9TeUV0bmZjOVJkbFJfYUpTNGMyRjRaT3VDZDA3TWtBcmh1WnFSbmprNENtU2pUQ0pXYnZraE5ZOHU4M3BmTlQ?oc=5",
+      "source": "Snowflake",
+      "published": "2026-10-22T07:00:00+00:00"
+     }
+    ]
+   },
+   {
+    "term": "Signet Jewelers",
+    "count": 49,
+    "headlines": [
+     {
+      "title": "Signet Jewelers Limited (SIG) Stock Forecasts",
+      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOREVvNkdWNmZTZC1sT3dJT3Q0anl2azEtT3BicTNoQ0tldmFDTFg5MEFTZGxCa3ZLaUJtdGFMbEVsankyWXJyWDNZTnZSV3ljeWJoT0Y0ZGVKeGVVZUU5QlNrSElTTzhSdWNBRGVyM2UwTGJCOHpDb0ZiMGRCZjFlNW0wZmF6dXVvV1NZbU9BMA?oc=5",
+      "source": "Yahoo Finance",
+      "published": "2026-11-11T19:11:45+00:00"
+     },
+     {
+      "title": "A 1.94 million-share stake is reported in Signet Jewelers (SIG), with shared voting power.",
+      "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxOWmt5NXZHYUY4NUo1S3ZWdlp3OGQ3YlhpbThvZ3c3cU42d1dZMlFsU0ktaFdHcUliUkhwaWk4c25Vck1MS0NFSHFWRjZlX3lSODhrUDhYSGY2Y3hGSjZuWG9naXQxcHk2aUI3QlpGR196UEw2clBiVjktR2diRU1VaGxKRWhnLTEwOFl2VXlPd0dfVTFqTzBjSk1yNDh5bGhwMW5VUmI4VDdCYkNFa0d2ajR6dHFEVFVVY05ZTzdPRlZaU283VVE4T0xR?oc=5",
+      "source": "Stock Titan",
+      "published": "2026-11-16T21:07:42+00:00"
+     },
+     {
+      "title": "Signet Jewelers Stock Is Having Its Best Day in Over a Year After Earnings",
+      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQenJ4aTk4ejdld2RpNUdmRmdzRS1mTnFnV0gtcnFFRVBpU2hQcEhzTXhrNTdLUkVkVUdPa1pTSVBhczFXT3dFMkZOWWRVeXFFU0FyVnkwZENRdXNUd1hxZ1ZmWElnVnF0N1ZNWVVlT0U1dUhrVk1IbUVDMzdlSnJGZFJOdlM?oc=5",
+      "source": "Barron's",
+      "published": "2026-09-09T07:00:00+00:00"
+     }
+    ]
+   },
+   {
+    "term": "Rare Carat",
+    "count": 44,
+    "headlines": [
+     {
+      "title": "Rare Carat Discount Codes: Up To 45% Off Diamond Jewelry Ahead Of Black Friday",
+      "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQaVllWWNIV1FrcXBZM2tLeEwzaXJPanhjNTRJYnY0eGpWNmYtQjljbFRPTmJLVFJyWWc1U2xmcXI5YnZKWXV4VkxzN3lLNElZUVNQRk1xQVpyZzVqdWJJbnNsZ252YzV2QkVNanJIOHI2aHFGenNoaDVtRjdSQzBudm9WVU5HQUp4VUJ1Yi10Wk8?oc=5",
+      "source": "Forbes",
+      "published": "2026-11-09T21:03:00+00:00"
+     },
+     {
+      "title": "Why US shoppers rate Rare Carat highly on Trustpilot",
+      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNcXYzOVJZRS1kcDNsLS1DempsTGx6andoZGNkd2ppQmJsOWdLdmhuVnRCcjNqT3JNR2Q5M010U29KbnIwdmE3XzBiQjNaUjU1enR0RXEwcW9id25mNjZNeVQtc2syNi1yTl9pbHhoYmFVWnAtYS1Jc1NPUDhEYzdpUGRwVVoxalRWZ3dhUEp2aW14SS1fTk1F?oc=5",
+      "source": "New York Post",
+      "published": "2026-05-11T07:00:00+00:00"
+     },
+     {
+      "title": "Where To Find Affordable Engagement Rings, According To Our Editors",
+      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxOX0ViaThNY2dVeTVyc1pBNnZfbENEQUFQaHlsVDdZMXhBb1RNb2xMRFNUeFpQb1V2Z0xWVHI1UmUzZk81djlhN0FNQkx3TlpTTDJpeGtPdHJ1azc0UHlTdWMyWVF6bVlyVGx2ZFFXdjI3al8tM3l1X2lqSmx6WXdfQ2lUc014cDNndTBibHZQcUhvY1BnMFZGRlBGS2Z3QQ?oc=5",
+      "source": "Forbes",
+      "published": "2026-11-06T08:00:00+00:00"
+     }
+    ]
+   }
+  ],
+  "terms": [
+   "Brilliant Earth",
+   "Blue Nile",
+   "James Allen",
+   "Rare Carat",
+   "Signet Jewelers"
+  ],
+  "top_outlets": [
+   {
+    "outlet": "nationaljeweler.com",
+    "stories": 35
+   },
+   {
+    "outlet": "Rapaport",
+    "stories": 34
+   },
+   {
+    "outlet": "De Beers Group",
+    "stories": 22
+   },
+   {
+    "outlet": "Who What Wear",
+    "stories": 21
+   },
+   {
+    "outlet": "JCK",
+    "stories": 10
+   }
+  ],
+  "verdict": "No earned-media coverage found for ZVDapp in this window - discovery is currently 100% paid or word of mouth. Every competitor below is being written about, which is a free list of publications to pitch."
+ }
+}

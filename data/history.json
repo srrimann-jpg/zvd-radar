@@ -1,0 +1,42 @@
+{
+ "entries": [
+  {
+   "date": "2026-11-16",
+   "generated_at": "2026-11-16T05:33:03+00:00",
+   "signals": 400,
+   "themes": {
+    "natural-diamond": 111,
+    "lab-grown": 77,
+    "engagement-rings": 66,
+    "jewelry-tech": 41,
+    "jewelry-retail": 25,
+    "jewelry-trends": 24,
+    "diamond-prices": 19,
+    "diamond-investment": 15,
+    "wholesale-b2b": 9,
+    "grading-certs": 7,
+    "sustainability": 6
+   },
+   "brand_mentions": 0
+  },
+  {
+   "date": "2026-11-17",
+   "generated_at": "2026-11-17T05:43:50+00:00",
+   "signals": 393,
+   "themes": {
+    "natural-diamond": 114,
+    "lab-grown": 74,
+    "engagement-rings": 66,
+    "jewelry-tech": 32,
+    "jewelry-retail": 26,
+    "jewelry-trends": 25,
+    "diamond-prices": 17,
+    "diamond-investment": 16,
+    "wholesale-b2b": 10,
+    "grading-certs": 7,
+    "sustainability": 6
+   },
+   "brand_mentions": 0
+  }
+ ]
+}

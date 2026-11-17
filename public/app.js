@@ -1,0 +1,513 @@
+/* ZVD Radar dashboard - vanilla JS, no build step. */
+
+const state = {
+  data: null,
+  tab: "topics",
+  audience: "All",
+  theme: "all",
+  sort: "score",
+  poll: null,
+  competitors: null,
+  compState: {},
+  compPoll: null,
+};
+
+const $ = (id) => document.getElementById(id);
+
+const escapeHtml = (value) =>
+  String(value == null ? "" : value).replace(/[&<>"']/g, (char) => ({
+    "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;",
+  }[char]));
+
+function shortDate(iso) {
+  if (!iso) return "undated";
+  const date = new Date(iso);
+  if (Number.isNaN(date.getTime())) return "undated";
+  return date.toLocaleDateString(undefined, { day: "numeric", month: "short" });
+}
+
+function longDate(iso) {
+  if (!iso) return "—";
+  const date = new Date(iso.length <= 10 ? iso + "T12:00:00" : iso);
+  if (Number.isNaN(date.getTime())) return iso;
+  return date.toLocaleDateString(undefined, { weekday: "short", day: "numeric", month: "long", year: "numeric" });
+}
+
+function ago(iso) {
+  if (!iso) return "";
+  const then = new Date(iso).getTime();
+  if (Number.isNaN(then)) return "";
+  const hours = (Date.now() - then) / 36e5;
+  if (hours < 1) return "just now";
+  if (hours < 24) return Math.round(hours) + "h ago";
+  const days = Math.round(hours / 24);
+  return days === 1 ? "yesterday" : days + "d ago";
+}
+
+function momentumPill(topic) {
+  if (topic.momentum === "Rising") return `<span class="pill rising">▲ Rising ${topic.change_pct != null ? Math.abs(topic.change_pct) + "%" : ""}</span>`;
+  if (topic.momentum === "Cooling") return `<span class="pill cooling">▼ Cooling ${topic.change_pct != null ? Math.abs(topic.change_pct) + "%" : ""}</span>`;
+  if (topic.momentum === "New") return `<span class="pill">New this scan</span>`;
+  return `<span class="pill">Steady</span>`;
+}
+
+/* ---------- data ---------- */
+async function load() {
+  try {
+    const response = await fetch("/api/radar", { cache: "no-store" });
+    state.data = await response.json();
+    render();
+  } catch (error) {
+    showStatus("Could not reach the radar service: " + error.message, true);
+  }
+}
+
+async function runScan() {
+  const button = $("run-scan");
+  button.disabled = true;
+  showStatus("Starting scan…", false);
+  try {
+    await fetch("/api/scan", { method: "POST" });
+  } catch (error) {
+    showStatus("Could not start the scan: " + error.message, true);
+    button.disabled = false;
+    return;
+  }
+  pollUntilDone();
+}
+
+function pollUntilDone() {
+  clearTimeout(state.poll);
+  state.poll = setTimeout(async () => {
+    await load();
+    const scan = state.data && state.data.state;
+    if (scan && scan.running) {
+      pollUntilDone();
+    } else {
+      $("run-scan").disabled = false;
+    }
+  }, 2200);
+}
+
+function showStatus(message, isError) {
+  const node = $("status");
+  node.classList.remove("hidden");
+  node.classList.toggle("error", Boolean(isError));
+  node.innerHTML = isError
+    ? escapeHtml(message)
+    : `<span class="dot"></span><span>${escapeHtml(message)}</span>`;
+}
+
+function hideStatus() {
+  $("status").classList.add("hidden");
+}
+
+/* ---------- render ---------- */
+function render() {
+  const payload = state.data || {};
+  const snapshot = payload.snapshot;
+  const scan = payload.state || {};
+
+  if (scan.running) {
+    $("run-scan").disabled = true;
+    showStatus(scan.step + (scan.seconds ? " · " + scan.seconds + "s" : ""), false);
+  } else if (scan.error) {
+    $("run-scan").disabled = false;
+    showStatus("Scan failed — " + scan.error, true);
+  } else {
+    $("run-scan").disabled = false;
+    hideStatus();
+  }
+
+  if (!snapshot) {
+    $("snapshot-date").textContent = longDate(new Date().toISOString().slice(0, 10));
+    $("snapshot-meta").textContent = scan.running ? "scanning the web…" : "no scan yet";
+    $("kpis").innerHTML = "";
+    $("topic-grid").innerHTML = `<div class="empty" style="grid-column:1/-1">No snapshot yet. The first scan takes about half a minute.<br><br><button class="btn" onclick="runScan()">Run the first scan</button></div>`;
+    return;
+  }
+
+  $("snapshot-date").textContent = longDate(snapshot.date);
+  const finished = snapshot.scan_seconds ? snapshot.scan_seconds + "s scan" : "";
+  const warnings = snapshot.stats.error_count;
+  $("snapshot-meta").textContent = [
+    "updated " + ago(snapshot.generated_at),
+    finished,
+    warnings ? warnings + (warnings === 1 ? " source warning" : " source warnings") : "",
+  ].filter(Boolean).join(" · ");
+  $("footer-stamp").textContent = "Last scan " + ago(snapshot.generated_at) + " · " + snapshot.stats.signals + " relevant signals";
+
+  renderKpis(snapshot);
+  renderThemes(snapshot);
+  renderTopics(snapshot);
+  renderIntent(snapshot);
+  renderSignals(snapshot);
+  renderBrand(snapshot);
+}
+
+function renderKpis(snapshot) {
+  const rising = snapshot.topics.filter((topic) => topic.momentum === "Rising").length;
+  const b2b = snapshot.topics.filter((topic) => topic.audience === "B2B").length;
+  const cards = [
+    { label: "Signals read", value: snapshot.stats.signals, note: snapshot.stats.outlets + " outlets" },
+    { label: "Themes live", value: snapshot.stats.themes, note: snapshot.topics.length + " publishable topics" },
+    { label: "Rising", value: rising, note: rising ? "vs last scan" : "baseline scan" },
+    { label: "Search intents", value: snapshot.stats.queries, note: "autocomplete queries" },
+    { label: "Brand mentions", value: snapshot.brand.total_mentions, note: b2b + (b2b === 1 ? " B2B topic" : " B2B topics") },
+  ];
+  $("kpis").innerHTML = cards.map((card) => `
+    <div class="kpi">
+      <span>${escapeHtml(card.label)}</span>
+      <strong>${escapeHtml(card.value)}</strong>
+      <small>${escapeHtml(card.note)}</small>
+    </div>`).join("");
+}
+
+function renderThemes(snapshot) {
+  const select = $("theme-filter");
+  const current = state.theme;
+  select.innerHTML = `<option value="all">All themes</option>` + snapshot.themes.map((theme) =>
+    `<option value="${escapeHtml(theme.id)}">${escapeHtml(theme.label)} (${theme.count})</option>`).join("");
+  select.value = current;
+  if (select.value !== current) {
+    state.theme = "all";
+    select.value = "all";
+  }
+}
+
+function visibleTopics(snapshot) {
+  let topics = snapshot.topics.slice();
+  if (state.audience !== "All") {
+    topics = topics.filter((topic) => topic.audience === state.audience || topic.audience === "Both");
+  }
+  if (state.theme !== "all") {
+    topics = topics.filter((topic) => topic.theme === state.theme);
+  }
+  if (state.sort === "momentum") {
+    const order = { Rising: 0, New: 1, Steady: 2, Cooling: 3 };
+    topics.sort((a, b) => (order[a.momentum] - order[b.momentum]) || (b.change_pct || 0) - (a.change_pct || 0));
+  } else if (state.sort === "signals") {
+    topics.sort((a, b) => b.signal_count - a.signal_count);
+  } else {
+    topics.sort((a, b) => b.score - a.score);
+  }
+  return topics;
+}
+
+function renderTopics(snapshot) {
+  const topics = visibleTopics(snapshot);
+  if (!topics.length) {
+    $("topic-grid").innerHTML = `<div class="empty" style="grid-column:1/-1">No topics match this filter. Try “All”.</div>`;
+    return;
+  }
+  $("topic-grid").innerHTML = topics.map((topic, index) => {
+    const keywords = topic.keywords.slice(0, 5).map((keyword) =>
+      `<span class="chip">${escapeHtml(keyword.query)}<em>${escapeHtml(keyword.stage)}</em></span>`).join("");
+    const signals = topic.signals.slice(0, 3).map((signal) => `
+      <a href="${escapeHtml(signal.url)}" target="_blank" rel="noopener">
+        <span>${escapeHtml(signal.outlet)}</span>${escapeHtml(signal.title)}
+      </a>`).join("");
+    const brief = topic.brief;
+    return `
+    <article class="topic" data-topic="${escapeHtml(topic.id)}">
+      <div class="topic-head">
+        <span class="rank">${String(index + 1).padStart(2, "0")}</span>
+        <span class="pill ${topic.audience === "B2C" ? "b2c" : topic.audience === "B2B" ? "b2b" : ""}">${escapeHtml(topic.audience)}</span>
+        ${momentumPill(topic)}
+        <span class="score" style="--pct:${topic.score}"><b>${topic.score}</b></span>
+      </div>
+      <h3>${escapeHtml(topic.title)}</h3>
+      <div class="meta">${escapeHtml(topic.theme_label)} · ${topic.signal_count} signals · ${topic.outlet_count} outlets · ${topic.query_count} search intents</div>
+      <p class="why">${escapeHtml(topic.why_now)}</p>
+      <div class="chips">${keywords}</div>
+      <div class="signal-list">${signals}</div>
+      <div class="brief hidden">
+        <h4>Hook</h4>
+        <blockquote>${escapeHtml(brief.hook)}</blockquote>
+        <div>
+          <h4>Angle</h4>
+          <p class="why">${escapeHtml(brief.angle)}</p>
+        </div>
+        <div>
+          <h4>Outline filling ${escapeHtml(brief.words)}</h4>
+          <ol>${brief.outline.map((line) => `<li>${escapeHtml(line)}</li>`).join("")}</ol>
+        </div>
+        <div class="row"><span>Format</span><span>${escapeHtml(brief.format)}</span></div>
+        <div class="row"><span>Call to action</span><span>${escapeHtml(brief.cta)}</span></div>
+      </div>
+      <div class="topic-actions">
+        <button class="ghost" data-action="brief">Content brief</button>
+        <button class="ghost" data-action="copy">Copy brief</button>
+      </div>
+    </article>`;
+  }).join("");
+}
+
+function renderIntent(snapshot) {
+  const rows = snapshot.keywords.slice(0, 60).map((keyword) => `
+    <tr>
+      <td>${escapeHtml(keyword.title)}${keyword.note ? `<div class="muted" style="margin-top:3px">${escapeHtml(keyword.note)}</div>` : ""}</td>
+      <td class="muted">${escapeHtml(keyword.theme_label)}</td>
+      <td>${escapeHtml(keyword.stage)}</td>
+      <td class="muted">${escapeHtml(keyword.audience)}</td>
+      <td class="num"><span class="bar"><i style="width:${keyword.score}%"></i></span> <span class="muted">${keyword.score}</span></td>
+      <td class="muted">${escapeHtml(keyword.page_type)}</td>
+    </tr>`).join("");
+  $("intent-body").innerHTML = rows || `<tr><td colspan="6" class="muted" style="padding:24px">No search intents collected yet.</td></tr>`;
+}
+
+function renderSignals(snapshot) {
+  const items = snapshot.signals.slice(0, 60).map((signal) => `
+    <div class="feed-item">
+      <time>${escapeHtml(shortDate(signal.published))}</time>
+      <a href="${escapeHtml(signal.url)}" target="_blank" rel="noopener">${escapeHtml(signal.title)}</a>
+      <span class="src">${escapeHtml(signal.outlet)} · ${escapeHtml(signal.theme_label || "—")} · ${escapeHtml(signal.audience)}</span>
+    </div>`).join("");
+  $("signal-feed").innerHTML = items || `<div class="empty">No signals collected yet.</div>`;
+}
+
+function renderBrand(snapshot) {
+  const brand = snapshot.brand;
+  const competitors = brand.competitors.length
+    ? brand.competitors.map((entry) => `
+        <tr>
+          <td>${escapeHtml(entry.term)}</td>
+          <td class="num">${entry.count}</td>
+          <td class="muted">${entry.headlines.length ? `<a href="${escapeHtml(entry.headlines[0].url)}" target="_blank" rel="noopener" style="text-decoration:none">${escapeHtml(entry.headlines[0].title)}</a>` : "—"}</td>
+        </tr>`).join("")
+    : `<tr><td colspan="3" class="muted" style="padding:20px">No competitor coverage found this window.</td></tr>`;
+
+  const mentions = brand.entries.length && brand.entries.some((entry) => entry.count)
+    ? brand.entries.flatMap((entry) => entry.headlines.map((headline) => `
+        <li><a href="${escapeHtml(headline.url)}" target="_blank" rel="noopener" style="text-decoration:none">${escapeHtml(headline.title)}</a> <span class="muted">· ${escapeHtml(headline.source)}</span></li>`)).join("")
+    : `<li>Nothing yet — this is the gap to close.</li>`;
+
+  const outlets = brand.top_outlets.length
+    ? brand.top_outlets.map((item) => `${escapeHtml(item.outlet)} (${item.stories})`).join(" · ")
+    : "—";
+
+  $("brand-body").innerHTML = `
+    <div class="brand-grid">
+      <div class="card">
+        <h2>Your brand in the press</h2>
+        <div class="big-number">${brand.total_mentions}</div>
+        <div class="muted">mentions of ZVDapp found in news search · ${brand.share_of_voice}% share of voice vs the brands below</div>
+        <p style="margin-top:16px">${escapeHtml(brand.verdict)}</p>
+        <ul>${mentions}</ul>
+      </div>
+      <div class="card">
+        <h2>What to do with this</h2>
+        <ul>
+          <li>Publish this week's highest-scoring topic — it already has proven search demand behind it.</li>
+          <li>Pitch the outlets below with a data angle: they are already writing about your category.</li>
+          <li>Open a trade briefing page so B2B buyers find you by term, not by ad.</li>
+          <li>Claim every 'vs' comparison your competitors appear in — that is free, high-intent traffic.</li>
+        </ul>
+        <h2 style="margin-top:22px">Outlets covering your category now</h2>
+        <p class="muted">${outlets}</p>
+      </div>
+    </div>
+    <div class="card" style="margin-top:16px">
+      <h2>Competitor coverage (same window)</h2>
+      <div class="table-wrap" style="border:0;background:none">
+        <table class="table">
+          <thead><tr><th>Brand</th><th class="num">Mentions</th><th>Most recent story</th></tr></thead>
+          <tbody>${competitors}</tbody>
+        </table>
+      </div>
+    </div>`;
+}
+
+/* ---------- competitors ---------- */
+async function loadCompetitors() {
+  try {
+    const response = await fetch("/api/competitors", { cache: "no-store" });
+    const payload = await response.json();
+    state.competitors = payload.data;
+    state.compState = payload.state || {};
+    renderCompetitors();
+  } catch (error) {
+    $("competitor-body").innerHTML = `<div class="empty">Could not load the competitor audit: ${escapeHtml(error.message)}</div>`;
+  }
+}
+
+async function runCompetitorAudit() {
+  state.compState = { running: true };
+  renderCompetitors();
+  try {
+    await fetch("/api/competitors/audit", { method: "POST" });
+  } catch (error) {
+    $("competitor-body").innerHTML = `<div class="empty">Could not start the audit: ${escapeHtml(error.message)}</div>`;
+    return;
+  }
+  pollCompetitors();
+}
+
+function pollCompetitors() {
+  clearTimeout(state.compPoll);
+  state.compPoll = setTimeout(async () => {
+    await loadCompetitors();
+    if (state.compState && state.compState.running) pollCompetitors();
+  }, 3000);
+}
+
+function statusPill(status) {
+  if (status === "blocked") return `<span class="pill cooling">blocked</span>`;
+  if (status === "error") return `<span class="pill">unreachable</span>`;
+  return `<span class="pill rising">reachable</span>`;
+}
+
+function renderCompetitors() {
+  const node = $("competitor-body");
+  if (!node) return;
+  if (state.compState && state.compState.running) {
+    node.innerHTML = `<div class="empty"><span class="dot"></span> Auditing competitor sites — sitemaps, schema and stacks. About a minute.</div>`;
+    return;
+  }
+  const data = state.competitors;
+  if (!data) {
+    node.innerHTML = `<div class="empty">No competitor audit yet.<br><br><button class="ghost" onclick="runCompetitorAudit()">Run the first audit</button></div>`;
+    return;
+  }
+  const blocked = data.results.filter((row) => row.status !== "ok").length;
+  const measured = data.results.filter((row) => row.status === "ok");
+  const deepest = measured.slice().sort((a, b) => b.content_urls - a.content_urls)[0];
+  const rows = data.results.map((row, index) => {
+    const evidence = [
+      row.title ? `<div><strong>Page title:</strong> ${escapeHtml(row.title)}</div>` : "",
+      row.notes.length ? `<div><strong>Notes:</strong> ${row.notes.map(escapeHtml).join(" · ")}</div>` : "",
+      row.tech.length ? `<div><strong>Stack signals:</strong> ${row.tech.map(escapeHtml).join(", ")}</div>` : "",
+      row.schema.length ? `<div><strong>Schema:</strong> ${escapeHtml(row.schema.join(", "))}</div>` : "",
+      row.sitemap_children ? `<div><strong>Sitemaps:</strong> ${row.sitemap_children} in index · newest update ${escapeHtml(row.newest_lastmod || "unknown")}</div>` : "",
+      `<div><strong>Sampled URLs:</strong> ${row.total_urls} (${row.content_urls} content · ${row.product_urls} catalogue · ${row.other_urls} other)</div>`,
+    ].filter(Boolean).join("");
+    return `
+      <tr>
+        <td class="muted">${index + 1}</td>
+        <td><strong>${escapeHtml(row.name)}</strong><div class="muted">${escapeHtml(row.type)} · ${escapeHtml(row.market)}</div></td>
+        <td class="num"><span class="bar"><i style="width:${row.score}%"></i></span> <span class="muted">${row.score}</span></td>
+        <td class="num">${row.content_urls}</td>
+        <td class="num">${row.product_urls}</td>
+        <td class="num">${row.updated_90d}</td>
+        <td class="muted">${row.tech.length ? escapeHtml(row.tech.slice(0, 3).join(", ")) : "—"}</td>
+        <td>${statusPill(row.status)}</td>
+      </tr>
+      <tr class="detail-row">
+        <td></td>
+        <td colspan="7"><details><summary>Evidence</summary><div class="evidence">${evidence}</div></details></td>
+      </tr>`;
+  }).join("");
+
+  node.innerHTML = `
+    <div class="kpis" style="margin:0 0 18px">
+      <div class="kpi"><span>Audited</span><strong>${data.count}</strong><small>${blocked} block crawlers</small></div>
+      <div class="kpi"><span>Deepest content</span><strong>${deepest ? deepest.content_urls : 0}</strong><small>${deepest ? escapeHtml(deepest.name) : "—"} pages</small></div>
+      <div class="kpi"><span>Highest score</span><strong>${measured.length ? measured[0].score : 0}</strong><small>${measured.length ? escapeHtml(measured[0].name) : "—"}</small></div>
+      <div class="kpi"><span>Updated last 90d</span><strong>${measured.reduce((sum, row) => sum + row.updated_90d, 0)}</strong><small>pages across the set</small></div>
+      <div class="kpi"><span>Last run</span><strong>${escapeHtml((data.generated_at || "").slice(0, 10))}</strong><small>${state.compState.seconds ? state.compState.seconds + "s" : "public evidence"}</small></div>
+    </div>
+    <div class="table-wrap">
+      <table class="table">
+        <thead><tr><th></th><th>Competitor</th><th class="num">Presence</th><th class="num">Content</th><th class="num">Catalogue</th><th class="num">New 90d</th><th>Stack signals</th><th>Access</th></tr></thead>
+        <tbody>${rows}</tbody>
+      </table>
+    </div>
+    <p class="panel-note" style="margin-top:14px">Presence score is a labelled heuristic (content volume, content-to-catalogue depth, schema, social proof, retention and experience tools, freshness) used to rank — not a traffic estimate. ${blocked} sites refuse non-browser clients, so they are marked blocked rather than scored.</p>`;
+}
+
+/* ---------- brief text ---------- */
+function briefText(topic) {
+  const brief = topic.brief;
+  return [
+    "ZVD RADAR — CONTENT BRIEF",
+    "Date: " + (state.data.snapshot ? state.data.snapshot.date : ""),
+    "Topic: " + topic.title,
+    "Theme: " + topic.theme_label + " · Audience: " + topic.audience + " · Opportunity score: " + topic.score,
+    "",
+    "WHY NOW",
+    topic.why_now,
+    "",
+    "HOOK",
+    brief.hook,
+    "",
+    "ANGLE",
+    brief.angle,
+    "",
+    "OUTLINE (" + brief.words + ")",
+    brief.outline.map((line, index) => (index + 1) + ". " + line).join("\n"),
+    "",
+    "FORMAT: " + brief.format,
+    "CTA: " + brief.cta,
+    "",
+    "TARGET QUERIES",
+    topic.keywords.map((keyword) => "· " + keyword.query + " (" + keyword.stage + ", " + keyword.score + ")").join("\n"),
+    "",
+    "SOURCE SIGNALS",
+    topic.signals.map((signal) => "· " + signal.title + " — " + signal.outlet + (signal.published ? " (" + signal.published.slice(0, 10) + ")" : "")).join("\n"),
+  ].join("\n");
+}
+
+/* ---------- events ---------- */
+document.addEventListener("click", (event) => {
+  const tab = event.target.closest(".tab");
+  if (tab) {
+    state.tab = tab.dataset.tab;
+    document.querySelectorAll(".tab").forEach((node) => node.classList.toggle("is-active", node === tab));
+    document.querySelectorAll(".panel").forEach((panel) => panel.classList.toggle("hidden", panel.id !== "panel-" + state.tab));
+    if (state.tab === "competitors") renderCompetitors();
+    return;
+  }
+
+  const seg = event.target.closest(".seg");
+  if (seg) {
+    state.audience = seg.dataset.audience;
+    document.querySelectorAll("#audience-filter .seg").forEach((node) => node.classList.toggle("is-active", node === seg));
+    if (state.data && state.data.snapshot) renderTopics(state.data.snapshot);
+    return;
+  }
+
+  const action = event.target.closest("[data-action]");
+  if (action) {
+    const card = action.closest(".topic");
+    const snapshot = state.data && state.data.snapshot;
+    if (!card || !snapshot) return;
+    const topic = snapshot.topics.find((item) => item.id === card.dataset.topic);
+    if (!topic) return;
+    if (action.dataset.action === "brief") {
+      const brief = card.querySelector(".brief");
+      brief.classList.toggle("hidden");
+      action.textContent = brief.classList.contains("hidden") ? "Content brief" : "Hide brief";
+    } else {
+      navigator.clipboard.writeText(briefText(topic)).then(() => {
+        action.textContent = "Copied ✓";
+        setTimeout(() => { action.textContent = "Copy brief"; }, 1600);
+      });
+    }
+    return;
+  }
+
+  if (event.target.id === "run-scan") {
+    runScan();
+  }
+
+  if (event.target.id === "run-competitors") {
+    runCompetitorAudit();
+  }
+});
+
+$("theme-filter").addEventListener("change", (event) => {
+  state.theme = event.target.value;
+  if (state.data && state.data.snapshot) renderTopics(state.data.snapshot);
+});
+
+$("sort-filter").addEventListener("change", (event) => {
+  state.sort = event.target.value;
+  if (state.data && state.data.snapshot) renderTopics(state.data.snapshot);
+});
+
+load();
+loadCompetitors();
+setInterval(() => {
+  const scan = state.data && state.data.state;
+  if (!scan || !scan.running) load();
+}, 60000);

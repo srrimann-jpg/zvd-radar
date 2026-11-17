@@ -1,0 +1,2 @@
+# Hosted (Vercel) entry point only. The local server and all of radar/ are stdlib-only.
+Flask==3.0.3
