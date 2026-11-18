@@ -71,7 +71,13 @@ async function runScan() {
   button.disabled = true;
   showStatus("Starting scan…", false);
   try {
-    await fetch("/api/scan", { method: "POST" });
+    const response = await fetch("/api/scan", { method: "POST" });
+    const payload = await response.json().catch(() => ({}));
+    if (!response.ok || payload.started === false) {
+      showStatus(payload.error || "The scan could not be started on this deployment.", true);
+      button.disabled = false;
+      return;
+    }
   } catch (error) {
     showStatus("Could not start the scan: " + error.message, true);
     button.disabled = false;

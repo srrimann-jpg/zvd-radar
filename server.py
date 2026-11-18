@@ -18,6 +18,7 @@ from pathlib import Path
 from urllib.parse import parse_qs, urlparse
 
 from radar import battlecards as battle_audit
+from radar import blobstore
 from radar import competitors as comp_audit
 from radar import demand
 from radar import publishing as pub_job
@@ -41,6 +42,39 @@ def _resolve_port():
 
 PORT = _resolve_port()
 
+# On a hosted read-only filesystem snapshots have to go somewhere else. Same switch the
+# Vercel entry point makes: Blob when a token is present, files otherwise.
+STORAGE_MODE = "files"
+if blobstore.available():
+    try:
+        store.set_backend(blobstore.BlobBackend())
+        STORAGE_MODE = "vercel-blob"
+    except blobstore.BlobError:
+        STORAGE_MODE = "files"
+
+READ_ONLY_MESSAGE = (
+    "This deployment is read-only, so a scan has nowhere to save its snapshot. "
+    "Run it locally (python3 server.py) or set BLOB_READ_WRITE_TOKEN on the hosting project."
+)
+
+_WRITABLE = None
+
+
+def storage_writable():
+    """Probe once, so a hosted scan fails with a sentence instead of an OSError."""
+    global _WRITABLE
+    if STORAGE_MODE != "files":
+        return True
+    if _WRITABLE is None:
+        probe = store.DATA_DIR / ".write-probe"
+        try:
+            probe.write_text("ok", encoding="utf-8")
+            probe.unlink()
+            _WRITABLE = True
+        except OSError:
+            _WRITABLE = False
+    return _WRITABLE
+
 STATE = {
     "running": False,
     "step": "idle",
@@ -59,6 +93,9 @@ PUB_LOCK = threading.Lock()
 
 
 def run_publishing():
+    if not storage_writable():
+        PUB_STATE.update(error=READ_ONLY_MESSAGE, running=False)
+        return False
     with PUB_LOCK:
         if PUB_STATE["running"]:
             return False
@@ -79,6 +116,9 @@ def start_publishing():
 
 
 def run_competitor_audit():
+    if not storage_writable():
+        COMP_STATE.update(error=READ_ONLY_MESSAGE, running=False)
+        return False
     with COMP_LOCK:
         if COMP_STATE["running"]:
             return False
@@ -99,6 +139,9 @@ def start_competitor_audit():
 
 
 def run_scan(progress=None):
+    if not storage_writable():
+        STATE.update(error=READ_ONLY_MESSAGE, step="Read-only", running=False)
+        return False
     with STATE_LOCK:
         if STATE["running"]:
             return False
@@ -130,7 +173,7 @@ def has_today():
 def scheduler():
     while True:
         try:
-            if not STATE["running"] and not has_today():
+            if storage_writable() and not STATE["running"] and not has_today():
                 start_scan_async()
         except Exception:  # noqa: BLE001
             pass
@@ -185,6 +228,7 @@ class Handler(BaseHTTPRequestHandler):
             "finished_at": STATE["finished_at"],
             "seconds": STATE["seconds"],
             "has_today": has_today(),
+            "storage": STORAGE_MODE,
         }
 
     # ---------- routes ----------
@@ -229,6 +273,9 @@ class Handler(BaseHTTPRequestHandler):
         if length:
             self.rfile.read(length)
         if parsed.path == "/api/scan":
+            if not storage_writable():
+                self._json({"started": False, "error": READ_ONLY_MESSAGE}, 503)
+                return
             if STATE["running"]:
                 self._json({"started": False, "state": self._state_payload()}, 202)
                 return
@@ -236,6 +283,9 @@ class Handler(BaseHTTPRequestHandler):
             self._json({"started": True, "state": self._state_payload()}, 202)
             return
         if parsed.path == "/api/publishing":
+            if not storage_writable():
+                self._json({"started": False, "error": READ_ONLY_MESSAGE}, 503)
+                return
             if PUB_STATE["running"]:
                 self._json({"started": False, "state": PUB_STATE}, 202)
                 return
@@ -243,6 +293,9 @@ class Handler(BaseHTTPRequestHandler):
             self._json({"started": True, "state": PUB_STATE}, 202)
             return
         if parsed.path == "/api/competitors/audit":
+            if not storage_writable():
+                self._json({"started": False, "error": READ_ONLY_MESSAGE}, 503)
+                return
             if COMP_STATE["running"]:
                 self._json({"started": False, "state": COMP_STATE}, 202)
                 return
