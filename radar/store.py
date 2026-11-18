@@ -60,6 +60,44 @@ class FileBackend(object):
         )
 
 
+class FallbackBackend(object):
+    """Read from the writable store, fall back to the bundled data/ files.
+
+    A freshly connected Blob store is empty, so without this the hosted dashboard would
+    show nothing until the first scan wrote a snapshot. Reads prefer the primary; the
+    committed files cover the gap and the first hosted scan takes over.
+    """
+
+    label = "blob+files"
+
+    def __init__(self, primary, fallback=None):
+        self.primary = primary
+        self.fallback = fallback or FileBackend()
+
+    def get(self, name):
+        value = self.primary.get(name)
+        if value is not None:
+            return value
+        return self.fallback.get(name)
+
+    def put(self, name, payload):
+        return self.primary.put(name, payload)
+
+    def names(self, prefix=""):
+        names = self.primary.names(prefix)
+        if names:
+            return names
+        return self.fallback.names(prefix)
+
+    def selftest(self):
+        if hasattr(self.primary, "selftest"):
+            report = self.primary.selftest()
+        else:
+            report = {"storage": self.label}
+        report["fallback"] = "bundled data/ files are served until the primary store has the snapshot"
+        return report
+
+
 BACKEND = FileBackend()
 
 

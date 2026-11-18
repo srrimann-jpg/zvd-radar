@@ -38,7 +38,7 @@ PUBLIC = os.path.join(ROOT, "public")
 STORAGE_MODE = "files"
 if blobstore.available():
     try:
-        store.set_backend(blobstore.BlobBackend())
+        store.set_backend(store.FallbackBackend(blobstore.BlobBackend()))
         STORAGE_MODE = "vercel-blob"
     except blobstore.BlobError as error:  # pragma: no cover - config problem
         sys.stderr.write("blob backend unavailable: %s\n" % error)
