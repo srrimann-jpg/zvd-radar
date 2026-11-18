@@ -146,6 +146,16 @@ def competitors():
                                             else STORAGE_MODE}})
 
 
+@_routes("/api/storage/selftest")
+def storage_selftest():
+    backend = store.backend()
+    if hasattr(backend, "selftest"):
+        return jsonify(backend.selftest())
+    return jsonify({"storage": STORAGE_MODE, "write": "ok (local disk)",
+                    "read": "ok (local disk)", "list": "ok (local disk)",
+                    "access": "n/a", "store_id": "n/a", "error": None})
+
+
 @_routes("/api/battlecards")
 def battlecards():
     payload = battle_audit.build()

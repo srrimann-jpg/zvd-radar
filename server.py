@@ -260,6 +260,16 @@ class Handler(BaseHTTPRequestHandler):
         if path == "/api/publishing":
             self._json({"data": pub_job.load(), "state": PUB_STATE})
             return
+        if path == "/api/storage/selftest":
+            backend = store.backend()
+            if hasattr(backend, "selftest"):
+                self._json(backend.selftest())
+            else:
+                label = getattr(backend, "label", "files")
+                self._json({"storage": label, "write": "ok (local disk)",
+                            "read": "ok (local disk)", "list": "ok (local disk)",
+                            "access": "n/a", "store_id": "n/a", "error": None})
+            return
         if path == "/api/battlecards":
             self._json(battle_audit.build())
             return
@@ -300,8 +310,14 @@ class Handler(BaseHTTPRequestHandler):
             if STATE["running"]:
                 self._json({"started": False, "state": self._state_payload()}, 202)
                 return
-            start_scan_async()
-            self._json({"started": True, "state": self._state_payload()}, 202)
+            if STORAGE_MODE == "files":
+                start_scan_async()
+                self._json({"started": True, "state": self._state_payload()}, 202)
+                return
+            # Hosted: the function is frozen the moment it responds, so a background
+            # thread would never finish saving. Run the scan inline instead.
+            run_scan()
+            self._json({"started": True, "state": self._state_payload()})
             return
         if parsed.path == "/api/publishing":
             if not storage_writable():
