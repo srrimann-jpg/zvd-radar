@@ -151,9 +151,12 @@ function render() {
   // rather than letting a click start a scan that cannot be saved.
   const scanState = (state.data && state.data.state) || {};
   const canScan = scanState.writable !== false;
-  $("run-scan").title = canScan
+  const scanButton = $("run-scan");
+  scanButton.disabled = !canScan;
+  scanButton.textContent = canScan ? "Run today's scan" : "Scan runs locally";
+  scanButton.title = canScan
     ? ""
-    : "This deployment is read-only. Run the scan locally or connect Blob storage to the hosting project.";
+    : "This deployment has a read-only filesystem, so a scan cannot be saved here. Run python3 server.py on your machine and push the new data files.";
 
   renderKpis(snapshot);
   renderThemes(snapshot);
