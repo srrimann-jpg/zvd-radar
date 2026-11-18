@@ -80,6 +80,7 @@ def _state_payload():
         "seconds": STATE["seconds"],
         "has_today": _has_today(),
         "storage": STORAGE_MODE,
+        "writable": STORAGE_MODE != "files",
     }
 
 

@@ -229,6 +229,7 @@ class Handler(BaseHTTPRequestHandler):
             "seconds": STATE["seconds"],
             "has_today": has_today(),
             "storage": STORAGE_MODE,
+            "writable": storage_writable(),
         }
 
     # ---------- routes ----------
@@ -261,6 +262,26 @@ class Handler(BaseHTTPRequestHandler):
             return
         if path == "/api/battlecards":
             self._json(battle_audit.build())
+            return
+        if path == "/api/cron/scan":
+            # Vercel Cron target. Runs inline: a serverless function that answers before
+            # the work finishes is frozen and the scan is lost.
+            secret = os.environ.get("CRON_SECRET")
+            if secret and (self.headers.get("Authorization") or "") != "Bearer %s" % secret:
+                self._json({"error": "unauthorized"}, 401)
+                return
+            if not storage_writable():
+                self._json({"ok": False, "error": READ_ONLY_MESSAGE}, 503)
+                return
+            if STATE["running"]:
+                self._json({"ok": False, "error": "a scan is already running"}, 202)
+                return
+            run_scan()
+            self._json({
+                "ok": STATE["error"] is None,
+                "error": STATE["error"],
+                "state": self._state_payload(),
+            })
             return
         if path == "/api/health":
             self._json({"ok": True, "time": datetime.now().isoformat(timespec="seconds")})

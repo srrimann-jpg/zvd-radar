@@ -147,6 +147,14 @@ function render() {
   ].filter(Boolean).join(" · ");
   $("footer-stamp").textContent = "Last scan " + ago(snapshot.generated_at) + " · " + snapshot.stats.signals + " relevant signals";
 
+  // A hosted deployment may have nowhere to write a snapshot. Say so on the control
+  // rather than letting a click start a scan that cannot be saved.
+  const scanState = (state.data && state.data.state) || {};
+  const canScan = scanState.writable !== false;
+  $("run-scan").title = canScan
+    ? ""
+    : "This deployment is read-only. Run the scan locally or connect Blob storage to the hosting project.";
+
   renderKpis(snapshot);
   renderThemes(snapshot);
   renderTopics(snapshot);
