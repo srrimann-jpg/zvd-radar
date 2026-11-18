@@ -152,6 +152,10 @@ function render() {
 function renderKpis(snapshot) {
   const rising = snapshot.topics.filter((topic) => topic.momentum === "Rising").length;
   const b2b = snapshot.topics.filter((topic) => topic.audience === "B2B").length;
+  const compRows = (state.competitors && Array.isArray(state.competitors.results))
+    ? state.competitors.results
+    : null;
+  const compOpen = compRows ? compRows.filter((row) => row.status === "ok").length : 0;
   const cards = [
     { label: "Signals read", value: snapshot.stats.signals, note: snapshot.stats.outlets + " outlets" },
     { label: "Themes live", value: snapshot.stats.themes, note: snapshot.topics.length + " publishable topics" },
@@ -169,6 +173,13 @@ function renderKpis(snapshot) {
       note: snapshot.brand.total_mentions
         ? snapshot.brand.share_of_voice + "% share of voice"
         : "no earned coverage yet",
+    },
+    {
+      label: "Competitors tracked",
+      value: compRows ? compRows.length : "—",
+      note: compRows
+        ? compOpen + " reachable · " + (compRows.length - compOpen) + " unreachable"
+        : "audit not loaded",
     },
   ];
   $("kpis").innerHTML = cards.map((card) => `
@@ -371,6 +382,7 @@ async function loadCompetitors() {
     state.competitors = payload.data;
     state.compState = payload.state || {};
     renderCompetitors();
+    if (state.data && state.data.snapshot) renderKpis(state.data.snapshot);
   } catch (error) {
     $("competitor-body").innerHTML = `<div class="empty">Could not load the competitor audit: ${escapeHtml(error.message)}</div>`;
   }
@@ -549,9 +561,112 @@ function renderPublishing() {
         <tbody>${data.domains.map(publishingRow).join("")}</tbody>
       </table>
     </div>
-    <p class="panel-note" style="margin-top:14px">${data.baseline
+        <p class="panel-note" style="margin-top:14px">${data.baseline
       ? "First run, so there is nothing to diff against yet — each competitor shows its most recently updated pages instead of claiming everything is new. The next run reports genuine additions."
-      : "New pages are URLs present now that were absent at the last run, read from each site's own sitemap. Titles are fetched for a few of them; a page we cannot read keeps its URL rather than a guess."}</p>`;
+      : "New pages are URLs present now that were absent at the last run, read from each site's own sitemap. Titles are fetched for a few of them; a page we cannot read keeps its URL rather than a guess."
+    }</p>`;
+}
+
+/* ---------- battlecards ---------- */
+function renderBattlecards() {
+  const node = $("battlecards-body");
+  if (!node) return;
+  const arr = (value) => (Array.isArray(value) ? value : []);
+  const txt = (value) => (value == null || value === "" ? "not captured" : value);
+  
+  // Load battlecard data from API
+  fetch("/api/battlecards", { cache: "no-store" })
+    .then((r) => { if (!r.ok) throw new Error(r.status); return r.json(); })
+    .then((payload) => {
+      const cards = payload.cards || {};
+      let html = "";
+      
+      // VDB card
+      if (cards.vdb) {
+        const s = cards.vdb.index_snapshot || {};
+        html += `
+          <div class="battlecard" style="border:2px solid #e53e3e; margin-bottom:24px">
+            <div class="battlecard-header" style="background:#e53e3e; color:white; padding:12px; font-weight:bold;">
+              ZVD vs Virtual Diamond Boutique
+            </div>
+            <div class="battlecard-body" style="padding:16px">
+              <div class="battlecard-section" style="margin-bottom:12px">
+                <strong>Status:</strong> ${cards.vdb.status}<br>
+                <strong>Scale:</strong> ${s.scale_claims || "No data"}<br>
+                <strong>Pricing:</strong> ${s.pricing_marketplace || "No data"}<br>
+                <strong>Founder note:</strong> ${s.founder_note || "No data"}<br>
+                <strong>Contact:</strong> ${s.contact || "No data"}<br>
+                <strong>Google Play:</strong> ${s.google_play || "No data"}<br>
+              </div>
+              <div class="battlecard-section" style="border-top:1px solid #eee; padding-top:8px; margin-top:8px">
+                <strong>Wedge:</strong> ${txt(cards.vdb.wedge)}<br>
+                <strong>Target queries:</strong> ${arr(cards.vdb.target_queries).join(", ") || "not captured"}<br>
+                <strong>Notes:</strong> ${arr(cards.vdb.notes).join(" · ")}<br>
+              </div>
+            </div>
+          </div>
+        `;
+      }
+      
+      // DND card
+      if (cards.dnd) {
+        html += `
+          <div class="battlecard" style="border:2px solid #7f5af0; margin-bottom:24px">
+            <div class="battlecard-header" style="background:#7f5af0; color:white; padding:12px; font-weight:bold;">
+              ZVD vs DND Diamond
+            </div>
+            <div class="battlecard-body" style="padding:16px">
+              <div class="battlecard-section" style="margin-bottom:12px">
+                <strong>Status:</strong> ${cards.dnd.status}<br>
+                <strong>Score:</strong> ${cards.dnd.score}<br>
+                <strong>Product URLs:</strong> ${cards.dnd.product_urls}<br>
+                <strong>Content URLs:</strong> ${cards.dnd.content_urls}<br>
+              </div>
+              <div class="battlecard-section" style="border-top:1px solid #eee; padding-top:8px; margin-top:8px">
+                <strong>Wedge:</strong> ${txt(cards.dnd.wedge)}<br>
+                <strong>Target queries:</strong> ${arr(cards.dnd.target_queries).join(", ") || "not captured"}<br>
+                <strong>Notes:</strong> ${arr(cards.dnd.notes).join(" · ")}<br>
+              </div>
+            </div>
+          </div>
+        `;
+      }
+      
+      // Lepdo card
+      if (cards.lepdo) {
+        html += `
+          <div class="battlecard" style="border:2px solid #18bc9c; margin-bottom:24px">
+            <div class="battlecard-header" style="background:#18bc9c; color:white; padding:12px; font-weight:bold;">
+              ZVD vs Lepdo Diamonds
+            </div>
+            <div class="battlecard-body" style="padding:16px">
+              <div class="battlecard-section" style="margin-bottom:12px">
+                <strong>Status:</strong> ${cards.lepdo.status}<br>
+                <strong>Score:</strong> ${cards.lepdo.score}<br>
+                <strong>Total URLs:</strong> ${cards.lepdo.total_urls}<br>
+                <strong>Content URLs:</strong> ${cards.lepdo.content_urls}<br>
+                <strong>Product URLs:</strong> ${cards.lepdo.product_urls}<br>
+              </div>
+              <div class="battlecard-section" style="border-top:1px solid #eee; padding-top:8px; margin-top:8px">
+                <strong>Wedge:</strong> ${txt(cards.lepdo.wedge)}<br>
+                <strong>Target queries:</strong> ${arr(cards.lepdo.target_queries).join(", ") || "not captured"}<br>
+                <strong>Notes:</strong> ${arr(cards.lepdo.notes).join(" · ")}<br>
+              </div>
+            </div>
+          </div>
+        `;
+      }
+      
+      if (Object.keys(cards).length === 0) {
+        node.innerHTML = `<div class="empty">No battlecard data loaded. Generating…</div>`;
+      } else {
+        node.innerHTML = html;
+      }
+    })
+    .catch((e) => {
+      console.error(e);
+      node.innerHTML = `<div class="empty">Could not load battlecards: ${e.message}</div>`;
+    });
 }
 
 /* ---------- brief text ---------- */
@@ -596,6 +711,9 @@ document.addEventListener("click", (event) => {
     if (state.tab === "competitors") {
       renderCompetitors();
       renderPublishing();
+    }
+    if (state.tab === "battlecards") {
+      renderBattlecards();
     }
     return;
   }

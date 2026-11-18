@@ -26,6 +26,7 @@ if ROOT not in sys.path:
 
 from flask import Flask, jsonify, request, send_from_directory  # noqa: E402
 
+from radar import battlecards as battle_audit  # noqa: E402
 from radar import blobstore, competitors as comp_audit, demand  # noqa: E402
 from radar import publishing as pub_job  # noqa: E402
 from radar import scan as scan_job, store  # noqa: E402
@@ -142,6 +143,14 @@ def competitors():
         data = {"error": "%s: %s" % (type(error).__name__, error)}
     return jsonify({"data": data, "state": {"mode": "read-only" if STORAGE_MODE == "files"
                                             else STORAGE_MODE}})
+
+
+@_routes("/api/battlecards")
+def battlecards():
+    payload = battle_audit.build()
+    response = jsonify(payload)
+    response.headers["Cache-Control"] = "no-store"
+    return response
 
 
 @_routes("/api/cron/scan")

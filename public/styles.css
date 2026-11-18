@@ -127,7 +127,7 @@ a { color: inherit; }
 /* ---------- kpis ---------- */
 .kpis {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(6, 1fr);
   gap: 1px;
   margin: 26px 32px 0;
   border: 1px solid var(--line);

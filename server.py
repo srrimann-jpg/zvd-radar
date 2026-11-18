@@ -17,6 +17,7 @@ from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 from urllib.parse import parse_qs, urlparse
 
+from radar import battlecards as battle_audit
 from radar import competitors as comp_audit
 from radar import demand
 from radar import publishing as pub_job
@@ -213,6 +214,9 @@ class Handler(BaseHTTPRequestHandler):
             return
         if path == "/api/publishing":
             self._json({"data": pub_job.load(), "state": PUB_STATE})
+            return
+        if path == "/api/battlecards":
+            self._json(battle_audit.build())
             return
         if path == "/api/health":
             self._json({"ok": True, "time": datetime.now().isoformat(timespec="seconds")})
