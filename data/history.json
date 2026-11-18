@@ -37,6 +37,25 @@
     "sustainability": 6
    },
    "brand_mentions": 0
+  },
+  {
+   "date": "2026-11-18",
+   "generated_at": "2026-11-18T05:26:59+00:00",
+   "signals": 380,
+   "themes": {
+    "natural-diamond": 117,
+    "lab-grown": 74,
+    "engagement-rings": 61,
+    "jewelry-tech": 32,
+    "jewelry-retail": 22,
+    "jewelry-trends": 21,
+    "diamond-prices": 17,
+    "diamond-investment": 14,
+    "wholesale-b2b": 10,
+    "grading-certs": 6,
+    "sustainability": 6
+   },
+   "brand_mentions": 0
   }
  ]
 }
